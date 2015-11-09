@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAKQ,sCAA2B;AAC3B,4CAAiC;ACNjC,iEAAyD;ACAjE,OAAQ;EACN,MAAM,EAAE,IAAI;EACZ,UAAU,EAAE,iCAAsC",
+"sources": ["style.scss","stylesheets/_global.scss","stylesheets/themeStyles/_headerFooter.scss"],
+"names": [],
+"file": "style.css"
+}
