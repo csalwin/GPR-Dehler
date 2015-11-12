@@ -1,0 +1,148 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700);
+body {
+  font-family: "Lato", "sans-serif"; }
+  body li {
+    list-style: none;
+    text-decoration: none; }
+  body a {
+    text-decoration: none; }
+  body .container {
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto; }
+    body .container:after {
+      content: " ";
+      display: block;
+      clear: both; }
+    @media (min-width: 480px) {
+      body .container {
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto; }
+        body .container:after {
+          content: " ";
+          display: block;
+          clear: both; } }
+    @media (min-width: 720px) {
+      body .container {
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto; }
+        body .container:after {
+          content: " ";
+          display: block;
+          clear: both; } }
+    @media (min-width: 960px) {
+      body .container {
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto; }
+        body .container:after {
+          content: " ";
+          display: block;
+          clear: both; } }
+
+#nav-bar {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: linear-gradient(to right, rgba(102, 102, 255, 0.25), rgba(179, 179, 255, 0.25));
+  background-size: 8.33333%;
+  background-origin: content-box;
+  background-clip: content-box;
+  background-position: left top;
+  background-image: linear-gradient(to right, rgba(102, 102, 255, 0.25), rgba(179, 179, 255, 0.25));
+  background-size: 8.33333%;
+  background-origin: content-box;
+  background-clip: content-box;
+  background-position: left top;
+  height: auto;
+  background: linear-gradient(#300f42, #230931);
+  padding: 10px 0; }
+  #nav-bar:after {
+    content: " ";
+    display: block;
+    clear: both; }
+  #nav-bar #logo {
+    width: 41.66667%;
+    float: left;
+    padding-left: 0.83333%;
+    padding-right: 0.83333%;
+    margin: 0 5px; }
+  #nav-bar .headerButtons {
+    width: 16.66667%;
+    float: left;
+    padding-left: 0.83333%;
+    padding-right: 0.83333%;
+    margin: 5px 0;
+    float: right;
+    display: block; }
+    #nav-bar .headerButtons .glyphicon-menu-hamburger, #nav-bar .headerButtons .glyphicon-search {
+      width: 50%;
+      float: left;
+      padding-left: 0.83333%;
+      padding-right: 0.83333%;
+      float: right;
+      color: #fff;
+      font-size: 19px;
+      right: 0;
+      position: relative; }
+    #nav-bar .headerButtons .glyphicon-menu-hamburger {
+      text-align: right; }
+  #nav-bar #navigation-menu {
+    margin-top: 10px;
+    display: none; }
+    #nav-bar #navigation-menu ul li {
+      font-size: 19px;
+      padding: 5px 0;
+      text-align: center; }
+      #nav-bar #navigation-menu ul li a {
+        color: #fff; }
+  #nav-bar form {
+    width: 50%;
+    float: left;
+    padding-left: 0.83333%;
+    padding-right: 0.83333%;
+    position: relative;
+    color: #ffffff;
+    overflow: hidden;
+    margin: 7px auto;
+    display: none;
+    float: none; }
+    #nav-bar form input {
+      width: 83.33333%;
+      float: left;
+      padding-left: 0.83333%;
+      padding-right: 0.83333%;
+      background: none;
+      border: none;
+      font-size: 16px; }
+      #nav-bar form input:focus {
+        outline: rgba(255, 255, 255, 0.6) 1px solid; }
+      #nav-bar form input::-webkit-input-placeholder {
+        color: #ffffff; }
+      #nav-bar form input::-moz-placeholder {
+        color: #ffffff; }
+      #nav-bar form input:-moz-placeholder {
+        /* Older versions of Firefox */
+        color: #ffffff; }
+      #nav-bar form input:-ms-input-placeholder {
+        color: #ffffff; }
+    #nav-bar form i {
+      position: absolute;
+      top: 3px; }
+
+@media (min-width: 720px) {
+  #nav-bar #logo {
+    width: 25%;
+    float: left;
+    padding-left: 0.83333%;
+    padding-right: 0.83333%; } }
+@media (min-width: 960px) {
+  #nav-bar #logo {
+    width: 16.66667%;
+    float: left;
+    padding-left: 0.83333%;
+    padding-right: 0.83333%; } }
+
+/*# sourceMappingURL=style.css.map */

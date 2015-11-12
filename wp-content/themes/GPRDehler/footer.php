@@ -10,15 +10,13 @@
  */
 ?>
 
-</div><!-- .site-content -->
-
 <footer>
 
 
 </footer><!-- .site-footer -->
 
-</div><!-- .site -->
 
+<script src="<?php echo esc_url( get_template_directory_uri() ); ?>/js/site.js"></script>
 <?php wp_footer(); ?>
 
 </body>

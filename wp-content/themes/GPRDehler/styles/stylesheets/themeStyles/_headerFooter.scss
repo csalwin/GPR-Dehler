@@ -1,4 +1,115 @@
-#navBar {
-  height: 50px;
-  background: linear-gradient($main_purple, #230931);
+
+  #nav-bar {
+    @include container();
+    @include show-grid(12);
+    height: auto;
+    background: linear-gradient($main_purple, #230931);
+    padding: 10px 0;
+
+    #logo{
+      @include span(5 of 12);
+      margin: 0 5px;
+
+    }
+
+    .headerButtons {
+      @include span(2 of 12);
+      margin: 5px 0 ;
+      float: right;
+      display: block;
+
+
+
+
+
+
+      .glyphicon-menu-hamburger, .glyphicon-search{
+        @include span(6 of 12);
+        float: right;
+        color: #fff;
+        font-size: 19px;
+        right: 0;
+        position: relative;
+
+      }
+      .glyphicon-menu-hamburger {
+        text-align: right;
+      }
+
+    }
+
+    #navigation-menu {
+      margin-top: 10px;
+      display: none;
+      ul{
+        li {
+          font-size: 19px;
+          padding: 5px 0;
+          text-align: center;
+          a{
+            color: #fff;
+          }
+        }
+
+      }
+    }
+    form {
+      @include span(6 of 12);
+      position: relative;
+      color: #ffffff;
+
+      overflow: hidden;
+      margin: 7px auto;
+      display: none;
+      float: none;
+      input {
+        @include span(10 of 12);
+        background: none;
+        border: none;
+        font-size: 16px;
+        &:focus {
+          outline: rgba(255,255,255,0.6) 1px solid;
+        }
+        &::-webkit-input-placeholder {
+          color: #ffffff;
+        }
+        &::-moz-placeholder {
+          color: #ffffff;
+        }
+        &:-moz-placeholder {   /* Older versions of Firefox */
+          color: #ffffff;
+        }
+        &:-ms-input-placeholder {
+          color: #ffffff;
+        }
+
+      }
+      i {
+        position: absolute;
+        top: 3px;
+      }
+    }
+  }
+
+@include breakpoint(small){
+  #nav-bar {
+    #logo {
+    }
+  }
+
+
 }
+@include breakpoint(medium){
+  #nav-bar {
+    #logo {
+      @include span(3 of 12);
+    }
+  }
+}
+  @include breakpoint(large){
+    #nav-bar {
+      #logo {
+        @include span(2 of 12);
+      }
+    }
+  }

@@ -1,8 +1,0 @@
-@import url(stylesheets/normalize.css);
-@import url(bootstrap/css/bootstrap.min.css);
-@import url(https://fonts.googleapis.com/css?family=Lato:400,700);
-#navBar {
-  height: 50px;
-  background: linear-gradient(#300f42, #230931); }
-
-/*# sourceMappingURL=style.css.map */

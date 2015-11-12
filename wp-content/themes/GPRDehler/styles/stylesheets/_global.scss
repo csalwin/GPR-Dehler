@@ -1,9 +1,27 @@
 @import url(https://fonts.googleapis.com/css?family=Lato:400,700);
 
 
-$screen-lg-min: 1200px;
-$screen-md-min: 992px;
-$screen-sm-min: 768px;
+$breakpoints: (
+        small: 480px,
+        medium: 720px,
+        large: 960px,
+        wide: 1200px
+);
+
+@mixin breakpoint($name) {
+  @if not map-has-key($breakpoints, $name) {
+    @warn "Invalid breakpoint `#{$name}`.";
+  }
+  @else {
+    @media (min-width: map-get($breakpoints, $name)) {
+      @content;
+    }
+  }
+}
+
+
+
+
 
 $main_purple: #300f42;
 $selected_purple: #8b003d;
@@ -18,4 +36,30 @@ $selected_purple: #8b003d;
   background: -ms-linear-gradient(top,  $top 0%,$bottom 100%); /* IE10+ */
   background: linear-gradient(to bottom,  $top 0%,$bottom 100%); /* W3C */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+}
+
+
+
+body {
+  font-family: "Lato", "sans-serif";
+  li {
+    list-style: none;
+    text-decoration: none;
+  }
+  a {
+    text-decoration: none;
+  }
+
+  .container {
+    @include container();
+      @include breakpoint(small){
+      @include container();
+    }
+    @include breakpoint(medium){
+      @include container();
+    }
+    @include breakpoint(large){
+      @include container();
+    }
+  }
 }
