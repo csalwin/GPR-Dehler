@@ -5,7 +5,8 @@
     height: auto;
     background: linear-gradient($main_purple, #230931);
     padding: 10px 0;
-
+    z-index: 5;
+    position: relative;
     #logo{
       @include span(5 of 12);
       margin: 0 5px;

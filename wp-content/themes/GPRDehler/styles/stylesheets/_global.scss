@@ -63,3 +63,27 @@ body {
     }
   }
 }
+
+.diamonds {
+  -ms-transform: rotate(45deg); /* IE 9 */
+  -webkit-transform: rotate(45deg); /* Chrome, Safari, Opera */
+  transform: rotate(45deg);
+  min-width: 800px;
+  min-height: 800px;
+  position: absolute;
+  display: block;
+  background: rgba(22, 22, 22, 0.7);
+  z-index: 3;
+  span {
+    position: relative;
+    float: right;
+    color: #ffffff;
+    display: block;
+    -ms-transform: rotate(-45deg); /* IE 9 */
+    -webkit-transform: rotate(-45deg); /* Chrome, Safari, Opera */
+    transform: rotate(-45deg);
+
+  }
+}
+
+

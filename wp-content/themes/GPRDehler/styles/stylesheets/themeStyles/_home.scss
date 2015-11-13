@@ -1,0 +1,27 @@
+
+
+
+.content {
+  position: relative;
+  .diamonds {
+    right: 85%;
+    top: -25%;
+    position: fixed;
+    span {
+      top: 77px;
+      left: 2px;
+      font-size: 5vw;
+
+    }
+  }
+
+
+
+  .slider {
+    img {
+      position: relative;
+      width: 100%;
+      height: auto;
+    }
+  }
+}
