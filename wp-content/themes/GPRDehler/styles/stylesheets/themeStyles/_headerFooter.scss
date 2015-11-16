@@ -1,7 +1,6 @@
 
   #nav-bar {
     @include container();
-    @include show-grid(12);
     height: auto;
     background: linear-gradient($main_purple, #230931);
     padding: 10px 0;
@@ -9,6 +8,7 @@
     position: relative;
     #logo{
       @include span(5 of 12);
+      max-width: 197px;
       margin: 0 5px;
 
     }
@@ -90,6 +90,47 @@
         top: 3px;
       }
     }
+  }
+  footer {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    background: #190624;
+
+    .diamonds {
+      width: 100%;
+      height: 100%;
+      right: 85%;
+      top: -345px;
+      position: absolute;
+
+    }
+    .contactUs {
+      position: relative;
+      display: block;
+      z-index: 4;
+      .footer-form {
+        @include span(5 of 12);
+        padding: 0 15px;
+        input, select {
+          display: block;
+          width: 100%;
+          margin: 5px 0;
+          background: none;
+          border: #ffffff solid 2px;
+          &:focus {
+            outline: $selected_purple 2px solid;
+
+          }
+        }
+        &.newsletter-form {
+          float: right;
+          text-align: right;
+        }
+      }
+    }
+
+
   }
 
 @include breakpoint(small){
