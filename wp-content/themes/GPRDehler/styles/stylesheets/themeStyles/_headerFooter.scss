@@ -1,131 +1,221 @@
 
   #nav-bar {
-    @include container();
     height: auto;
     background: linear-gradient($main_purple, #230931);
-    padding: 10px 0;
+
     z-index: 5;
     position: relative;
-    #logo{
-      @include span(5 of 12);
-      max-width: 197px;
-      margin: 0 5px;
+    .container {
+      background: linear-gradient($main_purple, #230931);
+      padding: 10px 0;
 
-    }
+      #logo{
+        @include span(5 of 12);
+        max-width: 197px;
+        margin: 0 5px;
 
-    .headerButtons {
-      @include span(2 of 12);
-      margin: 5px 0 ;
-      float: right;
-      display: block;
+      }
 
-
-
-
-
-
-      .glyphicon-menu-hamburger, .glyphicon-search{
-        @include span(6 of 12);
+      .headerButtons {
+        @include span(2 of 12);
+        margin: 5px 0 ;
         float: right;
-        color: #fff;
-        font-size: 19px;
-        right: 0;
-        position: relative;
+        display: block;
 
-      }
-      .glyphicon-menu-hamburger {
-        text-align: right;
-      }
-
-    }
-
-    #navigation-menu {
-      margin-top: 10px;
-      display: none;
-      ul{
-        li {
+        .glyphicon-menu-hamburger, .glyphicon-search{
+          @include span(6 of 12);
+          float: right;
+          color: #fff;
           font-size: 19px;
-          padding: 5px 0;
-          text-align: center;
-          a{
-            color: #fff;
+          right: 0;
+          position: relative;
+
+        }
+
+        &:after {
+          clear: both;
+        }
+
+      }
+
+      #navigation-menu {
+        clear: both;
+        margin-top: 10px;
+        display: none;
+        ul{
+          overflow: hidden;
+          position: relative;
+          display: block;
+          width: 100%;
+          padding: 0;
+          li {
+            font-size: 19px;
+            padding: 5px 0;
+            text-align: center;
+            a{
+              color: #fff;
+            }
           }
-        }
 
+        }
       }
+      form {
+        @include span(6 of 12);
+        position: relative;
+        color: #ffffff;
+
+        overflow: hidden;
+        margin: 7px auto;
+        display: none;
+        float: none;
+        input {
+          @include span(10 of 12);
+          background: none;
+          border: none;
+          font-size: 16px;
+          &:focus {
+            outline: rgba(255,255,255,0.6) 1px solid;
+          }
+          &::-webkit-input-placeholder {
+            color: #ffffff;
+          }
+          &::-moz-placeholder {
+            color: #ffffff;
+          }
+          &:-moz-placeholder {   /* Older versions of Firefox */
+            color: #ffffff;
+          }
+          &:-ms-input-placeholder {
+            color: #ffffff;
+          }
+
+        }
+        i {
+          position: absolute;
+          top: 3px;
+        }
+      }
+
+
+
+
     }
-    form {
-      @include span(6 of 12);
-      position: relative;
-      color: #ffffff;
 
-      overflow: hidden;
-      margin: 7px auto;
-      display: none;
-      float: none;
-      input {
-        @include span(10 of 12);
-        background: none;
-        border: none;
-        font-size: 16px;
-        &:focus {
-          outline: rgba(255,255,255,0.6) 1px solid;
-        }
-        &::-webkit-input-placeholder {
-          color: #ffffff;
-        }
-        &::-moz-placeholder {
-          color: #ffffff;
-        }
-        &:-moz-placeholder {   /* Older versions of Firefox */
-          color: #ffffff;
-        }
-        &:-ms-input-placeholder {
-          color: #ffffff;
-        }
 
-      }
-      i {
-        position: absolute;
-        top: 3px;
-      }
-    }
   }
   footer {
     position: relative;
     display: block;
     overflow: hidden;
-    background: #190624;
+    background: rgb(10, 10, 10);
 
     .diamonds {
       width: 100%;
       height: 100%;
       right: 85%;
-      top: -345px;
+      top: -250px;
       position: absolute;
+      background: rgba(33, 33, 33, 0.4);
 
     }
     .contactUs {
       position: relative;
       display: block;
       z-index: 4;
+      color: #ffffff;
       .footer-form {
-        @include span(5 of 12);
+        @include span(6 of 12);
         padding: 0 15px;
+        h3 {
+          font-size: 20px;
+          text-transform: uppercase;
+        }
         input, select {
           display: block;
           width: 100%;
-          margin: 5px 0;
+          margin: 8px 0;
           background: none;
           border: #ffffff solid 2px;
+          padding: 5px;
+          border-radius: 0;
+          font-size: 3.5vw;
+          text-transform: uppercase;
+          -webkit-appearance: none;
+          -moz-appearance: none;
+          appearance: none;
           &:focus {
             outline: $selected_purple 2px solid;
           }
+          &::-webkit-input-placeholder {
+            text-transform: uppercase;
+            color: #ffffff;
+          }
+          &:-moz-placeholder {
+            text-transform: uppercase;
+            color: #ffffff;
+          }
+          &:-ms-input-placeholder {
+            text-transform: uppercase;
+            color: #ffffff;
+          }
+        }
+        select {
+          background: url("images/footer/dropdownArrow.png") 97% 50% no-repeat;
+
+        }
+        p{
+          min-height: 34px;
+          font-size: 14px;
+          line-height: 15px;
+          margin: 0;
+        }
+        button {
+          background: $main_purple;
+          border: none;
+          padding: 8px 25px;
+
+
+
         }
         &.newsletter-form {
           float: right;
           text-align: right;
         }
+      }
+      .address {
+        @include span(4 of 12);
+        display: block;
+
+        h3{
+          font-size: 18px;
+        }
+        p{
+          font-size: 12px;
+          min-height: 100px;
+        }
+        a{
+          color: #ffffff;
+          font-size: 2.5vw;
+          max-font-size: 15px;
+
+          &:hover {
+          }
+          &.tel {
+            &:before{
+              content:"T:";
+              color: #007499;
+            }
+
+          }
+          &.email {
+            &:before {
+              content:"E:";
+              color: #007499;
+
+            }
+          }
+        }
+
       }
     }
 
@@ -136,21 +226,81 @@
   #nav-bar {
     #logo {
     }
+    #navigation-menu {
+      ul {
+        li {
+          a {
+
+          }
+        }
+      }
+    }
+  }
+  footer {
+    .contactUs {
+      .footer-form {
+        input, select {
+          font-size: 2vw;
+
+        }
+
+      }
+    }
   }
 
 
 }
 @include breakpoint(medium){
   #nav-bar {
-    #logo {
-      @include span(3 of 12);
+    .container {
+
+      #logo {
+        @include span(3 of 12);
+      }
+      #navigation-menu {
+
+        ul {
+          li {
+            font-size: 15px;
+            text-align: center;
+            width: 14.28%;
+            float: left;
+            a {
+
+            }
+          }
+        }
+      }
     }
   }
+
 }
   @include breakpoint(large){
     #nav-bar {
-      #logo {
-        @include span(2 of 12);
+      .container {
+        #logo {
+          @include span(2 of 12);
+        }
+        .headerButtons {
+          display: none;
+        }
+        #navigation-menu {
+          clear: none;
+          display: block;
+          ul {
+            width: auto;
+            li {
+              width: 90px;
+              a {
+
+              }
+            }
+          }
+        }
+
+
+
       }
+
     }
   }

@@ -41,7 +41,6 @@
 
 		</div>
 
-		<div class="clearfix"></div>
 		<?php
 
 		$menu = array(
