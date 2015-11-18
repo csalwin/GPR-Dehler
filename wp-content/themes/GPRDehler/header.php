@@ -28,6 +28,8 @@
 <body <?php body_class(); ?>>
 
 <div id="nav-bar">
+<!--	used for the half background image  -->
+	<div id="backgroundImage"></div>
 	<div class="container">
 		<?php if ( get_theme_mod( 'logo' ) ) : ?>
 			<img id="logo" src="<?php echo esc_url( get_theme_mod( 'logo' ) ); ?>" title="Webpage Logo" alt="Logo image" />
@@ -51,6 +53,15 @@
 		);
 
 		wp_nav_menu( $menu ); ?>
+
+
+		<div class="socialIcons">
+			<ul>
+				<li id="linkedIn"></li>
+				<li id="facebook"></li>
+				<li id="twitter"></li>
+			</ul>
+		</div>
 
 
 		<?php get_search_form( ); ?>

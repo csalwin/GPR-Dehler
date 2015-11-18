@@ -21,7 +21,10 @@ get_header(); ?>
 		<div class="slider">
 			<div class=diamonds><span>EXPERIENCE</span></div>
 
-			<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/slider/silde-1.jpg"/>
+			<?php putRevSlider('home-slider', 'homepage'); ?>
+
+
+<!--			<img src="--><?php //echo esc_url( get_template_directory_uri() ); ?><!--/images/slider/silde-1.jpg"/>-->
 		</div>
 		<div class="container box">
 			<h2>We are an <span>innovative international</span> management consulting company</h2>

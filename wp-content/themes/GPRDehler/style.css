@@ -69,11 +69,16 @@ body {
 
 #nav-bar {
   height: auto;
-  background: linear-gradient(#300f42, #230931);
   z-index: 5;
   position: relative; }
+  #nav-bar #backgroundImage {
+    background: linear-gradient(#300f42, #230931) no-repeat;
+    width: 50%;
+    position: absolute;
+    left: 0;
+    height: 100%; }
   #nav-bar .container {
-    background: linear-gradient(#300f42, #230931);
+    background: linear-gradient(#300f42, #230931) no-repeat;
     padding: 10px 0; }
     #nav-bar .container #logo {
       width: 41.66667%;
@@ -118,18 +123,19 @@ body {
           text-align: center; }
           #nav-bar .container #navigation-menu ul li a {
             color: #fff; }
-    #nav-bar .container form {
+    #nav-bar .container form#searchform {
       width: 50%;
       float: left;
       padding-left: 0.83333%;
       padding-right: 0.83333%;
+      clear: both;
       position: relative;
       color: #ffffff;
       overflow: hidden;
       margin: 7px auto;
       display: none;
       float: none; }
-      #nav-bar .container form input {
+      #nav-bar .container form#searchform input {
         width: 83.33333%;
         float: left;
         padding-left: 0.83333%;
@@ -137,20 +143,37 @@ body {
         background: none;
         border: none;
         font-size: 16px; }
-        #nav-bar .container form input:focus {
+        #nav-bar .container form#searchform input:focus {
           outline: rgba(255, 255, 255, 0.6) 1px solid; }
-        #nav-bar .container form input::-webkit-input-placeholder {
+        #nav-bar .container form#searchform input::-webkit-input-placeholder {
           color: #ffffff; }
-        #nav-bar .container form input::-moz-placeholder {
+        #nav-bar .container form#searchform input::-moz-placeholder {
           color: #ffffff; }
-        #nav-bar .container form input:-moz-placeholder {
+        #nav-bar .container form#searchform input:-moz-placeholder {
           /* Older versions of Firefox */
           color: #ffffff; }
-        #nav-bar .container form input:-ms-input-placeholder {
+        #nav-bar .container form#searchform input:-ms-input-placeholder {
           color: #ffffff; }
-      #nav-bar .container form i {
-        position: absolute;
+      #nav-bar .container form#searchform i {
+        position: relative;
         top: 3px; }
+    #nav-bar .container .socialIcons {
+      display: none; }
+      #nav-bar .container .socialIcons ul li {
+        width: 35px;
+        float: left;
+        position: relative; }
+        #nav-bar .container .socialIcons ul li#linkedIn:before {
+          content: url("images/linkedIn.png"); }
+        #nav-bar .container .socialIcons ul li#facebook:before {
+          content: url("images/facebook.png"); }
+        #nav-bar .container .socialIcons ul li#twitter:before {
+          content: url("images/twitter.png"); }
+        #nav-bar .container .socialIcons ul li:hover {
+          -webkit-filter: invert(75%);
+          -moz-filter: invert(75%);
+          -ms-filter: invert(75%);
+          filter: invert(75%); }
 
 footer {
   position: relative;
@@ -261,12 +284,48 @@ footer {
   #nav-bar .container .headerButtons {
     display: none; }
   #nav-bar .container #navigation-menu {
+    display: block; }
+    #nav-bar .container #navigation-menu ul {
+      width: auto; }
+      #nav-bar .container #navigation-menu ul li {
+        padding: 0 10px;
+        width: auto; }
+  #nav-bar .container form#searchform {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 17px 0 0 45px;
+    width: 150px;
+    height: 100%;
+    margin: 0;
+    background: #190624;
+    -webkit-clip-path: polygon(22% 0, 100% 0, 100% 100%, 0% 100%);
+    clip-path: polygon(22% 0, 100% 0, 100% 100%, 0% 100%); }
+    #nav-bar .container form#searchform input {
+      width: 66.66667%;
+      float: left;
+      padding-left: 0.83333%;
+      padding-right: 0.83333%;
+      position: relative;
+      right: 0; }
+  #nav-bar .container .socialIcons {
+    display: block;
+    position: absolute;
+    right: 130px;
+    z-index: 1;
+    top: 3px; } }
+@media (min-width: 1200px) {
+  #nav-bar .container #navigation-menu {
     clear: none;
     display: block; }
     #nav-bar .container #navigation-menu ul {
       width: auto; }
       #nav-bar .container #navigation-menu ul li {
-        width: 90px; } }
+        padding: 0 10px;
+        width: auto; }
+  #nav-bar .container .socialIcons {
+    top: 11px; } }
 .content {
   position: relative; }
   .content .slider {

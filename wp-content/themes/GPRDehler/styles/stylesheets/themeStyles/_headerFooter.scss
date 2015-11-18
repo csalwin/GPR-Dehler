@@ -1,12 +1,21 @@
 
   #nav-bar {
     height: auto;
-    background: linear-gradient($main_purple, #230931);
 
     z-index: 5;
     position: relative;
+
+    #backgroundImage{
+      background: linear-gradient($main_purple, #230931) no-repeat;
+      width: 50%;
+      position: absolute;
+      left: 0;
+      height: 100%;
+
+
+    }
     .container {
-      background: linear-gradient($main_purple, #230931);
+      background: linear-gradient($main_purple, #230931) no-repeat;
       padding: 10px 0;
 
       #logo{
@@ -59,8 +68,9 @@
 
         }
       }
-      form {
+      form#searchform {
         @include span(6 of 12);
+        clear: both;
         position: relative;
         color: #ffffff;
 
@@ -91,8 +101,45 @@
 
         }
         i {
-          position: absolute;
+          position: relative;
           top: 3px;
+        }
+      }
+
+      .socialIcons {
+        display: none;
+
+        ul {
+          li {
+            width: 35px;
+            float: left;
+            position: relative;
+            &#linkedIn {
+              &:before{
+                content: url('images/linkedIn.png');
+              }
+
+            }
+            &#facebook {
+              &:before{
+                content: url('images/facebook.png');
+              }
+
+            }
+            &#twitter {
+              &:before{
+                content: url('images/twitter.png');
+              }
+
+            }
+            &:hover {
+              -webkit-filter: invert(75%);
+              -moz-filter: invert(75%);
+              -ms-filter: invert(75%);
+              filter: invert(75%);
+            }
+
+          }
         }
       }
 
@@ -247,11 +294,11 @@
       }
     }
   }
-
-
 }
 @include breakpoint(medium){
   #nav-bar {
+
+
     .container {
 
       #logo {
@@ -271,6 +318,7 @@
           }
         }
       }
+
     }
   }
 
@@ -285,15 +333,89 @@
           display: none;
         }
         #navigation-menu {
+          display: block;
+          ul {
+            width: auto;
+            li {
+              padding: 0 10px;
+              width: auto;
+              a {
+
+              }
+            }
+          }
+        }
+        form#searchform {
+          display: block;
+          position: absolute;
+          top: 0;
+          right: 0;
+          padding: 17px 0 0 45px;
+          width: 150px;
+          height: 100%;
+          margin: 0;
+          background: #190624;
+          -webkit-clip-path: polygon(22% 0, 100% 0, 100% 100%, 0% 100%);
+          clip-path: polygon(22% 0, 100% 0, 100% 100%, 0% 100%);
+          input{
+            @include span(8 of 12);
+            position: relative;
+            right: 0;
+          }
+
+        }
+        .socialIcons {
+          display: block;
+          position: absolute;
+          right: 130px;
+          z-index: 1;
+          top: 3px;
+
+
+          ul {
+
+            li {
+
+
+            }
+          }
+        }
+
+
+
+
+      }
+
+    }
+  }
+  @include breakpoint(wide){
+    #nav-bar {
+      .container {
+        #logo {
+        }
+        .headerButtons {
+        }
+        #navigation-menu {
           clear: none;
           display: block;
           ul {
             width: auto;
             li {
-              width: 90px;
+              padding: 0 10px;
+              width: auto;
               a {
 
               }
+            }
+          }
+        }
+        .socialIcons {
+          top: 11px;
+
+          ul {
+
+            li {
+
             }
           }
         }
