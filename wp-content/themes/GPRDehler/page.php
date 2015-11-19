@@ -27,7 +27,7 @@ get_header(); ?>
 
 <!--			<img src="--><?php //echo esc_url( get_template_directory_uri() ); ?><!--/images/slider/silde-1.jpg"/>-->
 		</div>
-		<div class="container box">
+		<div class="container box weAre">
 			<h2>We are an <span>innovative international</span> management consulting company</h2>
 
 			<p> We are passionate about delivering sustainable and measurable client success, and know that to improve the way a business

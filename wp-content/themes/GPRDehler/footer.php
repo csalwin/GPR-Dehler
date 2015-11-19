@@ -11,7 +11,7 @@
 ?>
 
 <footer>
-    <div class=diamonds></div>
+    <div class=diamonds><div class="diamondFill"></div></div>
     <div class="contactUs">
         <div class="footer-form contact-form">
             <h3>Contact us</h3>

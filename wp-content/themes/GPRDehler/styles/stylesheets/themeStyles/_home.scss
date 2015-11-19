@@ -2,35 +2,44 @@
 
 .content {
   position: relative;
+  @include breakpoint(medium){
+    top: -85px;
+  }
   .slider {
     position: relative;
     overflow: hidden;
     top: 0;
 
+    @include breakpoint(large){
+      overflow: visible;
+    }
+
     .diamonds {
-      right: 65%;
-      top: -62%;
+      right: 84%;
+      top: -58%;
+
 
 
     }
     .diamondText {
-      top: 36%;
-      left: 4%;
-      font-size: 7.2vw;
+      top: 43%;
+      left: 5.3%;
+      font-size: 4.8vw;
       position: absolute;
       z-index: 3;
-    }
-    img {
-      position: relative;
-      width: 100%;
-      height: auto;
+      @include breakpoint(wide){
+        top: 253px;
+        left: 5.3%;
+        font-size: 62px;
+      }
     }
   }
   .box {
-    background-color: #ffffff;
+    background-color: rgba(255,255,255, 0.5);
     text-align: center;
     overflow: hidden;
     display: block;
+    z-index: 1;
     h2 {
       color: $main_purple;
       font-size: 4vw;
@@ -57,6 +66,32 @@
         border-bottom: #ffffff 2px solid;
         &:last-of-type {
           border-bottom: none;
+        }
+      }
+    }
+    &.weAre {
+      p{
+        margin: 0 auto 22px;
+        font-size: 17px;
+      }
+      @include breakpoint(small){
+        width: 85%;
+      }
+      @include breakpoint(medium){
+        h2 {
+          font-size: 24px;
+          width: 677px;
+          margin: 33px auto 16px;
+        }
+      }
+      @include breakpoint(wide){
+        h2{
+          font-size: 24px;
+          width: 45%;
+
+        }
+        p{
+          height: 96px;
         }
       }
     }
