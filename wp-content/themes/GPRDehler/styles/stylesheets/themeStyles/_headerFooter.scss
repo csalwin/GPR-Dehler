@@ -22,6 +22,13 @@
         @include span(5 of 12);
         max-width: 197px;
         margin: 0 5px;
+        @include breakpoint(medium){
+          @include span(3 of 12);
+        }
+        @include breakpoint(large){
+          @include span(2 of 12);
+
+        }
 
       }
 
@@ -30,6 +37,10 @@
         margin: 5px 0 ;
         float: right;
         display: block;
+        @include breakpoint(large){
+          display: none;
+
+        }
 
         .glyphicon-menu-hamburger, .glyphicon-search{
           @include span(6 of 12);
@@ -51,6 +62,7 @@
         clear: both;
         margin-top: 10px;
         display: none;
+
         ul{
           overflow: hidden;
           position: relative;
@@ -61,8 +73,45 @@
             font-size: 19px;
             padding: 5px 0;
             text-align: center;
+            @include breakpoint(medium){
+              font-size: 15px;
+              text-align: center;
+              width: 14.28%;
+              float: left;
+            }
             a{
               color: #fff;
+            }
+          }
+
+        }
+
+        @include breakpoint(large){
+          display: block;
+          ul {
+            width: auto;
+            li {
+              padding: 0 10px;
+              width: auto;
+              a {
+
+              }
+            }
+          }
+
+        }
+
+        @include breakpoint(wide){
+          clear: none;
+          display: block;
+          ul {
+            width: auto;
+            li {
+              padding: 0 10px;
+              width: auto;
+              a {
+
+              }
             }
           }
 
@@ -78,11 +127,34 @@
         margin: 7px auto;
         display: none;
         float: none;
+
+
+        @include breakpoint(large){
+          display: block;
+          position: absolute;
+          top: 0;
+          right: 0;
+          padding: 17px 0 0 45px;
+          width: 150px;
+          height: 100%;
+          margin: 0;
+          background: #190624;
+          -webkit-clip-path: polygon(22% 0, 100% 0, 100% 100%, 0% 100%);
+          clip-path: polygon(22% 0, 100% 0, 100% 100%, 0% 100%);
+        }
         input {
           @include span(10 of 12);
           background: none;
           border: none;
           font-size: 16px;
+
+
+          @include breakpoint(large){
+            @include span(8 of 12);
+            position: relative;
+            right: 0;
+          }
+
           &:focus {
             outline: rgba(255,255,255,0.6) 1px solid;
           }
@@ -108,6 +180,17 @@
 
       .socialIcons {
         display: none;
+        position: absolute;
+        right: 130px;
+        z-index: 1;
+        top: 3px;
+
+        @include breakpoint(large){
+          display: block;
+        }
+        @include breakpoint(wide){
+          top: 11px;
+        }
 
         ul {
           li {
@@ -142,14 +225,10 @@
           }
         }
       }
-
-
-
-
     }
-
-
   }
+
+
   footer {
     position: relative;
     display: block;
@@ -190,6 +269,10 @@
           -webkit-appearance: none;
           -moz-appearance: none;
           appearance: none;
+          @include breakpoint(small){
+            font-size: 2vw;
+          }
+
           &:focus {
             outline: $selected_purple 2px solid;
           }
@@ -267,162 +350,4 @@
     }
 
 
-  }
-
-@include breakpoint(small){
-  #nav-bar {
-    #logo {
-    }
-    #navigation-menu {
-      ul {
-        li {
-          a {
-
-          }
-        }
-      }
-    }
-  }
-  footer {
-    .contactUs {
-      .footer-form {
-        input, select {
-          font-size: 2vw;
-
-        }
-
-      }
-    }
-  }
-}
-@include breakpoint(medium){
-  #nav-bar {
-
-
-    .container {
-
-      #logo {
-        @include span(3 of 12);
-      }
-      #navigation-menu {
-
-        ul {
-          li {
-            font-size: 15px;
-            text-align: center;
-            width: 14.28%;
-            float: left;
-            a {
-
-            }
-          }
-        }
-      }
-
-    }
-  }
-
-}
-  @include breakpoint(large){
-    #nav-bar {
-      .container {
-        #logo {
-          @include span(2 of 12);
-        }
-        .headerButtons {
-          display: none;
-        }
-        #navigation-menu {
-          display: block;
-          ul {
-            width: auto;
-            li {
-              padding: 0 10px;
-              width: auto;
-              a {
-
-              }
-            }
-          }
-        }
-        form#searchform {
-          display: block;
-          position: absolute;
-          top: 0;
-          right: 0;
-          padding: 17px 0 0 45px;
-          width: 150px;
-          height: 100%;
-          margin: 0;
-          background: #190624;
-          -webkit-clip-path: polygon(22% 0, 100% 0, 100% 100%, 0% 100%);
-          clip-path: polygon(22% 0, 100% 0, 100% 100%, 0% 100%);
-          input{
-            @include span(8 of 12);
-            position: relative;
-            right: 0;
-          }
-
-        }
-        .socialIcons {
-          display: block;
-          position: absolute;
-          right: 130px;
-          z-index: 1;
-          top: 3px;
-
-
-          ul {
-
-            li {
-
-
-            }
-          }
-        }
-
-
-
-
-      }
-
-    }
-  }
-  @include breakpoint(wide){
-    #nav-bar {
-      .container {
-        #logo {
-        }
-        .headerButtons {
-        }
-        #navigation-menu {
-          clear: none;
-          display: block;
-          ul {
-            width: auto;
-            li {
-              padding: 0 10px;
-              width: auto;
-              a {
-
-              }
-            }
-          }
-        }
-        .socialIcons {
-          top: 11px;
-
-          ul {
-
-            li {
-
-            }
-          }
-        }
-
-
-
-      }
-
-    }
   }

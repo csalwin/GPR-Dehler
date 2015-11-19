@@ -39,7 +39,6 @@
 
         </div>
 
-        <div class="clearfix"></div>
         <div class="address">
             <h3>Europe</h3>
             <p>GPR Dehler Limited<br />
