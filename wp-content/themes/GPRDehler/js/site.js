@@ -10,7 +10,7 @@ $( document ).ready(function() {
         $('#navigation-menu').slideToggle();
 
     });
-    $('.glyphicon-search').click(function () {
+    $('.headerButtons .glyphicon-search').click(function () {
         $('#navigation-menu').slideUp();
         $('#nav-bar form').slideToggle();
 

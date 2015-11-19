@@ -19,7 +19,8 @@ get_header(); ?>
 
 
 		<div class="slider">
-			<div class=diamonds><span>EXPERIENCE</span></div>
+			<div class=diamonds><div class="diamondFill"></div></div>
+			<span class="diamondText">EXPERIENCE</span>
 
 			<?php putRevSlider('home-slider', 'homepage'); ?>
 

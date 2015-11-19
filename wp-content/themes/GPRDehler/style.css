@@ -45,27 +45,35 @@ body {
           clear: both; } }
 
 .diamonds {
+  width: 100%;
+  position: absolute;
+  max-width: 1236px;
+  max-height: 1236px; }
+  .diamonds:before {
+    content: "";
+    display: block;
+    padding-top: 100%; }
+
+.diamondFill {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   -ms-transform: rotate(45deg);
   /* IE 9 */
   -webkit-transform: rotate(45deg);
   /* Chrome, Safari, Opera */
   transform: rotate(45deg);
-  min-width: 800px;
-  min-height: 800px;
-  position: absolute;
   display: block;
   background: rgba(20, 5, 29, 0.7);
   z-index: 3; }
-  .diamonds span {
-    position: relative;
-    float: right;
-    color: #ffffff;
-    display: block;
-    -ms-transform: rotate(-45deg);
-    /* IE 9 */
-    -webkit-transform: rotate(-45deg);
-    /* Chrome, Safari, Opera */
-    transform: rotate(-45deg); }
+
+.diamondText {
+  position: relative;
+  float: right;
+  color: #ffffff;
+  display: block; }
 
 #nav-bar {
   height: auto;
@@ -340,16 +348,14 @@ footer {
     overflow: hidden;
     top: 0; }
     .content .slider .diamonds {
-      width: 100%;
-      height: 100%;
-      right: 85%;
-      top: -345px;
-      position: absolute; }
-      .content .slider .diamonds span {
-        top: 8%;
-        right: 0;
-        font-size: 30px;
-        position: fixed; }
+      right: 65%;
+      top: -62%; }
+    .content .slider .diamondText {
+      top: 36%;
+      left: 4%;
+      font-size: 7.2vw;
+      position: absolute;
+      z-index: 3; }
     .content .slider img {
       position: relative;
       width: 100%;

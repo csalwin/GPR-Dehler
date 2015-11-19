@@ -65,27 +65,37 @@ body {
     }
   }
 }
-
-.diamonds {
+.diamonds{
+  width: 100%;
+  position: absolute;
+  max-width: 1236px;
+  max-height: 1236px;
+  &:before{
+    content: "";
+    display: block;
+    padding-top: 100%; //To set ratio of 1:1
+  }
+}
+.diamondFill {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   -ms-transform: rotate(45deg); /* IE 9 */
   -webkit-transform: rotate(45deg); /* Chrome, Safari, Opera */
   transform: rotate(45deg);
-  min-width: 800px;
-  min-height: 800px;
-  position: absolute;
   display: block;
   background: rgba(20, 5, 29, 0.7);
   z-index: 3;
-  span {
-    position: relative;
-    float: right;
-    color: #ffffff;
-    display: block;
-    -ms-transform: rotate(-45deg); /* IE 9 */
-    -webkit-transform: rotate(-45deg); /* Chrome, Safari, Opera */
-    transform: rotate(-45deg);
 
-  }
+}
+.diamondText {
+  position: relative;
+  float: right;
+  color: #ffffff;
+  display: block;
+
 }
 
 
