@@ -36,7 +36,7 @@ get_header(); ?>
 				beyond what other businesses are doing and establish you at the forefront of your industry.</p>
 
 		</div>
-		<div class="box whoAreWe">
+		<div class="container box whoAreWe">
 
 			<ul>
 				<li>Who we are

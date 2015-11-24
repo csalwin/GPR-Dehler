@@ -97,6 +97,7 @@
     }
 
     &.whoAreWe {
+      padding: 0;
       ul {
         li {
           padding: 15px 10px;
@@ -144,6 +145,11 @@
                 background: none;
               }
             }
+          }
+        }
+        @include breakpoint (medium){
+          li {
+            @include span(3 of 12);
           }
         }
       }
@@ -202,6 +208,11 @@
             margin: 0 auto;
           }
 
+        }
+        @include breakpoint (medium){
+          li {
+            @include span(4 of 12);
+          }
         }
       }
     }
