@@ -270,6 +270,11 @@ footer {
     display: block;
     z-index: 4;
     color: #ffffff; }
+    footer .contactUs .clearfix {
+      display: block; }
+      @media (min-width: 960px) {
+        footer .contactUs .clearfix {
+          display: none; } }
     footer .contactUs .footer-form {
       width: 50%;
       float: left;
@@ -295,6 +300,9 @@ footer {
         @media (min-width: 480px) {
           footer .contactUs .footer-form input, footer .contactUs .footer-form select {
             font-size: 2vw; } }
+        @media (min-width: 960px) {
+          footer .contactUs .footer-form input, footer .contactUs .footer-form select {
+            font-size: 14px; } }
         footer .contactUs .footer-form input:focus, footer .contactUs .footer-form select:focus {
           outline: #8b003d 2px solid; }
         footer .contactUs .footer-form input::-webkit-input-placeholder, footer .contactUs .footer-form select::-webkit-input-placeholder {
@@ -322,6 +330,9 @@ footer {
         text-align: right; }
         footer .contactUs .footer-form.newsletter-form:after {
           clear: both; }
+      @media (min-width: 960px) {
+        footer .contactUs .footer-form {
+          width: 25%; } }
     footer .contactUs .address {
       width: 33.33333%;
       float: left;
@@ -335,14 +346,18 @@ footer {
         min-height: 100px; }
       footer .contactUs .address a {
         color: #ffffff;
-        font-size: 2.5vw;
-        max-font-size: 15px; }
+        font-size: 2.5vw; }
         footer .contactUs .address a.tel:before {
           content: "T:";
           color: #007499; }
         footer .contactUs .address a.email:before {
           content: "E:";
           color: #007499; }
+      @media (min-width: 960px) {
+        footer .contactUs .address {
+          width: 16.66667%; }
+          footer .contactUs .address a {
+            font-size: 14px; } }
 
 .content {
   position: relative; }
@@ -417,7 +432,8 @@ footer {
       .content .box.weAre p {
         height: 96px; } }
     .content .box.whoAreWe {
-      padding: 0; }
+      padding: 0;
+      margin-bottom: 30px; }
       .content .box.whoAreWe ul li {
         padding: 15px 10px; }
         .content .box.whoAreWe ul li .imgWrap {
@@ -451,14 +467,71 @@ footer {
             top: -75px;
             -webkit-filter: grayscale(1);
             filter: grayscale(1); }
+        .content .box.whoAreWe ul li .desktopWho {
+          display: none;
+          float: left;
+          position: absolute;
+          top: 45px;
+          left: 10px;
+          bottom: 0;
+          right: 10px; }
+          .content .box.whoAreWe ul li .desktopWho svg {
+            width: 100%;
+            height: 100%;
+            display: block; }
+          .content .box.whoAreWe ul li .desktopWho .path {
+            -webkit-transition: all .4s;
+            transition: all .4s;
+            -webkit-transition-delay: 0s;
+            transition-delay: 0s; }
+          .content .box.whoAreWe ul li .desktopWho:hover .path {
+            display: block; }
+          .content .box.whoAreWe ul li .desktopWho .top {
+            -webkit-transform-origin: 100% 50%;
+            transform-origin: 100% 50%; }
+          .content .box.whoAreWe ul li .desktopWho .right {
+            -webkit-transform-origin: 50% 100%;
+            transform-origin: 50% 100%; }
+          .content .box.whoAreWe ul li .desktopWho .left {
+            -webkit-transform-origin: 50% 0%;
+            transform-origin: 50% 0%; }
         .content .box.whoAreWe ul li:hover .imgWrap:before {
           background: none; }
+        .content .box.whoAreWe ul li:hover .desktopWho .top {
+          -webkit-transform: scaleX(0);
+          transform: scaleX(0); }
+        .content .box.whoAreWe ul li:hover .desktopWho .right {
+          -webkit-transform: scaleY(0);
+          transform: scaleY(0); }
+        .content .box.whoAreWe ul li:hover .desktopWho .bottom {
+          -webkit-transform: scaleX(0);
+          transform: scaleX(0); }
+        .content .box.whoAreWe ul li:hover .desktopWho .left {
+          -webkit-transform: scaleY(0);
+          transform: scaleY(0); }
       @media (min-width: 720px) {
         .content .box.whoAreWe ul li {
           width: 25%;
           float: left;
           padding-left: 0.83333%;
-          padding-right: 0.83333%; } }
+          padding-right: 0.83333%;
+          text-align: center;
+          font-size: 20px;
+          background: none;
+          color: #300f42;
+          font-weight: bold;
+          padding-bottom: 45px; }
+          .content .box.whoAreWe ul li .imgWrap {
+            -webkit-clip-path: none;
+            clip-path: none;
+            position: relative;
+            width: 80%;
+            margin: 0 auto;
+            top: 25px; }
+            .content .box.whoAreWe ul li .imgWrap img {
+              top: 0 !important; }
+          .content .box.whoAreWe ul li .desktopWho {
+            display: block; } }
     .content .box.testimonial {
       position: relative;
       background: url("images/home/quote-bg.png") no-repeat;
@@ -481,6 +554,14 @@ footer {
           display: block;
           top: 65px;
           right: 20px; }
+      @media (min-width: 720px) {
+        .content .box.testimonial {
+          padding: 85px 20px; }
+          .content .box.testimonial p {
+            width: 60%;
+            margin: 0 auto;
+            font-size: 23px;
+            padding-bottom: 30px; } }
     .content .box.ourProcess {
       background: url("images/home/process-bg.png"); }
       .content .box.ourProcess p {
@@ -501,11 +582,35 @@ footer {
             display: block;
             position: static;
             margin: 0 auto; }
-        @media (min-width: 720px) {
+      @media (min-width: 720px) {
+        .content .box.ourProcess {
+          padding-bottom: 50px; }
           .content .box.ourProcess ul li {
             width: 33.33333%;
             float: left;
             padding-left: 0.83333%;
             padding-right: 0.83333%; } }
+      @media (min-width: 960px) {
+        .content .box.ourProcess h2 {
+          font-size: 25px; }
+        .content .box.ourProcess ul li {
+          width: 16.66667%;
+          float: left;
+          padding-left: 0.83333%;
+          padding-right: 0.83333%; } }
+    .content .box.clients ul li {
+      background: none;
+      color: rgba(13, 13, 13, 0.5);
+      text-align: center;
+      width: 50%;
+      float: left;
+      padding-left: 0.83333%;
+      padding-right: 0.83333%; }
+      @media (min-width: 480px) {
+        .content .box.clients ul li {
+          width: 33.33333%; } }
+      @media (min-width: 720px) {
+        .content .box.clients ul li {
+          width: 14.28571%; } }
 
 /*# sourceMappingURL=style.css.map */

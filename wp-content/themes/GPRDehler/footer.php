@@ -12,7 +12,7 @@
 
 <footer>
     <div class=diamonds><div class="diamondFill"></div></div>
-    <div class="contactUs">
+    <div class="container contactUs">
         <div class="footer-form contact-form">
             <h3>Contact us</h3>
             <form>
@@ -38,6 +38,8 @@
 
 
         </div>
+
+        <div class="clearfix"></div>
 
         <div class="address">
             <h3>Europe</h3>

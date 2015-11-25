@@ -98,6 +98,7 @@
 
     &.whoAreWe {
       padding: 0;
+      margin-bottom: 30px ;
       ul {
         li {
           padding: 15px 10px;
@@ -139,17 +140,104 @@
             }
 
           }
+          .desktopWho{
+
+              display: none;
+              float: left;
+              position: absolute;
+              top: 45px;
+              left: 10px;
+              bottom: 0;
+              right: 10px;
+
+            svg{
+              width: 100%;
+              height: 100%;
+              display: block;
+            }
+
+
+            .path {
+
+
+              -webkit-transition: all .4s;
+              transition: all .4s;
+              -webkit-transition-delay: 0s;
+              transition-delay: 0s;
+
+            }
+
+            &:hover .path {
+              display: block;
+            }
+
+            .top {
+              -webkit-transform-origin: 100% 50%;
+              transform-origin: 100% 50%;
+            }
+            .right {
+              -webkit-transform-origin: 50% 100%;
+              transform-origin: 50% 100%;
+            }
+            .left {
+              -webkit-transform-origin: 50% 0%;
+              transform-origin: 50% 0%;
+            }
+
+          }
           &:hover {
             .imgWrap {
               &:before {
                 background: none;
               }
             }
+            .desktopWho .top {
+              -webkit-transform: scaleX(0);
+              transform: scaleX(0);
+
+            }
+            .desktopWho .right {
+
+              -webkit-transform: scaleY(0);
+              transform: scaleY(0);
+
+            }
+            .desktopWho .bottom {
+              -webkit-transform: scaleX(0);
+              transform: scaleX(0);
+            }
+            .desktopWho .left {
+              -webkit-transform: scaleY(0);
+              transform: scaleY(0);
+            }
           }
         }
         @include breakpoint (medium){
           li {
             @include span(3 of 12);
+            text-align: center;
+            font-size: 20px;
+            background: none;
+            color: $main_purple;
+            font-weight: bold;
+            padding-bottom: 45px;
+            .imgWrap{
+              -webkit-clip-path: none;
+              clip-path: none;
+              position: relative;
+              width: 80%;
+              margin: 0 auto;
+              top: 25px;
+              img {
+                top: 0 !important;
+
+              }
+
+            }
+            .desktopWho{
+              display: block;
+            }
+
           }
         }
       }
@@ -182,6 +270,15 @@
 
         }
       }
+      @include breakpoint (medium){
+        padding: 85px 20px;
+        p{
+          width: 60%;
+          margin: 0 auto;
+          font-size: 23px;
+          padding-bottom: 30px;
+        }
+      }
     }
     &.ourProcess {
       background: url("images/home/process-bg.png");
@@ -208,18 +305,48 @@
             margin: 0 auto;
           }
 
+
         }
-        @include breakpoint (medium){
+      }
+      @include breakpoint (medium){
+        padding-bottom: 50px;
+        ul {
           li {
             @include span(4 of 12);
           }
         }
       }
+      @include breakpoint (large) {
+        h2 {
+          font-size: 25px;
+        }
+        ul {
+          li {
+            @include span(2 of 12);
+          }
+
+        }
+
+      }
     }
 
 
 
-
-
+    &.clients {
+      ul {
+        li {
+          background: none;
+          color: rgba(13,13,13,0.5);
+          text-align: center;
+          @include span(6 of 12);
+          @include breakpoint (small){
+            width: span(4 of 12);
+          }
+          @include breakpoint (medium) {
+            width: span(1 of 7);
+          }
+        }
+      }
+    }
   }
 }
