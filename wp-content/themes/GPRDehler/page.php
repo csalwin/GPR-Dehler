@@ -28,14 +28,12 @@ get_header(); ?>
 				 data-cycle-fx=scrollHorz
 				 data-cycle-timeout=2000
 				 data-cycle-caption-plugin=caption2
-				 data-cycle-overlay-fx-out="slideUp"
-				 data-cycle-overlay-fx-in="slideUp"
 				>
 				<div class="cycle-overlay"></div>
 
-				<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/slider/silde-1.jpg" data-cycle-desc="Resilience">
-				<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/slider/silde-1.jpg" data-cycle-desc="Resilience">
-				<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/slider/silde-1.jpg" data-cycle-desc="Resilience">
+				<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/slider/slide-1.jpg" data-cycle-desc="Resilience">
+				<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/slider/slide-2.png" data-cycle-desc="Enjoy">
+				<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/slider/slide-3.png" data-cycle-desc="Test">
 
 			</div>
 

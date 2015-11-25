@@ -269,7 +269,8 @@ footer {
     position: relative;
     display: block;
     z-index: 4;
-    color: #ffffff; }
+    color: #ffffff;
+    margin-bottom: 50px; }
     footer .contactUs .clearfix {
       display: block; }
       @media (min-width: 960px) {
@@ -370,9 +371,22 @@ footer {
     top: 0; }
     .content .slider .cycle-slideshow {
       max-height: 500px;
-      overflow: hidden; }
+      overflow: hidden;
+      z-index: 0; }
       .content .slider .cycle-slideshow img {
         width: 100%; }
+      .content .slider .cycle-slideshow .cycle-overlay {
+        position: absolute;
+        top: 60%;
+        font-size: 4.8vw;
+        z-index: 100;
+        left: 40%;
+        text-transform: uppercase;
+        color: #300f42; }
+        @media (min-width: 1200px) {
+          .content .slider .cycle-slideshow .cycle-overlay {
+            top: 282px;
+            font-size: 62px; } }
     @media (min-width: 960px) {
       .content .slider {
         overflow: visible; } }
@@ -380,7 +394,7 @@ footer {
       right: 84%;
       top: -58%; }
     .content .slider .diamondText {
-      top: 56%;
+      top: 60%;
       left: 5.3%;
       font-size: 4.8vw;
       position: absolute;
@@ -421,7 +435,8 @@ footer {
           border-bottom: none; }
     .content .box.weAre p {
       margin: 0 auto 22px;
-      font-size: 17px; }
+      font-size: 17px;
+      max-width: 980px; }
     @media (min-width: 480px) {
       .content .box.weAre {
         width: 85%; } }
