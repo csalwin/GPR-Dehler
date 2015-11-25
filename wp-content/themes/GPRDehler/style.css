@@ -368,6 +368,11 @@ footer {
     position: relative;
     overflow: hidden;
     top: 0; }
+    .content .slider .cycle-slideshow {
+      max-height: 500px;
+      overflow: hidden; }
+      .content .slider .cycle-slideshow img {
+        width: 100%; }
     @media (min-width: 960px) {
       .content .slider {
         overflow: visible; } }
@@ -375,14 +380,14 @@ footer {
       right: 84%;
       top: -58%; }
     .content .slider .diamondText {
-      top: 43%;
+      top: 56%;
       left: 5.3%;
       font-size: 4.8vw;
       position: absolute;
       z-index: 3; }
       @media (min-width: 1200px) {
         .content .slider .diamondText {
-          top: 253px;
+          top: 282px;
           left: 5.3%;
           font-size: 62px; } }
   .content .box {

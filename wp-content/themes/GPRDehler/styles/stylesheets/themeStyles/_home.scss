@@ -9,6 +9,14 @@
     position: relative;
     overflow: hidden;
     top: 0;
+    .cycle-slideshow {
+      max-height: 500px;
+      overflow: hidden;
+
+      img {
+        width: 100%;
+      }
+    }
 
     @include breakpoint(large){
       overflow: visible;
@@ -22,17 +30,18 @@
 
     }
     .diamondText {
-      top: 43%;
+      top: 56%;
       left: 5.3%;
       font-size: 4.8vw;
       position: absolute;
       z-index: 3;
       @include breakpoint(wide){
-        top: 253px;
+        top: 282px;
         left: 5.3%;
         font-size: 62px;
       }
     }
+
   }
   .box {
     background-color: rgba(255,255,255, 0.5);

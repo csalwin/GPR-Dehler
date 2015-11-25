@@ -13,6 +13,12 @@ function enqueue() {
     wp_deregister_script('jquery');
     wp_register_script('jquery', "https://code.jquery.com/jquery-1.11.3.min.js", false, null);
     wp_enqueue_script('jquery');
+
+    wp_register_script('Cycle2', get_template_directory_uri(). "/js/cycle2.js", "jquery", "1", true );
+    wp_register_script('Cycle2-captions', get_template_directory_uri(). "/js/cycle2-caption.js", "Cycle2", "1", true );
+    wp_enqueue_script('Cycle2');
+    wp_enqueue_script('Cycle2-captions');
+
 }
 
 

@@ -22,7 +22,25 @@ get_header(); ?>
 			<div class=diamonds><div class="diamondFill"></div></div>
 			<span class="diamondText">EXPERIENCE</span>
 
-			<?php putRevSlider('home-slider', 'homepage'); ?>
+
+
+			<div class="cycle-slideshow"
+				 data-cycle-fx=scrollHorz
+				 data-cycle-timeout=2000
+				 data-cycle-caption-plugin=caption2
+				 data-cycle-overlay-fx-out="slideUp"
+				 data-cycle-overlay-fx-in="slideUp"
+				>
+				<div class="cycle-overlay"></div>
+
+				<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/slider/silde-1.jpg" data-cycle-desc="Resilience">
+				<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/slider/silde-1.jpg" data-cycle-desc="Resilience">
+				<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/slider/silde-1.jpg" data-cycle-desc="Resilience">
+
+			</div>
+
+
+<!--			--><?php //putRevSlider('home-slider', 'homepage'); ?>
 
 
 <!--			<img src="--><?php //echo esc_url( get_template_directory_uri() ); ?><!--/images/slider/silde-1.jpg"/>-->
