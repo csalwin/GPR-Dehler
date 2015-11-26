@@ -159,8 +159,13 @@ get_header(); ?>
 
 		</div>
 		<div class="box testimonial">
+			<div class="container">
 
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque auctor massa ac justo volutpat, sit amet condimentum </p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque auctor massa ac justo volutpat, sit amet condimentum </p>
+
+
+			</div>
+
 
 			<img class="clip-triangle" src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/home/bottle-Img.png"/>
 
