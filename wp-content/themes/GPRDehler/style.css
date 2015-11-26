@@ -364,7 +364,10 @@ footer {
   position: relative; }
   @media (min-width: 720px) {
     .content {
-      top: -85px; } }
+      top: -10vw; } }
+  @media (min-width: 1200px) {
+    .content {
+      top: -77px; } }
   .content .slider {
     position: relative;
     overflow: hidden;
@@ -376,23 +379,31 @@ footer {
       .content .slider .cycle-slideshow img {
         width: 100%; }
       .content .slider .cycle-slideshow .cycle-overlay {
+        font-family: "Lato", "sans-serif";
         position: absolute;
-        top: 60%;
+        top: 63%;
         font-size: 4.8vw;
         z-index: 100;
         left: 40%;
         text-transform: uppercase;
-        color: #300f42; }
+        color: #300f42;
+        line-height: 4.8vw; }
         @media (min-width: 1200px) {
           .content .slider .cycle-slideshow .cycle-overlay {
-            top: 282px;
-            font-size: 62px; } }
+            top: 298px;
+            font-size: 62px;
+            left: 520px;
+            line-height: 56px; } }
     @media (min-width: 960px) {
       .content .slider {
         overflow: visible; } }
     .content .slider .diamonds {
       right: 84%;
       top: -58%; }
+      @media (min-width: 1200px) {
+        .content .slider .diamonds {
+          right: inherit;
+          left: -990px; } }
     .content .slider .diamondText {
       top: 60%;
       left: 5.3%;
@@ -453,7 +464,9 @@ footer {
         height: 96px; } }
     .content .box.whoAreWe {
       padding: 0;
-      margin-bottom: 30px; }
+      margin-bottom: 30px;
+      z-index: 2;
+      background: none; }
       .content .box.whoAreWe ul li {
         padding: 15px 10px; }
         .content .box.whoAreWe ul li .imgWrap {
@@ -561,7 +574,11 @@ footer {
       display: block; }
       .content .box.testimonial p {
         color: #ffffff;
-        font-size: 15px; }
+        font-size: 15px;
+        width: 50%;
+        float: left;
+        padding-left: 0.83333%;
+        padding-right: 0.83333%; }
         .content .box.testimonial p:before {
           content: url("images/home/quote-quote.png");
           position: absolute;
@@ -574,14 +591,26 @@ footer {
           display: block;
           top: 65px;
           right: 20px; }
+      .content .box.testimonial .clip-triangle {
+        display: none;
+        width: 577px;
+        height: 538px;
+        position: absolute;
+        bottom: 0;
+        right: -40px; }
       @media (min-width: 720px) {
         .content .box.testimonial {
           padding: 85px 20px; }
           .content .box.testimonial p {
-            width: 60%;
             margin: 0 auto;
             font-size: 23px;
             padding-bottom: 30px; } }
+      @media (min-width: 1200px) {
+        .content .box.testimonial {
+          overflow: visible;
+          height: 289px; }
+          .content .box.testimonial .clip-triangle {
+            display: block; } }
     .content .box.ourProcess {
       background: url("images/home/process-bg.png"); }
       .content .box.ourProcess p {

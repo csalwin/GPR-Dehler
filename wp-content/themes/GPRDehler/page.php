@@ -32,8 +32,10 @@ get_header(); ?>
 				<div class="cycle-overlay"></div>
 
 				<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/slider/slide-1.jpg" data-cycle-desc="Resilience">
-				<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/slider/slide-2.png" data-cycle-desc="Enjoy">
-				<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/slider/slide-3.png" data-cycle-desc="Test">
+				<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/slider/slide-2.png" data-cycle-desc="Results">
+				<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/slider/slide-3.png" data-cycle-desc="Leadership">
+				<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/slider/slide-4.png" data-cycle-desc="Value">
+				<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/slider/slide-5.png" data-cycle-desc="Accelerated <br /> Change">
 
 			</div>
 
@@ -160,7 +162,7 @@ get_header(); ?>
 
 			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque auctor massa ac justo volutpat, sit amet condimentum </p>
 
-
+			<img class="clip-triangle" src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/home/bottle-Img.png"/>
 
 		</div>
 		<div class="box ourProcess">
@@ -250,6 +252,9 @@ get_header(); ?>
 
 
 	</div>
+
+
+
 
 
 
