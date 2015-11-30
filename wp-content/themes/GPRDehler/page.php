@@ -132,7 +132,23 @@ get_header(); ?>
 				</li>
 				<li>Articles
 					<div class="imgWrap">
+
+
+
+						<!--						<svg width="100%" height="100%">-->
+<!--							<defs>-->
+<!--								<clip-path id="myClip">-->
+<!--									<polygon points="0.13 0, 1 0.01, 1 1, 0.13 1, 0 0.5" />-->
+<!--								</clip-path>-->
+<!--							</defs>-->
+<!--							<foreignObject clip-path="url(#myClip)" width="100%" height="100%">-->
+<!--								<img src="--><?php //echo esc_url( get_template_directory_uri() ); ?><!--/images/home/who-img4.png"/>-->
+<!--							</foreignObject>-->
+<!--						</svg>-->
+
+
 						<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/home/who-img4.png"/>
+
 
 
 					</div>
@@ -175,8 +191,15 @@ get_header(); ?>
 
 				<h2>Interdisciplinary skills</h2>
 				<p>At GPR Dehler we pull together experts from different fields to change or organisations </p>
+
+
+
+
+
 				<ul>
 					<li>
+
+
 						<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/home/skills/skills1.png"/>
 						Cognitive Science
 						<p>Lorem ipsum dolor sit consectetur adipiscing
@@ -295,4 +318,7 @@ get_header(); ?>
 <?php endif;?>
 
 
+
 <?php get_footer(); ?>
+
+

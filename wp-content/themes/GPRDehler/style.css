@@ -499,7 +499,12 @@ footer {
             display: block;
             top: -75px;
             -webkit-filter: grayscale(1);
-            filter: grayscale(1); }
+            filter: grayscale(1);
+            -webkit-clip-path: url("#clip-polygon");
+            clip-path: url("#clip-polygon"); }
+          .content .box.whoAreWe ul li .imgWrap .clip-svg {
+            width: 0;
+            height: 0; }
         .content .box.whoAreWe ul li .desktopWho {
           display: none;
           float: left;
