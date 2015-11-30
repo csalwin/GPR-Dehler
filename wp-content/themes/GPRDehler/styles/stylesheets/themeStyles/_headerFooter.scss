@@ -38,7 +38,7 @@
         margin: 5px 0 ;
         float: right;
         display: block;
-        @include breakpoint(large){
+        @include breakpoint(wide){
           display: none;
 
         }
@@ -75,12 +75,12 @@
             font-size: 19px;
             padding: 5px 0;
             text-align: center;
-            @include breakpoint(medium){
-              font-size: 15px;
-              text-align: center;
-              width: 14.28%;
-              float: left;
-            }
+            //@include breakpoint(medium){
+            //  font-size: 15px;
+            //  text-align: center;
+            //  width: 14.28%;
+            //  float: left;
+            //}
             a{
               color: #fff;
             }
@@ -88,20 +88,20 @@
 
         }
 
-        @include breakpoint(large){
-          display: block;
-          ul {
-            width: auto;
-            li {
-              padding: 0 10px;
-              width: auto;
-              a {
-
-              }
-            }
-          }
-
-        }
+        //@include breakpoint(large){
+        //  display: block;
+        //  ul {
+        //    width: auto;
+        //    li {
+        //      padding: 0 10px;
+        //      width: auto;
+        //      a {
+        //
+        //      }
+        //    }
+        //  }
+        //
+        //}
 
         @include breakpoint(wide){
           clear: none;
@@ -110,8 +110,11 @@
             width: span(7 of 12);
             padding-left: 32px;
             li {
-              padding: 0 12px;
-              width: auto;
+                font-size: 15px;
+                text-align: center;
+                padding: 0 12px;
+                width: auto;
+                float: left;
               a {
 
               }
@@ -131,22 +134,18 @@
         display: none;
         float: none;
 
-
-        @include breakpoint(large){
+        @include breakpoint(wide){
+          padding: 25px 0 0 50px;
           display: block;
           position: absolute;
           top: 0;
           right: 0;
-          padding: 17px 0 0 45px;
           width: 150px;
           height: 100%;
           margin: 0;
           background: #190624;
           -webkit-clip-path: polygon(22% 0, 100% 0, 100% 100%, 0% 100%);
           clip-path: polygon(22% 0, 100% 0, 100% 100%, 0% 100%);
-        }
-        @include breakpoint(wide){
-          padding: 25px 0 0 50px;
         }
         input {
           @include span(10 of 12);
@@ -193,11 +192,8 @@
         right: 130px;
         z-index: 1;
         top: 3px;
-
-        @include breakpoint(large){
-          display: block;
-        }
         @include breakpoint(wide){
+          display: block;
           top: 16px;
           right: 135px;
         }

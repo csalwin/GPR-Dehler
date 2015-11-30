@@ -10,16 +10,6 @@
  */
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?> class="no-js">
-<svg class="clip-svg">
-	<defs>
-		<clipPath id="clip-polygon" clipPathUnits="objectBoundingBox" >
-			<!--									<polygon points="0.13 0, 1 0.01, 1 1, 0.13 1, 0 0.5" />-->
-			<polygon points="0 1, 0 0, 1 0, 0.8 1" />
-		</clipPath>
-	</defs>
-</svg>
-
-
 
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
