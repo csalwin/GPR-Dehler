@@ -242,38 +242,45 @@ get_header(); ?>
 
     </div>
 
-    <div class="container box clients">
+    <div class="box clients">
+
+        <div class="container">
+
+            <ul id="logoSlider">
+                <li>
+                    <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/home/clients/ANGLO.png" />
+                </li>
+                <li>
+                    <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/home/clients/BHP-BILLITON.png" />
+
+                </li>
+                <li>
+                    <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/home/clients/CITIGROUP.png" />
+
+                </li>
+                <li>
+                    <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/home/clients/COCA-COLA-AMATIL.png" />
+
+                </li>
+                <li>
+                    <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/home/clients/fosters.png" />
+
+                </li>
+                <li>
+                    <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/home/clients/NEWMONT.png" />
+
+                </li>
+                <li>
+                    <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/home/clients/ORIX.png" />
+
+                </li>
+            </ul>
+
+        </div>
 
 
-        <ul id="logoSlider">
-            <li>
-                <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/home/clients/ANGLO.png" />
-            </li>
-            <li>
-                <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/home/clients/BHP-BILLITON.png" />
 
-            </li>
-            <li>
-                <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/home/clients/CITIGROUP.png" />
 
-            </li>
-            <li>
-                <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/home/clients/COCA-COLA-AMATIL.png" />
-
-            </li>
-            <li>
-                <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/home/clients/fosters.png" />
-
-            </li>
-            <li>
-                <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/home/clients/NEWMONT.png" />
-
-            </li>
-            <li>
-                <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/home/clients/ORIX.png" />
-
-            </li>
-        </ul>
 
 
 

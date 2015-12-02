@@ -338,6 +338,10 @@
     display: block;
     overflow: hidden;
     background: rgb(10, 10, 10);
+    &:before{
+      content: "";
+      padding: 30px;
+    }
 
 
     .diamonds {
@@ -523,6 +527,7 @@
         padding: 20px (0.83333% * 2) ;
       }
     }
+
 
 
   }

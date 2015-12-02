@@ -345,6 +345,9 @@ footer {
   display: block;
   overflow: hidden;
   background: #0a0a0a; }
+  footer:before {
+    content: "";
+    padding: 30px; }
   footer .diamonds {
     width: 100%;
     right: 92%;
@@ -777,27 +780,29 @@ footer {
         float: left;
         padding-left: 0.83333%;
         padding-right: 0.83333%; } }
-  .home.content .box.clients ul {
-    overflow: hidden;
-    margin: 10px 0; }
-    .home.content .box.clients ul li {
-      background: none;
-      color: rgba(13, 13, 13, 0.5);
-      text-align: center;
-      width: 50%;
-      float: left;
-      padding-left: 0.83333%;
-      padding-right: 0.83333%; }
-      .home.content .box.clients ul li img {
-        width: 80%;
-        margin: 0 auto;
-        display: inline-block; }
-      @media (min-width: 480px) {
-        .home.content .box.clients ul li {
-          width: 33.33333%; } }
-      @media (min-width: 720px) {
-        .home.content .box.clients ul li {
-          width: 14.28571%; } }
+  .home.content .box.clients {
+    position: relative; }
+    .home.content .box.clients ul {
+      overflow: hidden;
+      margin: 10px 0; }
+      .home.content .box.clients ul li {
+        background: none;
+        color: rgba(13, 13, 13, 0.5);
+        text-align: center;
+        width: 50%;
+        float: left;
+        padding-left: 0.83333%;
+        padding-right: 0.83333%; }
+        .home.content .box.clients ul li img {
+          width: 80%;
+          margin: 0 auto;
+          display: inline-block; }
+        @media (min-width: 480px) {
+          .home.content .box.clients ul li {
+            width: 33.33333%; } }
+        @media (min-width: 720px) {
+          .home.content .box.clients ul li {
+            width: 14.28571%; } }
 
 .industries.content {
   position: relative; }

@@ -36,7 +36,6 @@ get_header(); ?>
                     </div>
                     <div class="desktopWho">
                         <svg>
-
                             <line x1="0" y1="0" x2="100%" y2="0" style="stroke: #8b003d; stroke-width: 15"></line>
                             <line x1="100%" y1="0" x2="100%" y2="90%" style="stroke: #8b003d; stroke-width: 15"></line>
                             <line x1="100%" y1="100%" x2="0" y2="100%" style="stroke: #8b003d; stroke-width: 15"></line>
