@@ -1,14 +1,4 @@
-<?php
-/**
- * Template Name: Home Page
- *
- * @package WordPress
- * @subpackage GPR-Dehler
- */
-
-get_header(); ?>
-
-<div class="home content">
+<div class="content">
 
 
     <div class="slider">
