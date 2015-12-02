@@ -485,5 +485,44 @@
       }
     }
 
+    .finalBar {
+      background: linear-gradient(#230931, $main_purple) no-repeat;
+      display: block;
+      position: relative;
+      bottom: 0;
+      z-index: 3;
+      ul{
+        padding-left: 0.83333% * 2;
+        margin: 0;
+        float: left;
+        li {
+          color: #ffffff;
+          float: none;
+          width: auto;
+          display: inline-block;
+          padding: 20px 0;
+          a {
+            color: #ffffff;
+          }
+          &:after {
+            content: "|";
+            display: inline-block;
+            padding: 0 10px;
+          }
+          &:last-child {
+            &:after {
+              content: "";
+            }
+          }
+
+        }
+      }
+      .copyright {
+        color: #ffffff;
+        float: right;
+        padding: 20px (0.83333% * 2) ;
+      }
+    }
+
 
   }

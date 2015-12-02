@@ -82,6 +82,30 @@
 
 
     </div>
+    <div class="finalBar">
+
+        <div class="container">
+            <?php
+
+            $menu = array(
+                'menu' => 'FooterMenu',
+                'container' => 'div',
+                'container_class' => 'footer-menu',
+                'container_id' => 'footer-menu'
+            );
+
+            wp_nav_menu( $menu ); ?>
+
+
+            <div class="copyright">
+                &copy; <?php echo date('Y')?> GPR Dehler Pty Ltd
+            </div>
+
+        </div>
+
+
+    </div>
+
 
 
 
