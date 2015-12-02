@@ -6,13 +6,13 @@ $( document ).ready(function() {
     //Header JS
 
     $('.glyphicon-menu-hamburger').click(function () {
-        $('#nav-bar form').slideUp();
-        $('#navigation-menu').slideToggle();
+        $('#search-mobile').slideUp();
+        $('#nav-menu-mobile').slideToggle();
 
     });
     $('.headerButtons .glyphicon-search').click(function () {
-        $('#navigation-menu').slideUp();
-        $('#nav-bar form').slideToggle();
+        $('#nav-menu-mobile').slideUp();
+        $('#search-mobile').slideToggle();
 
     });
 

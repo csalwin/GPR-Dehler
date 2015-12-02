@@ -1,19 +1,23 @@
 
+.backgroundImage{
+  background: linear-gradient($main_purple, #230931) no-repeat;
+  width: 50%;
+  position: absolute;
+  left: 0;
+  height: 100%;
+
+
+}
+
   #nav-bar {
     height: auto;
 
     z-index: 5;
     position: relative;
 
-    #backgroundImage{
-      background: linear-gradient($main_purple, #230931) no-repeat;
-      width: 50%;
-      position: absolute;
-      left: 0;
-      height: 100%;
 
 
-    }
+
     .container {
       background: linear-gradient($main_purple, #230931) no-repeat;
       padding: 14px 0;
@@ -234,6 +238,100 @@
     }
   }
 
+  #nav-menu-mobile {
+    display: none;
+    position: absolute;
+    width: 100%;
+    z-index: 4;
+
+    .backgroundImage {
+      background: linear-gradient(#230931, $main_purple) no-repeat;
+    }
+    .container {
+      background: linear-gradient(#230931, $main_purple) no-repeat;
+      padding: 14px 0;
+
+      #navigation-menu-mobile {
+        position: relative;
+        display: block;
+        ul {
+          padding: 0;
+          width: 100%;
+          li {
+            text-align: center;
+            a {
+              color: #ffffff;
+            }
+
+          }
+        }
+
+      }
+    }
+    @include breakpoint(wide) {
+      display: none !important;
+    }
+
+  }
+  #search-mobile {
+    display: none;
+    position: absolute;
+    width: 100%;
+    z-index: 4;
+    .backgroundImage {
+      background: linear-gradient(#230931, $main_purple) no-repeat;
+    }
+    .container {
+      background: linear-gradient(#230931, $main_purple) no-repeat;
+      padding: 14px 0;
+      form {
+        width: 80%;
+        margin: 0 auto;
+        input{
+          color: #ffffff;
+          width: 80%;
+          margin: 8px 0;
+          background: none;
+          border: #ffffff solid 2px;
+          padding: 5px;
+          border-radius: 0;
+          font-size: 3.5vw;
+          text-transform: uppercase;
+          -webkit-appearance: none;
+          -moz-appearance: none;
+          appearance: none;
+          @include breakpoint(small){
+            font-size: 2vw;
+          }
+          @include breakpoint (large){
+            font-size: 14px;
+          }
+
+          &:focus {
+            outline: transparent;
+          }
+          &::-webkit-input-placeholder {
+            text-transform: uppercase;
+            color: #ffffff;
+          }
+          &:-moz-placeholder {
+            text-transform: uppercase;
+            color: #ffffff;
+          }
+          &:-ms-input-placeholder {
+            text-transform: uppercase;
+            color: #ffffff;
+          }
+        }
+        i {
+          color: #fff;
+        }
+      }
+    }
+  }
+
+
+
 
   footer {
     position: relative;
@@ -243,10 +341,9 @@
 
 
     .diamonds {
-      width: 100%;
-      height: 100%;
-      right: 85%;
-      top: -250px;
+        width: 100%;
+        right: 92%;
+        top: -428px;
       .diamondFill{
         background: rgba(33, 33, 33, 0.4);
       }
@@ -325,7 +422,13 @@
           background: $main_purple;
           border: none;
           padding: 8px 25px;
-
+          -moz-transition: background .3s linear;
+          -webkit-transition: background .3s linear;
+          -o-transition: background .3s linear;
+          transition: background .3s linear;
+          &:hover {
+            background: #8b003d;
+          }
 
 
         }
@@ -362,7 +465,6 @@
               content:"T:";
               color: #007499;
             }
-
           }
           &.email {
             &:before {

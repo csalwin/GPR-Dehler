@@ -100,3 +100,46 @@ body {
 }
 
 
+.box {
+  background-color: rgba(255,255,255, 0.5);
+  text-align: center;
+  overflow: hidden;
+  display: block;
+  z-index: 1;
+  h2 {
+    color: $main_purple;
+    font-size: 4vw;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+  span {
+    color: $selected_purple;
+  }
+  p {
+    font-size: 12px;
+  }
+  ul {
+    padding: 0;
+    margin: 0;
+    li {
+      display: block;
+      position: relative;
+      text-align: left;
+      background: linear-gradient($main_purple, #230931);
+      padding: 10px;
+      text-transform: uppercase;
+      color: #ffffff;
+      border-bottom: #ffffff 2px solid;
+      &:last-of-type {
+        border-bottom: none;
+      }
+      &:hover {
+        background: linear-gradient(#8b003d, #68032f);
+      }
+    }
+  }
+}
+
+
+
+

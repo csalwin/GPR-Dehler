@@ -28,9 +28,19 @@
 
 <body <?php body_class(); ?>>
 
+
+
+
+
 <div id="nav-bar">
+
+
+
+
+
+
 <!--	used for the half background image  -->
-	<div id="backgroundImage"></div>
+	<div class="backgroundImage"></div>
 	<div class="container">
 		<?php if ( get_theme_mod( 'logo' ) ) : ?>
 			<img id="logo" src="<?php echo esc_url( get_theme_mod( 'logo' ) ); ?>" title="Webpage Logo" alt="Logo image" />
@@ -68,6 +78,35 @@
 		<?php get_search_form( ); ?>
 
 	</div>
+</div>
+<div id="nav-menu-mobile">
+	<div class="backgroundImage"></div>
+
+	<div class="container">
+
+		<?php
+
+		$menu = array(
+			'menu' => 'HeaderMenu',
+			'container' => 'div',
+			'container_class' => 'home-nav-menu',
+			'container_id' => 'navigation-menu-mobile'
+		);
+
+		wp_nav_menu( $menu ); ?>
+
+
+	</div>
+
+
+</div>
+<div id="search-mobile">
+	<div class="backgroundImage"></div>
+
+	<div class="container">
+		<?php get_search_form( ); ?>
+	</div>
+
 </div>
 
 

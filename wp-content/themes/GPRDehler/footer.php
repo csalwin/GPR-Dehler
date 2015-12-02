@@ -20,7 +20,7 @@
                 <input type="phone" placeholder="phone number" name="phone">
                 <input type="email" placeholder="email address" name="email">
                 <select>
-                    <option value="" disabled selected>Type of enqury</option>
+                    <option value="" disabled selected>Type of enquiry</option>
                     <option value="TEST">Test</option>
                 </select>
                 <button type="submit">Submit</button>
