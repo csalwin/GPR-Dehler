@@ -42,11 +42,14 @@
 <!--	used for the half background image  -->
 	<div class="backgroundImage"></div>
 	<div class="container">
-		<?php if ( get_theme_mod( 'logo' ) ) : ?>
-			<img id="logo" src="<?php echo esc_url( get_theme_mod( 'logo' ) ); ?>" title="Webpage Logo" alt="Logo image" />
-		<?php else : ?>
-			<img id="logo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/logo.png" title="Webpage Logo" alt="Logo image"/>
-		<?php endif; ?>
+		<a href="<?php echo get_home_url(); ?>">
+			<?php if ( get_theme_mod( 'logo' ) ) : ?>
+				<img id="logo" src="<?php echo esc_url( get_theme_mod( 'logo' ) ); ?>" title="Webpage Logo" alt="Logo image" />
+			<?php else : ?>
+				<img id="logo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/logo.png" title="Webpage Logo" alt="Logo image"/>
+			<?php endif; ?>
+		</a>
+
 		<div class="headerButtons">
 
 			<i class="glyphicon glyphicon-menu-hamburger"></i>

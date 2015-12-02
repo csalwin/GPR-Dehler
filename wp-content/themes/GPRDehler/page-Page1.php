@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Industries
+ * Template Name: Page1
  *
  * @package WordPress
  * @subpackage GPR-Dehler
