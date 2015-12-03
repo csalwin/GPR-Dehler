@@ -333,6 +333,32 @@
 
 
 
+  .overDiamond  {
+    display: none;
+    height: 600px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    overflow: hidden;
+
+    .diamonds {
+      width: 100%;
+      right: 92%;
+      top: -213px;
+      .diamondFill{
+        background: rgba(33, 33, 33, 0.4);
+      }
+    }
+
+    @include breakpoint(wide) {
+      display: block;
+    }
+  }
+
+
+
+
+
   footer {
     position: relative;
     display: block;
@@ -342,14 +368,15 @@
       content: "";
       padding: 30px;
     }
-
-
     .diamonds {
-        width: 100%;
-        right: 92%;
-        top: -428px;
+      width: 100%;
+      right: 92%;
+      top: -428px;
       .diamondFill{
         background: rgba(33, 33, 33, 0.4);
+      }
+      @include breakpoint(wide) {
+        display: none;
       }
     }
     .contactUs {

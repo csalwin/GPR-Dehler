@@ -19,8 +19,8 @@ function enqueue() {
     wp_enqueue_script('Cycle2');
     wp_enqueue_script('Cycle2-captions');
 
-    wp_register_script('bxSlider', get_template_directory_uri(). "/js/jquery.bxSlider.js", "jquery", "1", true );
-    wp_enqueue_script('bxSlider');
+    wp_register_script('slick', get_template_directory_uri(). "/js/slickSlider/slick.min.js", "jquery", "1", true );
+    wp_enqueue_script('slick');
 
 
 

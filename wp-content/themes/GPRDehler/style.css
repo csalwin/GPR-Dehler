@@ -340,6 +340,23 @@ body {
       #search-mobile .container form i {
         color: #fff; }
 
+.overDiamond {
+  display: none;
+  height: 600px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  overflow: hidden; }
+  .overDiamond .diamonds {
+    width: 100%;
+    right: 92%;
+    top: -213px; }
+    .overDiamond .diamonds .diamondFill {
+      background: rgba(33, 33, 33, 0.4); }
+  @media (min-width: 1200px) {
+    .overDiamond {
+      display: block; } }
+
 footer {
   position: relative;
   display: block;
@@ -354,6 +371,9 @@ footer {
     top: -428px; }
     footer .diamonds .diamondFill {
       background: rgba(33, 33, 33, 0.4); }
+    @media (min-width: 1200px) {
+      footer .diamonds {
+        display: none; } }
   footer .contactUs {
     position: relative;
     display: block;
@@ -784,7 +804,8 @@ footer {
     position: relative; }
     .home.content .box.clients ul {
       overflow: hidden;
-      margin: 10px 0; }
+      margin: 10px 0;
+      z-index: 10; }
       .home.content .box.clients ul li {
         background: none;
         color: rgba(13, 13, 13, 0.5);

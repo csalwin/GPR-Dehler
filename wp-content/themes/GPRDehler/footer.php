@@ -10,6 +10,10 @@
  */
 ?>
 
+<div class="overDiamond">
+    <div class=diamonds><div class="diamondFill"></div></div>
+</div>
+
 <footer>
     <div class=diamonds><div class="diamondFill"></div></div>
     <div class="container contactUs">
@@ -21,7 +25,8 @@
                 <input type="email" placeholder="email address" name="email">
                 <select>
                     <option value="" disabled selected>Type of enquiry</option>
-                    <option value="TEST">Test</option>
+                    <option value="Enquiry1">Enquiry 1</option>
+                    <option value="Enquiry2">Enquiry 2</option>
                 </select>
                 <button type="submit">Submit</button>
             </form>

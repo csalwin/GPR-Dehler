@@ -246,35 +246,78 @@ get_header(); ?>
 
         <div class="container">
 
-            <ul id="logoSlider">
-                <li>
-                    <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/home/clients/ANGLO.png" />
-                </li>
-                <li>
-                    <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/home/clients/BHP-BILLITON.png" />
+<!--                <a class="buttons prev" href="#">&#60;</a>-->
+<!--                <div class="viewport">-->
+                    <ul class="overview">
+                        <li>
+                            <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/home/clients/ANGLO.png" />
+                        </li>
+                        <li>
+                            <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/home/clients/BHP-BILLITON.png" />
 
-                </li>
-                <li>
-                    <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/home/clients/CITIGROUP.png" />
+                        </li>
+                        <li>
+                            <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/home/clients/CITIGROUP.png" />
 
-                </li>
-                <li>
-                    <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/home/clients/COCA-COLA-AMATIL.png" />
+                        </li>
+                        <li>
+                            <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/home/clients/COCA-COLA-AMATIL.png" />
 
-                </li>
-                <li>
-                    <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/home/clients/fosters.png" />
+                        </li>
+                        <li>
+                            <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/home/clients/fosters.png" />
 
-                </li>
-                <li>
-                    <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/home/clients/NEWMONT.png" />
+                        </li>
+                        <li>
+                            <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/home/clients/NEWMONT.png" />
 
-                </li>
-                <li>
-                    <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/home/clients/ORIX.png" />
+                        </li>
+                        <li>
+                            <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/home/clients/ORIX.png" />
 
-                </li>
-            </ul>
+                        </li>
+                    </ul>
+<!--                </div>-->
+<!--                <a class="buttons next" href="#">&#62;</a>-->
+
+
+
+<!--            <div class="viewport">-->
+<!---->
+<!--                <ul id="logoSlider">-->
+<!--                    <li>-->
+<!--                        <img src="--><?php //echo esc_url( get_template_directory_uri() ); ?><!--/images/home/clients/ANGLO.png" />-->
+<!--                    </li>-->
+<!--                    <li>-->
+<!--                        <img src="--><?php //echo esc_url( get_template_directory_uri() ); ?><!--/images/home/clients/BHP-BILLITON.png" />-->
+<!---->
+<!--                    </li>-->
+<!--                    <li>-->
+<!--                        <img src="--><?php //echo esc_url( get_template_directory_uri() ); ?><!--/images/home/clients/CITIGROUP.png" />-->
+<!---->
+<!--                    </li>-->
+<!--                    <li>-->
+<!--                        <img src="--><?php //echo esc_url( get_template_directory_uri() ); ?><!--/images/home/clients/COCA-COLA-AMATIL.png" />-->
+<!---->
+<!--                    </li>-->
+<!--                    <li>-->
+<!--                        <img src="--><?php //echo esc_url( get_template_directory_uri() ); ?><!--/images/home/clients/fosters.png" />-->
+<!---->
+<!--                    </li>-->
+<!--                    <li>-->
+<!--                        <img src="--><?php //echo esc_url( get_template_directory_uri() ); ?><!--/images/home/clients/NEWMONT.png" />-->
+<!---->
+<!--                    </li>-->
+<!--                    <li>-->
+<!--                        <img src="--><?php //echo esc_url( get_template_directory_uri() ); ?><!--/images/home/clients/ORIX.png" />-->
+<!---->
+<!--                    </li>-->
+<!--                </ul>-->
+<!---->
+<!---->
+<!--            </div>-->
+
+
 
         </div>
 
@@ -285,6 +328,21 @@ get_header(); ?>
 
 
     </div>
+
+    <script type="text/javascript">
+        $(document).ready(function()
+        {
+            $('.overview').slick({
+                slidesToShow: 6,
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 0,
+                speed: 4500,
+                cssEase:'linear'
+            });
+
+        });
+    </script>
 
 
     <?php get_footer(); ?>
