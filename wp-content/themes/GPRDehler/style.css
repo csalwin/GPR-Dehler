@@ -193,10 +193,15 @@ body {
       clear: both;
       position: relative;
       color: #ffffff;
+      z-index: 1;
       overflow: hidden;
       margin: 7px auto;
       display: none;
-      float: none; }
+      float: none;
+      -moz-transition: width .4s linear;
+      -webkit-transition: width .4s linear;
+      -o-transition: width .4s linear;
+      transition: width .4s linear; }
       @media (min-width: 1200px) {
         #nav-bar .container form#searchform {
           padding: 25px 0 0 50px;

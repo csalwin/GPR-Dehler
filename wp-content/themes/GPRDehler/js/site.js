@@ -16,6 +16,28 @@ $( document ).ready(function() {
 
     });
 
+    $("#searchform").click(function () {
+
+
+        if ( $("#searchform").css('width') == '150px'){
+            $("#searchform").css('width', '300px');
+        }else {
+            $("#searchform").css('width', '150px');
+        }
+
+
+
+
+
+
+
+
+
+    });
+
+
+
+
 
 
 

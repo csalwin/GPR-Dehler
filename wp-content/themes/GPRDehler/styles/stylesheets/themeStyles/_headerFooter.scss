@@ -132,11 +132,16 @@
         clear: both;
         position: relative;
         color: #ffffff;
-
+        z-index: 1;
         overflow: hidden;
         margin: 7px auto;
         display: none;
         float: none;
+        -moz-transition: width .4s linear;
+        -webkit-transition: width .4s linear;
+        -o-transition: width .4s linear;
+        transition: width .4s linear;
+
 
         @include breakpoint(wide){
           padding: 25px 0 0 50px;
