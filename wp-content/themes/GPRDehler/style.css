@@ -366,7 +366,7 @@ footer {
   position: relative;
   display: block;
   overflow: hidden;
-  background: #0a0a0a; }
+  background: #272727; }
   footer:before {
     content: "";
     padding: 30px; }
@@ -375,7 +375,7 @@ footer {
     right: 92%;
     top: -428px; }
     footer .diamonds .diamondFill {
-      background: rgba(33, 33, 33, 0.4); }
+      background: rgba(64, 64, 64, 0.4); }
     @media (min-width: 1200px) {
       footer .diamonds {
         display: none; } }
@@ -521,8 +521,7 @@ footer {
       overflow: hidden;
       z-index: 0; }
       .home.content .slider .cycle-slideshow img {
-        width: 100%;
-        height: 100%; }
+        width: 100%; }
       .home.content .slider .cycle-slideshow .cycle-overlay {
         font-family: "Lato", "sans-serif";
         position: absolute;
@@ -621,7 +620,7 @@ footer {
             left: 0;
             right: 0;
             z-index: 2;
-            background: rgba(48, 15, 66, 0.5);
+            background: none;
             -moz-transition: background .3s linear;
             -webkit-transition: background .3s linear;
             -o-transition: background .3s linear;
@@ -631,8 +630,6 @@ footer {
             position: relative;
             display: block;
             top: -75px;
-            -webkit-filter: grayscale(1);
-            filter: grayscale(1);
             -webkit-clip-path: url("#clip-polygon");
             clip-path: url("#clip-polygon");
             z-index: 1; }
@@ -653,8 +650,8 @@ footer {
             height: 100%;
             display: block; }
           .home.content .box.whoAreWe ul li .sign .desktopWho .path {
-            -webkit-transition: all .4s;
-            transition: all .4s;
+            -webkit-transition: all .8s;
+            transition: all .8s;
             -webkit-transition-delay: 0s;
             transition-delay: 0s; }
           .home.content .box.whoAreWe ul li .sign .desktopWho:hover .path {
@@ -669,7 +666,10 @@ footer {
             -webkit-transform-origin: 50% 0%;
             transform-origin: 50% 0%; }
         .home.content .box.whoAreWe ul li .sign:hover .imgWrap:before {
-          background: none; }
+          background: rgba(48, 15, 66, 0.5); }
+        .home.content .box.whoAreWe ul li .sign:hover .imgWrap img {
+          -webkit-filter: grayscale(1);
+          filter: grayscale(1); }
         .home.content .box.whoAreWe ul li .sign:hover .desktopWho .top {
           -webkit-transform: scaleX(0);
           transform: scaleX(0); }
@@ -777,7 +777,14 @@ footer {
       font-size: 13px; }
     .home.content .box.ourProcess ul {
       margin-top: 10px;
-      margin-bottom: 20px; }
+      margin-bottom: 20px;
+      width: 50%;
+      float: left;
+      padding-left: 0.83333%;
+      padding-right: 0.83333%;
+      margin-left: auto;
+      margin-right: auto;
+      float: none; }
       .home.content .box.ourProcess ul li {
         background: none;
         border: none;
@@ -801,7 +808,7 @@ footer {
       .home.content .box.ourProcess h2 {
         font-size: 25px; }
       .home.content .box.ourProcess ul li {
-        width: 16.66667%;
+        width: 33.33333%;
         float: left;
         padding-left: 0.83333%;
         padding-right: 0.83333%; } }

@@ -9,8 +9,6 @@
 get_header(); ?>
 
 <div class="home content">
-
-
     <div class="slider">
         <div class=diamonds><div class="diamondFill"></div></div>
         <span class="diamondText">EXPERIENCE</span>
@@ -19,8 +17,11 @@ get_header(); ?>
 
         <div class="cycle-slideshow"
              data-cycle-fx=scrollHorz
-             data-cycle-timeout=2000
+             data-cycle-timeout=2500
+             data-cycle-speed= 1200
              data-cycle-caption-plugin=caption2
+             data-cycle-caption-fx-in=fadeIn
+             data-cycle-caption-fx-speed=1200
             >
             <div class="cycle-overlay"></div>
 
@@ -29,7 +30,6 @@ get_header(); ?>
             <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/slider/slide-3.png" data-cycle-desc="Leadership">
             <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/slider/slide-4.png" data-cycle-desc="Value">
             <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/slider/slide-5.png" data-cycle-desc="Accelerated <br /> Change">
-
         </div>
 
 
@@ -184,7 +184,7 @@ get_header(); ?>
     <div class="box ourProcess">
         <div class="container">
 
-            <h2>Interdisciplinary skills</h2>
+            <h2>Think <span>Disrupt</span> Adapt</h2>
             <p>At GPR Dehler we pull together experts from different fields to change or organisations </p>
 
 
@@ -197,43 +197,17 @@ get_header(); ?>
 
                     <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/home/skills/skills1.png"/>
                     Cognitive Science
-                    <p>Lorem ipsum dolor sit consectetur adipiscing
-                        commodo varius neque</p>
-                </li>
-                <li>
-                    <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/home/skills/skills2.png"/>
-                    Consulting
 
-                    <p>Lorem ipsum dolor sit consectetur adipiscing
-                        commodo varius neque</p>
-                </li>
-                <li>
-                    <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/home/skills/skills3.png"/>
-                    Economics
-
-                    <p>Lorem ipsum dolor sit consectetur adipiscing
-                        commodo varius neque</p>
-                </li>
-                <li>
-                    <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/home/skills/skills4.png"/>
-                    Computer Science
-
-                    <p>Lorem ipsum dolor sit consectetur adipiscing
-                        commodo varius neque</p>
                 </li>
                 <li>
                     <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/home/skills/skills5.png"/>
                     Management Theory
 
-                    <p>Lorem ipsum dolor sit consectetur adipiscing
-                        commodo varius neque</p>
                 </li>
                 <li>
                     <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/home/skills/skills6.png"/>
                     Behavioural Science
 
-                    <p>Lorem ipsum dolor sit consectetur adipiscing
-                        commodo varius neque</p>
                 </li>
 
             </ul>
