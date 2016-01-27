@@ -2,30 +2,8 @@
 
 //Main Scss File Include all the other css and SCSS files here
 
-//Dependencys
-@import "styles/stylesheets/sass/susy";
-
-
 //Scss Variables
 @import "styles/stylesheets/global";
-
-$susy: (
-        columns: 12,
-        gutters: 1/4,
-        math: fluid,
-        output: float,
-        container: 1200px,
-        gutter-position: inside,
-        global-box-sizing: border-box,
-        debug: (
-                image: show,
-        //        color: rgba(#66f, .25),
-        //        output: background,
-        //        toggle: top right,
-        ),
-);
-
-
 
 
 //Main theme Pages

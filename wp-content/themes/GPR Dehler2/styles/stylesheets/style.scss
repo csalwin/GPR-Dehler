@@ -1,0 +1,15 @@
+
+
+//Main Scss File Include all the other css and SCSS files here
+
+//Scss Variables
+@import "global";
+
+
+//Main theme Pages
+@import "themeStyles/headerFooter";
+@import "themeStyles/home";
+@import "themeStyles/industries";
+
+
+

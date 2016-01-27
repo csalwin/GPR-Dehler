@@ -8,43 +8,48 @@
 
 get_header(); ?>
 
-<div class="home content">
-    <div class="slider">
-        <div class=diamonds><div class="diamondFill"></div></div>
-        <span class="diamondText">EXPERIENCE</span>
+<div class="home container-fluid">
+    <div class="row sliderBanner">
+        <div class="slider">
+            <div class=diamonds><div class="diamondFill"></div>
+                <span class="diamondText">THINK. DISRUPT.</span></div>
+
+            <div class="cycle-slideshow"
+                 data-cycle-fx=scrollHorz
+                 data-cycle-timeout=2500
+                 data-cycle-speed= 1200
+                 data-cycle-caption-plugin=caption2
+                 data-cycle-caption-fx-in=fadeIn
+                 data-cycle-caption-fx-speed=1200
+                >
+                <div class="cycle-overlay"></div>
+
+                <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/slider/slide-1.jpg" data-cycle-desc="GROW.">
+                <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/slider/slide-2.png" data-cycle-desc="Innovate.">
+                <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/slider/slide-3.png" data-cycle-desc="Adapt.">
+                <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/slider/slide-4.png" data-cycle-desc="Value">
+                <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/slider/slide-5.png" data-cycle-desc="Accelerated <br /> Change">
+            </div>
 
 
+            <!--			--><?php //putRevSlider('home-slider', 'homepage'); ?>
 
-        <div class="cycle-slideshow"
-             data-cycle-fx=scrollHorz
-             data-cycle-timeout=2500
-             data-cycle-speed= 1200
-             data-cycle-caption-plugin=caption2
-             data-cycle-caption-fx-in=fadeIn
-             data-cycle-caption-fx-speed=1200
-            >
-            <div class="cycle-overlay"></div>
 
-            <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/slider/slide-1.jpg" data-cycle-desc="Resilience">
-            <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/slider/slide-2.png" data-cycle-desc="Results">
-            <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/slider/slide-3.png" data-cycle-desc="Leadership">
-            <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/slider/slide-4.png" data-cycle-desc="Value">
-            <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/slider/slide-5.png" data-cycle-desc="Accelerated <br /> Change">
+            <!--			<img src="--><?php //echo esc_url( get_template_directory_uri() ); ?><!--/images/slider/silde-1.jpg"/>-->
         </div>
 
-
-        <!--			--><?php //putRevSlider('home-slider', 'homepage'); ?>
-
-
-        <!--			<img src="--><?php //echo esc_url( get_template_directory_uri() ); ?><!--/images/slider/silde-1.jpg"/>-->
     </div>
-    <div class="container box weAre">
-        <h2>We are an <span>innovative international</span> management consulting company</h2>
 
-        <p> We are passionate about delivering sustainable and measurable client success, and know that to improve the way a business
-            works, you need to start with the people behind the processes. We’re experts at thinking in new ways and taking risks.
-            This means that when it comes to implementing organisational change, your people will be empowered to innovate
-            beyond what other businesses are doing and establish you at the forefront of your industry.</p>
+    <div class="container box weAre">
+        <div class="row">
+            <h2>We are an <span>innovative international</span> management consulting company</h2>
+
+            <p> We are passionate about delivering sustainable and measurable client success, and know that to improve the way a business
+                works, you need to start with the people behind the processes. We’re experts at thinking in new ways and taking risks.
+                This means that when it comes to implementing organisational change, your people will be empowered to innovate
+                beyond what other businesses are doing and establish you at the forefront of your industry.</p>
+        </div>
+
 
     </div>
     <div class="container box whoAreWe">

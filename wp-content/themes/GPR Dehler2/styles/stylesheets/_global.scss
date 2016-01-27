@@ -1,0 +1,116 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700);
+$main_purple: #300f42;
+$selected_purple: #8b003d;
+
+//Screen Sizes
+
+$screen-sm: 768px;
+$screen-md: 992px;
+$screen-lg: 1200px;
+
+
+@mixin linearGradient($top, $bottom){
+  background: $top; /* Old browsers */
+  background: -moz-linear-gradient(top,  $top 0%, $bottom 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$top), color-stop(100%,$bottom)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  $top 0%,$bottom 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  $top 0%,$bottom 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  $top 0%,$bottom 100%); /* IE10+ */
+  background: linear-gradient(to bottom,  $top 0%,$bottom 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+}
+
+.container {
+  //max-width: 992px;
+}
+
+
+body {
+  font-family: "Lato", "sans-serif";
+  background: #FFFFFF;
+  li {
+    list-style: none;
+    text-decoration: none;
+  }
+  a {
+    text-decoration: none;
+  }
+}
+.diamonds{
+  width: 100%;
+  position: absolute;
+  max-width: 1236px;
+  max-height: 1236px;
+  &:before{
+    content: "";
+    display: block;
+    padding-top: 100%; //To set ratio of 1:1
+  }
+}
+.diamondFill {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  -ms-transform: rotate(45deg); /* IE 9 */
+  -webkit-transform: rotate(45deg); /* Chrome, Safari, Opera */
+  transform: rotate(45deg);
+  display: block;
+  background: rgba(20, 5, 29, 0.7);
+  z-index: 3;
+
+}
+.diamondText {
+  position: relative;
+  float: right;
+  color: #ffffff;
+  display: block;
+
+}
+
+
+.box {
+  background-color: rgba(255,255,255, 0.5);
+  text-align: center;
+  overflow: hidden;
+  display: block;
+  z-index: 1;
+  h2 {
+    color: $main_purple;
+    font-size: 4vw;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+  span {
+    color: $selected_purple;
+  }
+  p {
+    font-size: 12px;
+  }
+  ul {
+    padding: 0;
+    margin: 0;
+    li {
+      display: block;
+      position: relative;
+      text-align: left;
+      background: linear-gradient($main_purple, #230931);
+      padding: 10px;
+      text-transform: uppercase;
+      color: #ffffff;
+      border-bottom: #ffffff 2px solid;
+      &:last-of-type {
+        border-bottom: none;
+      }
+      &:hover {
+        background: linear-gradient(#8b003d, #68032f);
+        color: #dddddd;
+      }
+    }
+  }
+}
+
+
+
+
