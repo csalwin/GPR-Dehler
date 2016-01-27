@@ -8,7 +8,7 @@
 
 get_header(); ?>
 
-<div class="home container-fluid">
+<div class="home">
     <div class="row sliderBanner">
         <div class="slider">
             <div class=diamonds><div class="diamondFill"></div>
