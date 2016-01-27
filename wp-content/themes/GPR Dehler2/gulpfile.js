@@ -1,7 +1,7 @@
 /**
  * Created by Chris on 21/01/16.
  */
-var url 		= 'localhost:8888/GPRDehler';
+var url 		= '192.168.1.111/GPRDehler';
 
 var gulp = require('gulp'),
     sass = require('gulp-sass'),

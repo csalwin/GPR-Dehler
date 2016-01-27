@@ -14,21 +14,33 @@ get_header(); ?>
             <div class=diamonds><div class="diamondFill"></div>
                 <span class="diamondText">THINK. DISRUPT.</span></div>
 
-            <div class="cycle-slideshow"
-                 data-cycle-fx=scrollHorz
-                 data-cycle-timeout=2500
-                 data-cycle-speed= 1200
-                 data-cycle-caption-plugin=caption2
-                 data-cycle-caption-fx-in=fadeIn
-                 data-cycle-caption-fx-speed=1200
-                >
-                <div class="cycle-overlay"></div>
+<!--            <div class="cycle-slideshow"-->
+<!--                 data-cycle-fx=scrollHorz-->
+<!--                 data-cycle-timeout=2500-->
+<!--                 data-cycle-speed= 1200-->
+<!--                 data-cycle-caption-plugin=caption2-->
+<!--                 data-cycle-caption-fx-in=fadeIn-->
+<!--                 data-cycle-caption-fx-speed=1200-->
+<!--                >-->
+<!--                <div class="cycle-overlay"></div>-->
+<!---->
+<!--                <img src="--><?php //echo esc_url( get_template_directory_uri() ); ?><!--/images/slider/slide-1.jpg" data-cycle-desc="GROW.">-->
+<!--                <img src="--><?php //echo esc_url( get_template_directory_uri() ); ?><!--/images/slider/slide-2.png" data-cycle-desc="Innovate.">-->
+<!--                <img src="--><?php //echo esc_url( get_template_directory_uri() ); ?><!--/images/slider/slide-3.png" data-cycle-desc="Adapt.">-->
+<!--                <img src="--><?php //echo esc_url( get_template_directory_uri() ); ?><!--/images/slider/slide-4.png" data-cycle-desc="Value">-->
+<!--                <img src="--><?php //echo esc_url( get_template_directory_uri() ); ?><!--/images/slider/slide-5.png" data-cycle-desc="Accelerated <br /> Change">-->
+<!--            </div>-->
 
-                <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/slider/slide-1.jpg" data-cycle-desc="GROW.">
-                <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/slider/slide-2.png" data-cycle-desc="Innovate.">
-                <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/slider/slide-3.png" data-cycle-desc="Adapt.">
-                <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/slider/slide-4.png" data-cycle-desc="Value">
-                <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/slider/slide-5.png" data-cycle-desc="Accelerated <br /> Change">
+
+            <div class="homeSliderWrapper">
+                <ul class="homeSlider">
+                    <li><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/slider/slide-1.jpg" data-cycle-desc="GROW."></li>
+                    <li><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/slider/slide-2.png" data-cycle-desc="Innovate."></li>
+                    <li><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/slider/slide-3.png" data-cycle-desc="Adapt."></li>
+                    <li><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/slider/slide-4.png" data-cycle-desc="Value"></li>
+                    <li><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/slider/slide-5.png" data-cycle-desc="Accelerated <br /> Change"></li>
+                </ul>
+
             </div>
 
 
@@ -42,7 +54,10 @@ get_header(); ?>
 
     <div class="container box weAre">
         <div class="row">
-            <h2>We are an <span>innovative international</span> management consulting company</h2>
+            <h2>Accelerated stratagy realisation</h2>
+
+            <p>THINK DISRUPT ADAPT IMG</p>
+
 
             <p> We are passionate about delivering sustainable and measurable client success, and know that to improve the way a business
                 works, you need to start with the people behind the processes. We’re experts at thinking in new ways and taking risks.
@@ -224,6 +239,8 @@ get_header(); ?>
 
 <!--                <a class="buttons prev" href="#">&#60;</a>-->
 <!--                <div class="viewport">-->
+
+<!--            SLICK SLIDER -->
                     <ul class="overview">
                         <li>
                             <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/home/clients/ANGLO.png" />
@@ -305,6 +322,11 @@ get_header(); ?>
 
     </div>
 
+
+
+
+    <?php get_footer(); ?>
+
     <script type="text/javascript">
         $(document).ready(function()
         {
@@ -317,10 +339,11 @@ get_header(); ?>
                 cssEase:'linear'
             });
 
+            $('.homeSlider').bxSlider({
+                pager:false
+            });
+
         });
     </script>
-
-
-    <?php get_footer(); ?>
 </div>
 

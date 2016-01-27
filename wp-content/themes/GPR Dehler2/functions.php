@@ -22,6 +22,10 @@ function enqueue() {
     wp_register_script('slick', get_template_directory_uri(). "/js/slickSlider/slick.min.js", "jquery", "1", true );
     wp_enqueue_script('slick');
 
+    wp_register_script('bxslider', get_template_directory_uri(). "/js/bxslider/jquery.bxslider.min.js", "jquery", "1", true );
+    wp_enqueue_script('bxslider');
+
+
 
 
 }

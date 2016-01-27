@@ -16,7 +16,11 @@
 	<meta name="viewport" content="width=device-width">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
+
+
+	<link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/js/bxslider/jquery.bxslider.css">
 	<link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/js/slickSlider/slick.css">
+
 
 	<link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/js/slickSlider/slick-theme.css">
 	<link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/styles/bootstrap/css/bootstrap.min.css">
