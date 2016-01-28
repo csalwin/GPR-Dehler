@@ -36,40 +36,6 @@ body {
     text-decoration: none;
   }
 }
-.diamonds{
-  width: 100%;
-  position: absolute;
-  max-width: 1236px;
-  max-height: 1236px;
-  &:before{
-    content: "";
-    display: block;
-    padding-top: 100%; //To set ratio of 1:1
-  }
-}
-.diamondFill {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  -ms-transform: rotate(45deg); /* IE 9 */
-  -webkit-transform: rotate(45deg); /* Chrome, Safari, Opera */
-  transform: rotate(45deg);
-  display: block;
-  background: rgba(20, 5, 29, 0.7);
-  z-index: 3;
-
-}
-.diamondText {
-  position: relative;
-  float: right;
-  color: #ffffff;
-  display: block;
-
-}
-
-
 .box {
   background-color: rgba(255,255,255, 0.5);
   text-align: center;
@@ -78,7 +44,6 @@ body {
   z-index: 1;
   h2 {
     color: $main_purple;
-    font-size: 4vw;
     text-transform: uppercase;
     font-weight: bold;
   }
@@ -109,6 +74,22 @@ body {
       }
     }
   }
+}
+
+button {
+  background: $main_purple;
+  border: none;
+  padding: 8px 25px;
+  color: #ffffff;
+  -moz-transition: background .3s linear;
+  -webkit-transition: background .3s linear;
+  -o-transition: background .3s linear;
+  transition: background .3s linear;
+  &:hover {
+    background: #8b003d;
+  }
+
+
 }
 
 

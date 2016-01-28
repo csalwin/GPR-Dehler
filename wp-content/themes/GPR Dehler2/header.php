@@ -87,35 +87,6 @@
 		</div>
 	</div>
 </div>
-<!--<div id="nav-menu-mobile">-->
-<!--	<div class="backgroundImage"></div>-->
-<!---->
-<!--	<div class="container">-->
-<!---->
-<!--		--><?php
-//
-//		$menu = array(
-//			'menu' => 'HeaderMenu',
-//			'container' => 'div',
-//			'container_class' => 'home-nav-menu',
-//			'container_id' => 'navigation-menu-mobile'
-//		);
-//
-//		wp_nav_menu( $menu ); ?>
-<!---->
-<!---->
-<!--	</div>-->
-<!---->
-<!---->
-<!--</div>-->
-<!--<div id="search-mobile">-->
-<!--	<div class="backgroundImage"></div>-->
-<!---->
-<!--	<div class="container">-->
-<!--		--><?php //get_search_form( ); ?>
-<!--	</div>-->
-<!---->
-<!--</div>-->
 
 
 

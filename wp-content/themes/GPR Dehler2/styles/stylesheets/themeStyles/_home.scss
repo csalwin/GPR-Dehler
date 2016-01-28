@@ -2,7 +2,7 @@
 
 .home {
   position: relative;
-  overflow: hidden;
+  overflow-x: hidden;
   .sliderBanner {
     position: relative;
     display: block;
@@ -11,27 +11,29 @@
     @media (min-width: $screen-md) {
       overflow: visible;
     }
-
-
-
     .slider {
       position: relative;
       width: 100%;
       max-height: 400px;
       display: block;
-      overflow: hidden;
+      top: -10px;
+
       .homeSliderWrapper {
+        .bx-viewport {
+          overflow: visible !important;
+        }
         .homeSlider {
           li {
             position: relative;
             z-index: 1;
+            //max-height: 400px;
             .diamondImg {
               position: absolute;
               left: 15px;
               top: 0;
               z-index: 3;
               height: 100%;
-              overflow: hidden;
+              //overflow: hidden;
               width: 50%;
               img {
                 height: 150%;
@@ -45,36 +47,41 @@
 
             img{
               height: 100%;
+              max-height: 400px;
 
             }
             .casestudy{
               background: url("images/diamond.png") no-repeat;
-              background-size: 60% 150%;
+              background-position-y: -20px;
               position: absolute;
               display: block;
-              height: 100%;
-              width: 50%;
+              height: 600px;
+              width: 53%;
               min-width: 300px;
               left: 0;
               color: white;
-              //padding: 290px 0 0 200px;
-
-
+              padding: 198px 0 0 90px;
               h1 {
-                font-size: 16px;
+                font-size: 38px;
                 margin: 5px 0;
                 position: relative;
+                text-transform: uppercase;
                 span {
-                  padding-left: 70px;
+                  padding-left: 25px;
                 }
 
 
               }
               p {
-                font-size: 12px;
+                font-size: 16px;
+                width: 203px;
+
 
               }
               a{
+                font-size: 16px;
+                font-weight: bold;
+                color: white;
 
               }
 
@@ -82,68 +89,39 @@
           }
         }
       }
-
-
-
     }
-    //.diamonds {
-    //  right: 90%;
-    //  top: -64%;
-    //  @media (min-width: $screen-md) {
-    //    top: -400px;
-    //  }
-    //
-    //  .diamondText {
-    //    top: 47%;
-    //    right: -72px;
-    //    font-size: 4.0vw;
-    //    position: absolute;
-    //    z-index: 3;
-    //
-    //  }
-    //
-    //}
 
   }
-
-
   .box {
     &.weAre {
       background: #ffffff;
-      p{
-        margin: 0 auto 22px;
-        font-size: 17px;
-        max-width: 980px;
+      h2 {
+        font-size: 25px;
+      }
+      img {
+        margin: 0 auto;
+        display: block;
+        position: relative;
+        float: none;
+      }
+      .introWrapper {
+        margin: 15px auto;
 
+        max-width: 970px;
+        display: block;
+        position: relative;
+        text-align: center;
+        float: none;
+        p{
+          font-size: 17px;
+        }
+        button {
+          margin-top: 20px;
+          margin-bottom: 20px;
+        }
 
       }
-      //@include breakpoint(medium){
-      //  background: none;
-      //  h2 {
-      //    font-size: 24px;
-      //    width: 677px;
-      //    margin: 33px auto 16px;
-      //  }
-      //}
-      //@include breakpoint (large) {
-      //  h2 {
-      //    width: 75%;
-      //  }
-      //  p{
-      //    width: 75%;
-      //  }
-      //
-      //}
-      //@include breakpoint(wide){
-      //  h2{
-      //    font-size: 24px;
-      //    width: 60%;
-      //
-      //  }
-      //  p{
-      //    height: 96px;
-      //  }
-      //}
+
     }
 
     &.whoAreWe {
@@ -156,20 +134,11 @@
         li {
           padding: 15px 10px;
           text-align: left;
-
           .sign {
             width: 100%;
             height: 100%;
             display: block;
             max-width: 200px;
-
-            //@include breakpoint (medium) {
-            //  margin: 0 auto;
-            //
-            //}
-
-
-
             .imgWrap {
               height: 100%;
               width: 40%;
@@ -210,7 +179,7 @@
             }
             .desktopWho {
 
-              display: none;
+              display: block;
               float: left;
               position: absolute;
               top: 45px;
