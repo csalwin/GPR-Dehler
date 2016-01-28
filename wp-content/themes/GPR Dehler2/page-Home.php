@@ -10,46 +10,76 @@ get_header(); ?>
 
 <div class="home">
     <div class="row sliderBanner">
+<!--        <div class=diamonds><div class="diamondFill"></div>-->
+<!--            <span class="diamondText">THINK. DISRUPT.</span>-->
+<!--        </div>-->
+
         <div class="slider">
-            <div class=diamonds><div class="diamondFill"></div>
-                <span class="diamondText">THINK. DISRUPT.</span></div>
-
-<!--            <div class="cycle-slideshow"-->
-<!--                 data-cycle-fx=scrollHorz-->
-<!--                 data-cycle-timeout=2500-->
-<!--                 data-cycle-speed= 1200-->
-<!--                 data-cycle-caption-plugin=caption2-->
-<!--                 data-cycle-caption-fx-in=fadeIn-->
-<!--                 data-cycle-caption-fx-speed=1200-->
-<!--                >-->
-<!--                <div class="cycle-overlay"></div>-->
-<!---->
-<!--                <img src="--><?php //echo esc_url( get_template_directory_uri() ); ?><!--/images/slider/slide-1.jpg" data-cycle-desc="GROW.">-->
-<!--                <img src="--><?php //echo esc_url( get_template_directory_uri() ); ?><!--/images/slider/slide-2.png" data-cycle-desc="Innovate.">-->
-<!--                <img src="--><?php //echo esc_url( get_template_directory_uri() ); ?><!--/images/slider/slide-3.png" data-cycle-desc="Adapt.">-->
-<!--                <img src="--><?php //echo esc_url( get_template_directory_uri() ); ?><!--/images/slider/slide-4.png" data-cycle-desc="Value">-->
-<!--                <img src="--><?php //echo esc_url( get_template_directory_uri() ); ?><!--/images/slider/slide-5.png" data-cycle-desc="Accelerated <br /> Change">-->
-<!--            </div>-->
-
-
             <div class="homeSliderWrapper">
                 <ul class="homeSlider">
-                    <li><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/slider/slide-1.jpg" data-cycle-desc="GROW."></li>
-                    <li><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/slider/slide-2.png" data-cycle-desc="Innovate."></li>
-                    <li><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/slider/slide-3.png" data-cycle-desc="Adapt."></li>
-                    <li><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/slider/slide-4.png" data-cycle-desc="Value"></li>
-                    <li><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/slider/slide-5.png" data-cycle-desc="Accelerated <br /> Change"></li>
-                </ul>
 
+                    <li>
+<!--                        <div class=diamondImg>-->
+<!--                            <img src="--><?php //echo esc_url( get_template_directory_uri() ); ?><!--/images/dimond.png">-->
+<!--                        </div>-->
+
+
+                        <div class="container">
+
+                            <div class="casestudy">
+                                <h1>Think. Disrupt. <span>Grow.</span></h1>
+                                <p>$800 Million of new value is <br />
+                                    created in 18 months.
+                                </p>
+                                <a href="#">Read the case Study</a>
+
+                            </div>
+                        </div>
+
+
+                        <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/slider/slide-1.jpg">
+
+
+
+                    </li>
+                    <li>
+
+                        <div class="container">
+                            <div class="casestudy">
+                                <h1>Think. Disrupt. <span>Innovate.</span></h1>
+                                <p>$800 Million of new value is <br />
+                                    created in 18 months.
+                                </p>
+                                <a href="#">Read the case Study</a>
+
+                            </div>
+                        </div>
+
+
+                        <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/slider/slide-2.png">
+
+                    </li>
+                    <li>
+                        <div class="container">
+                            <div class="casestudy">
+                                <h1>Think. Disrupt. <span>Adapt.</span></h1>
+                                <p>$800 Million of new value is <br />
+                                    created in 18 months.
+                                </p>
+                                <a href="#">Read the case Study</a>
+
+                            </div>
+                        </div>
+
+                        <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/slider/slide-3.png">
+
+                    </li>
             </div>
-
-
             <!--			--><?php //putRevSlider('home-slider', 'homepage'); ?>
 
 
             <!--			<img src="--><?php //echo esc_url( get_template_directory_uri() ); ?><!--/images/slider/silde-1.jpg"/>-->
         </div>
-
     </div>
 
     <div class="container box weAre">
@@ -71,7 +101,6 @@ get_header(); ?>
 
         <ul>
             <li>
-
                 <div class="sign">
                     Who we are
                     <div class="imgWrap">
@@ -340,7 +369,9 @@ get_header(); ?>
             });
 
             $('.homeSlider').bxSlider({
-                pager:false
+                controls: false,
+                pager: false,
+                auto: true
             });
 
         });
