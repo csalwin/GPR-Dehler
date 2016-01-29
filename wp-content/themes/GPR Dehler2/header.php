@@ -38,6 +38,7 @@
 
 
 
+
 <div id="nav-bar">
 <!--	used for the half background image  -->
 	<div class="backgroundImage"></div>
@@ -56,8 +57,11 @@
 				<i class="glyphicon glyphicon-search col-xs-3 pull-right"></i>
 			</div>
 
+
+
+
 			<div class="searchForm col-xs-6 col-md-4 col-lg-1 col-md-pull-3 col-md-pull-0">
-				<?php get_search_form( ); ?>
+					<?php get_search_form( ); ?>
 			</div>
 			<div class="socialIcons col-md-3 col-lg-2 col-lg-pull-1 pull-right hidden-xs hidden-sm">
 				<ul>
@@ -78,6 +82,7 @@
 			);
 
 			wp_nav_menu( $menu ); ?>
+
 
 
 

@@ -308,24 +308,16 @@
     position: relative;
     display: block;
     overflow: hidden;
-    background: #272727;
+    background: #e0dee2;
     &:before{
       content: "";
       padding: 30px;
-    }
-    .diamonds {
-      width: 100%;
-      right: 92%;
-      top: -428px;
-      .diamondFill{
-        background: rgba(64, 64, 64, 0.4);
-      }
     }
     .contactUs {
       position: relative;
       display: block;
       z-index: 4;
-      color: #ffffff;
+      color: #575756;
       margin-bottom: 50px;
 
       .clearfix {
@@ -346,10 +338,10 @@
           width: 100%;
           margin: 8px 0;
           background: none;
-          border: #ffffff solid 2px;
+          border: #575756 solid 2px;
           padding: 5px;
           border-radius: 0;
-          font-size: 3.5vw;
+          font-size: 13px;
           text-transform: uppercase;
           -webkit-appearance: none;
           -moz-appearance: none;
@@ -360,15 +352,15 @@
           }
           &::-webkit-input-placeholder {
             text-transform: uppercase;
-            color: #ffffff;
+            color: #575756;
           }
           &:-moz-placeholder {
             text-transform: uppercase;
-            color: #ffffff;
+            color: #575756;
           }
           &:-ms-input-placeholder {
             text-transform: uppercase;
-            color: #ffffff;
+            color: #575756;
           }
         }
         select {
@@ -414,8 +406,8 @@
           min-height: 100px;
         }
         a{
-          color: #ffffff;
-          font-size: 2.5vw;
+          color: #575756;
+          font-size: 14px;
 
           &:hover {
           }

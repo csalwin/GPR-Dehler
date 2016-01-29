@@ -12,28 +12,34 @@
  */
 
 get_header(); ?>
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+	<div class="page content">
+		<div class="headerImg">
 
-		<?php
-		// Start the loop.
-		while ( have_posts() ) : the_post();
+			<h2><?php echo get_the_title();?></h2>
+			<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/industries/header.png" alt="headerImage">
 
-			// Include the page content template.
-			get_template_part( 'content', 'page' );
+		</div>
 
-			// If comments are open or we have at least one comment, load up the comment template.
-			if ( !is_front_page()) :
-				if ( comments_open() || get_comments_number() ) :
-					comments_template();
+
+		<div class="container">
+			<?php
+			// Start the loop.
+			while ( have_posts() ) : the_post();
+
+				// Include the page content template.
+				get_template_part( 'content', 'page' );
+
+				// If comments are open or we have at least one comment, load up the comment template.
+				if ( !is_front_page()) :
+					if ( comments_open() || get_comments_number() ) :
+						comments_template();
+					endif;
 				endif;
-			endif;
 
-		// End the loop.
-		endwhile;
-		?>
-
-		</main><!-- .site-main -->
+				// End the loop.
+			endwhile;
+			?>
+		</div>
 	</div><!-- .content-area -->
 
 
