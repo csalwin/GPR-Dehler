@@ -19,53 +19,72 @@
       top: -10px;
 
       .homeSliderWrapper {
+        .sliderbg {
+          position: relative;
+          .slidebg {
+            content: "";
+            position: absolute;
+            width: 800px;
+            height: 800px;
+            top: -160px;
+            left: -640px;
+            z-index: 1;
+            background: rgba(20, 5,28, 0.2) 0 200px no-repeat;
+            -webkit-transform: rotate(45deg);
+            -moz-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            -o-transform: rotate(45deg);
+            transform: rotate(45deg);
+          }
+
+        }
+        .bx-wrapper:last-of-type {
+          position: absolute;
+          top: 0;
+          z-index: 3;
+        }
         .bx-viewport {
           overflow: visible !important;
+          background: none;
         }
         .homeSlider {
+          &.content {
+            position: absolute;
+            top: 0;
+          }
           li {
             position: relative;
             z-index: 1;
-            //max-height: 400px;
-            .diamondImg {
-              position: absolute;
-              left: 15px;
-              top: 0;
-              z-index: 3;
-              height: 100%;
-              //overflow: hidden;
-              width: 50%;
-              img {
-                height: 150%;
-              }
-              @media (min-width: $screen-md) {
-
-              }
-
-            }
-
+            max-height: 400px;
             .imageWrapper {
               max-height: 400px;
               overflow: hidden;
+
+              position: relative;
+              top: 0;
+              width: 100%;
+              //@media (min-width: $screen-md) {
+              //  position: absolute;
+              //}
+
               img{
                 height: 100%;
               }
 
             }
-
-
-
             .casestudy{
-              background: url("images/diamond.png") no-repeat;
-              background-position-y: -20px;
-              position: absolute;
+              //background: url("images/diamond.png") no-repeat;
+              //background-position-y: -20px;
+              //position: absolute;
               display: block;
               height: 600px;
-              width: 53%;
+              z-index: 5;
               min-width: 300px;
               left: 0;
               color: white;
-              padding: 198px 0 0 90px;
+              padding: 198px 0 0 0;
+
+
               h1 {
                 font-size: 38px;
                 margin: 5px 0;
@@ -93,7 +112,6 @@
         }
       }
     }
-
   }
   .box {
     &.weAre {
@@ -199,13 +217,10 @@
                     a {
                       font-weight: bold;
                     }
-
                   }
-
                 }
 
               }
-
             }
           }
         }

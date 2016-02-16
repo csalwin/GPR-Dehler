@@ -6,6 +6,7 @@
  * Time: 11:16
  */
 add_theme_support( 'html5', array( 'search-form' ) );
+add_theme_support( 'post-thumbnails' );
 
 //Enqueing JS Scripts
 if (!is_admin()) add_action("wp_enqueue_scripts", "enqueue", 11);

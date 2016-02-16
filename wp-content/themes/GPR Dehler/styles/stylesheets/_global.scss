@@ -89,8 +89,60 @@ button {
     background: #8b003d;
   }
 
-
 }
+.headerImgWrapper {
+  overflow: hidden;
+  max-height: 300px;
+
+  .headerImg {
+    width: 100%;
+  }
+  h1 {
+    text-align: center;
+    text-transform: uppercase;
+    color: #ffffff;
+    position: absolute;
+    width: 100%;
+    top: 100px;
+    @media (min-width: $screen-sm) {
+      font-size: 40px;
+      top: 120px;
+      
+    }
+    @media (min-width: $screen-md) {
+      font-size: 45px;
+      top: 150px;
+
+    }
+    @media (min-width: $screen-sm) {
+      font-size: 65px;
+
+
+    }
+  }
+}
+.thecontent {
+  margin: 0 auto;
+  max-width: 970px;
+  text-align: center;
+  h2 {
+    font-size: 24px;
+  }
+  p {
+    color: #575756;
+    margin: 25px 0;
+  }
+  img {
+    margin: 0 auto 20px auto;
+    float: none;
+
+  }
+  button {
+    margin: 30px 15px;
+    width: 150px;
+  }
+}
+
 
 
 

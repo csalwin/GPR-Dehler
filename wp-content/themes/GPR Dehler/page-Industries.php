@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Page1
+ * Template Name: Industries Page
  *
  * @package WordPress
  * @subpackage GPR-Dehler
@@ -16,8 +16,6 @@ get_header(); ?>
         <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/industries/header.png" alt="headerImage">
 
     </div>
-
-
     <div class="box main container">
         <p>
             We generate value for clients across industries. We pride ourselves in our sector expertise,

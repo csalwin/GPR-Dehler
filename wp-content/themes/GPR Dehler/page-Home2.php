@@ -364,7 +364,7 @@ get_header(); ?>
             $('.homeSlider').bxSlider({
                 controls: false,
                 pager: false,
-                auto: false
+                auto: true
             });
 
         });

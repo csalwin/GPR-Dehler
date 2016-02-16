@@ -14,12 +14,35 @@ get_header(); ?>
 
         <div class="slider">
             <div class="homeSliderWrapper">
-                <ul class="homeSlider">
+                <div class="container sliderbg hidden-xs hidden-sm">
+                    <div class="slidebg">&nbsp;</div>
+                </div>
+                <ul class="homeSlider images">
 
                     <li>
-                        <div class="container hidden-xs hidden-sm">
+                        <div class="imageWrapper">
+                            <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/slider/slide-1.jpg">
+                        </div>
 
-                            <div class="casestudy">
+
+                    </li>
+                    <li>
+                        <div class="imageWrapper">
+                            <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/slider/slide-2.png">
+                        </div>
+
+                    </li>
+                    <li>
+                        <div class="imageWrapper">
+                            <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/slider/slide-3.png">
+                        </div>
+                    </li>
+                </ul>
+
+                <ul class="homeSlider content">
+                    <li>
+                        <div class="container hidden-xs hidden-sm">
+                            <div class="col-xs-7 casestudy">
                                 <h1>Think. Disrupt. <span>Grow.</span></h1>
                                 <p>$800 Million of new value is <br />
                                     created in 18 months.
@@ -28,17 +51,10 @@ get_header(); ?>
 
                             </div>
                         </div>
-
-                        <div class="imageWrapper">
-                            <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/slider/slide-1.jpg">
-                        </div>
-
-
                     </li>
                     <li>
-
                         <div class="container hidden-xs hidden-sm">
-                            <div class="casestudy">
+                            <div class="col-xs-7 casestudy">
                                 <h1>Think. Disrupt. <span>Innovate.</span></h1>
                                 <p>$800 Million of new value is <br />
                                     created in 18 months.
@@ -47,14 +63,10 @@ get_header(); ?>
 
                             </div>
                         </div>
-                        <div class="imageWrapper">
-                            <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/slider/slide-2.png">
-                        </div>
-
                     </li>
                     <li>
                         <div class="container hidden-xs hidden-sm">
-                            <div class="casestudy">
+                            <div class="col-xs-7 casestudy">
                                 <h1>Think. Disrupt. <span>Adapt.</span></h1>
                                 <p>$800 Million of new value is <br />
                                     created in 18 months.
@@ -63,10 +75,8 @@ get_header(); ?>
 
                             </div>
                         </div>
-                        <div class="imageWrapper">
-                            <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/slider/slide-3.png">
-                        </div>
                     </li>
+                </ul>
             </div>
         </div>
 
@@ -74,7 +84,7 @@ get_header(); ?>
         <div class="row">
             <h2 class="col-xs-12">Accelerated strategy realisation</h2>
 
-            <img class="col-xs-12 col-sm-7 col-md-4 col-lg-push-" src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/home/introImg.png">
+            <img class="col-xs-12 col-sm-7 col-md-4" src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/home/introImg.png">
 
 
             <div class="introWrapper col-xs-11"">
@@ -224,6 +234,8 @@ get_header(); ?>
     <?php get_footer(); ?>
 
     <script type="text/javascript">
+
+        var slider_array = {};
         $(document).ready(function()
         {
             $('.overview').slick({
@@ -235,17 +247,22 @@ get_header(); ?>
                 cssEase:'linear'
             });
 
-            $('.homeSlider').bxSlider({
-                controls: false,
-                pager: false,
-                infiniteLoop: true,
-                auto: true
+            // launch bxslider
+            $('.homeSlider').each(function(i){
+                slider_array[i] = $(this).bxSlider({
+                    controls: false,
+                    pager: false,
+                    infiniteLoop: true,
+                    auto: true
+                });
             });
+
+
             $('.testSlider').bxSlider({
                 controls: false,
                 pager: false,
                 infiniteLoop: true,
-                auto: true
+                auto: false
             });
 
         });

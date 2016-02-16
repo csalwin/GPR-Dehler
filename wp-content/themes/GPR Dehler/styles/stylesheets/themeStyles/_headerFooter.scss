@@ -23,6 +23,7 @@
     .container{
       background: linear-gradient($main_purple, #230931) no-repeat;
       padding: 10px 15px;
+      overflow: hidden;
       .row {
         position: relative;
       }
@@ -134,9 +135,26 @@
           height: 141%;
           width: 130px;
           padding-top: 13px;
-          background: #190624;
-          -webkit-clip-path: polygon(22% 0, 100% 0, 100% 100%, 0% 100%);
-          clip-path: polygon(22% 0, 100% 0, 100% 100%, 0% 100%);
+          //background: #190624;
+          //-webkit-clip-path: polygon(22% 0, 100% 0, 100% 100%, 0% 100%);
+          //clip-path: polygon(22% 0, 100% 0, 100% 100%, 0% 100%);
+          //
+          &:before {
+            content: "";
+            position: absolute;
+            width: 169%;
+            height: 319%;
+            top: -29%;
+            left: 2%;
+            z-index: -1;
+            background: #190624 0 200px no-repeat;
+            -webkit-transform: rotate(23deg);
+            -moz-transform: rotate(23deg);
+            -ms-transform: rotate(23deg);
+            -o-transform: rotate(23deg);
+            transform: rotate(23deg);
+          }
+
         }
 
 
@@ -274,35 +292,6 @@
   }
 
 
-  .overDiamond  {
-    display: none;
-    height: 600px;
-    width: 100%;
-    position: absolute;
-    bottom: 0;
-    overflow: hidden;
-
-    .diamonds {
-      width: 100%;
-      right: 92%;
-      top: -213px;
-      .diamondFill{
-        background: rgba(33, 33, 33, 0.4);
-      }
-    }
-  }
-
-
-
-
-
-
-
-
-
-
-
-
 
   footer {
     position: relative;
@@ -338,7 +327,8 @@
           width: 100%;
           margin: 8px 0;
           background: none;
-          border: #575756 solid 2px;
+          border: #ffffff solid 2px;
+          background: rgba(255,255,255,0.3);
           padding: 5px;
           border-radius: 0;
           font-size: 13px;
@@ -425,10 +415,8 @@
             }
           }
         }
-
       }
     }
-
     .finalBar {
       background: linear-gradient(#230931, $main_purple) no-repeat;
       display: block;

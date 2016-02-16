@@ -42,7 +42,7 @@
 <div id="nav-bar">
 <!--	used for the half background image  -->
 	<div class="backgroundImage"></div>
-	<div class="container">
+	<div class="container nav-container">
 		<div class="row">
 			<a class="col-xs-6 col-md-3 col-lg-2" href="<?php echo get_home_url(); ?>">
 				<?php if ( get_theme_mod( 'logo' ) ) : ?>
