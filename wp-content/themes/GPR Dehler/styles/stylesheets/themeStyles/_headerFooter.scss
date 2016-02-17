@@ -296,18 +296,47 @@
   footer {
     position: relative;
     display: block;
-    overflow: hidden;
+    overflow: visible;
     background: #e0dee2;
+
     &:before{
       content: "";
       padding: 30px;
     }
+    .footerbg {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 200%;
+      overflow: hidden;
+      .footbg{
+        content: "";
+        position: absolute;
+        width: 800px;
+        height: 800px;
+        left: -544px;
+        z-index: 1;
+        top: 161px;
+        background: rgba(39, 5, 47, 0.15) 0 200px no-repeat;
+        -webkit-transform: rotate(45deg);
+        -moz-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        -o-transform: rotate(45deg);
+        transform: rotate(45deg);
+      }
+    }
+
     .contactUs {
       position: relative;
       display: block;
       z-index: 4;
       color: #575756;
       margin-bottom: 50px;
+
+
+
+
 
       .clearfix {
         display: block;

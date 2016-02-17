@@ -24,10 +24,10 @@
           .slidebg {
             content: "";
             position: absolute;
-            width: 800px;
-            height: 800px;
-            top: -160px;
-            left: -640px;
+            width: 1200px;
+            height: 1200px;
+            top: -360px;
+            left: -1116px;
             z-index: 1;
             background: rgba(20, 5,28, 0.2) 0 200px no-repeat;
             -webkit-transform: rotate(45deg);
@@ -144,8 +144,6 @@
       }
 
     }
-
-
     &.testimonial {
       position: relative;
       text-align: center;

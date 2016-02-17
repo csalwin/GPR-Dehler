@@ -14,8 +14,27 @@ get_header(); ?>
 
         <div class="slider">
             <div class="homeSliderWrapper">
+                <div style="
+                    overflow: hidden;
+                    height: 411px;
+                    /* max-height: 411px; */
+                    width: 100%;
+                    position: absolute;
+                    ">
+                    <div class="container sliderbg">
+
+                        <div class="slidebg" style="background: rgba(20, 5,28, 0.7) 0 200px no-repeat; ">&nbsp;</div>
+
+                    </div>
+
+
+                </div>
+
                 <div class="container sliderbg hidden-xs hidden-sm">
+
                     <div class="slidebg">&nbsp;</div>
+
+
                 </div>
                 <ul class="homeSlider images">
 

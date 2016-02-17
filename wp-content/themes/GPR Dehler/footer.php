@@ -10,15 +10,18 @@
  */
 ?>
 
-<div class="overDiamond">
-    <div class=diamonds><div class="diamondFill"></div></div>
-</div>
 
 <footer>
-    <div class=diamonds><div class="diamondFill"></div></div>
+    <div class="footerbg hidden-xs hidden-sm">
+        <div class="footbg">&nbsp;</div>
+    </div>
+
     <div class="container contactUs">
 
         <div class="row">
+
+
+
             <div class="footer-form contact-form col-xs-12 col-sm-6 col-md-3">
                 <h3>Contact us</h3>
                 <form>
