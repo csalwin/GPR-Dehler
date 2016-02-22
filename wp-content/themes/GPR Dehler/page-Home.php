@@ -14,7 +14,7 @@ get_header(); ?>
 
         <div class="slider">
             <div class="homeSliderWrapper">
-                <div style="
+                <div class="hidden-xs hidden-sm" style="
                     overflow: hidden;
                     height: 411px;
                     /* max-height: 411px; */
@@ -128,9 +128,6 @@ get_header(); ?>
                         <div class="imgWrapper">
                             <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/home/testSlider1.png">
                         </div>
-                        <div class="triangle hidden-xs hidden-sm">
-                            <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/home/testSliderTri1.png">
-                        </div>
                         <div class="overlay">
                             <div class="container">
                                 <div class="casestudy">
@@ -145,9 +142,7 @@ get_header(); ?>
                         <div class="imgWrapper">
                             <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/home/testSlider2.jpg">
                         </div>
-                        <div class="triangle hidden-xs hidden-sm">
-                            <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/home/testSliderTri2.png">
-                        </div>
+
                         <div class="overlay">
                             <div class="container">
                                 <div class="casestudy">
@@ -162,9 +157,6 @@ get_header(); ?>
                         <div class="imgWrapper">
                             <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/home/testSlider3.jpg">
                         </div>
-                        <div class="triangle hidden-xs hidden-sm">
-                            <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/home/testSliderTri3.png">
-                        </div>
                         <div class="overlay">
                             <div class="container">
                                 <div class="casestudy">
@@ -177,6 +169,29 @@ get_header(); ?>
                     </li>
                 </ul>
             </div>
+
+        </div>
+        <div class="slider sideTriangle hidden-xs hidden-sm">
+
+            <div class="rotatewrapper">
+                <div class="greyBox">
+                    &nbsp;
+                </div>
+                <ul class="testSlider">
+                    <li>
+                        <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/home/testSlider1.png">
+                    </li>
+                    <li>
+                        <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/home/testSlider2.jpg">
+                    </li>
+                    <li>
+                        <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/home/testSlider3.jpg">
+                    </li>
+                </ul>
+
+
+            </div>
+
         </div>
 
 
@@ -276,12 +291,13 @@ get_header(); ?>
                 });
             });
 
-
-            $('.testSlider').bxSlider({
-                controls: false,
-                pager: false,
-                infiniteLoop: true,
-                auto: false
+            $('.testSlider').each(function(i){
+                slider_array[i] = $(this).bxSlider({
+                    controls: false,
+                    pager: false,
+                    infiniteLoop: true,
+                    auto: true
+                });
             });
 
         });

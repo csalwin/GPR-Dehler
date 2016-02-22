@@ -152,6 +152,7 @@
       overflow: visible;
 
       .sliderwrapper {
+        overflow: hidden;
         .slider {
           .bx-viewport{
             overflow: visible !important;
@@ -167,13 +168,6 @@
               .imgWrapper {
                 max-height: 311px;
                 overflow: hidden;
-              }
-              .triangle {
-                position: absolute;
-                right: 0px;
-                top: -155px;
-                z-index: 1;
-
               }
               .overlay {
                 overflow: hidden;
@@ -222,6 +216,60 @@
             }
           }
         }
+
+      }
+      .sideTriangle {
+        overflow: hidden;
+        position: absolute;
+        right: -470px;
+        top: -57px;
+        z-index: 2;
+        width: 1200px;
+        height: 1200px;
+        transform: rotate(-45deg);
+        .rotatewrapper{
+          transform: rotate(45deg);
+
+          .greyBox {
+            position: absolute;
+            height: 400px;
+            width: 400px;
+            z-index: 5;
+            left: 601px;
+            display: block;
+            background: #e0dee2;
+            top: -208px;
+            transform: rotate(45deg);
+
+          }
+
+
+        }
+        .bx-wrapper {
+          z-index: -1;
+        }
+
+
+          .bx-viewport {
+            z-index: 1;
+
+          }
+          ul.testSlider {
+            overflow: visible;
+            max-height: 300px;
+            li {
+              background: none;
+              border: none;
+              overflow: visible;
+              padding: 0;
+              .imgWrapper {
+                max-height: 311px;
+                overflow: hidden;
+              }
+            }
+          }
+
+
       }
       p{
         color: #ffffff;

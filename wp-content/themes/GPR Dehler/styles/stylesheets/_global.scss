@@ -28,6 +28,9 @@ $screen-lg: 1200px;
 body {
   font-family: "Lato", "sans-serif";
   background: #FFFFFF;
+  .page{
+    z-index: 1;
+  }
   li {
     list-style: none;
     text-decoration: none;
