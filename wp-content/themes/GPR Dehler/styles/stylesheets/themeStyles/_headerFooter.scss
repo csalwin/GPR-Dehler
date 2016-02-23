@@ -298,6 +298,7 @@
     display: block;
     overflow: visible;
     background: #e0dee2;
+    z-index: -1;
 
     &:before{
       content: "";

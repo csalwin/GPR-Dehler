@@ -8,42 +8,23 @@ License: GPLv2
 */
 
 
-add_action( 'init', 'create_Industries_post' );
-function create_Industries_post() {
-register_post_type( 'Industries',
-    array(
-        'labels' => array(
-            'name' => 'Industries',
-            'singular_name' => 'Industry Post',
-            'add_new' => 'Add New',
-            'add_new_item' => 'Add New Industry Post',
-            'edit' => 'Edit',
-            'edit_item' => 'Edit Industry Post',
-            'new_item' => 'New Industry Post',
-            'view' => 'View',
-            'view_item' => 'View Industry Post',
-            'search_items' => 'Search Industry Posts ',
-            'not_found' => 'No Industry Posts found found',
-            'not_found_in_trash' => 'No Industry Posts found in Trash',
-            'parent' => 'Industries'
-        ),
-
-        'public' => true,
-        'menu_position' => 7,
-        'supports' => array( 'title', 'editor', 'thumbnail', 'custom-fields' ),
-        'taxonomies' => array( 'industries_categories' ),
-        'has_archive' => true
-        )
-    );
-}
-
-// Custom Taxonomy Code
-add_action( 'init', 'industries_Categories', 0 );
-function industries_Categories() {
-    register_taxonomy( 'industries_categories', 'post', array( 'hierarchical' => true, 'label' => 'Industries Categories', 'query_var' => true, 'rewrite' => true ) );
-}
-
+//add_action( 'init', 'create_Industries_post' );
 add_action( 'init', 'create_Careers_post' );
+add_action( 'init', 'create_Case_Studies_post' );
+add_action( 'init', 'create_Insight_post' );
+
+//add_action( 'init', 'industries_Categories', 0 );
+add_action( 'init', 'insight_Categories', 0 );
+add_action( 'init', 'Site_Categories', 0 );
+
+
+//Removes default Posts
+//add_action('admin_menu','remove_default_post_type');
+//function remove_default_post_type() {
+//    remove_menu_page('edit.php');
+//}
+
+
 function create_Careers_post() {
     register_post_type( 'Careers',
         array(
@@ -70,6 +51,67 @@ function create_Careers_post() {
             'has_archive' => true
         )
     );
+}
+
+function create_Case_Studies_post() {
+    register_post_type( 'CaseStudies',
+        array(
+            'labels' => array(
+                'name' => 'Case Studies',
+                'singular_name' => 'Case Study',
+                'add_new' => 'Add New',
+                'add_new_item' => 'Add New Case Study',
+                'edit' => 'Edit',
+                'edit_item' => 'Edit Case Study',
+                'new_item' => 'New Case Study',
+                'view' => 'View',
+                'view_item' => 'View Case Study',
+                'search_items' => 'Search Case Studies',
+                'not_found' => 'No Case Studies found found',
+                'not_found_in_trash' => 'No Case Studies found in Trash',
+                'parent' => 'Case Studies'
+            ),
+
+            'public' => true,
+            'menu_position' => 8,
+            'supports' => array( 'title', 'editor', 'thumbnail', 'custom-fields' ),
+            'taxonomies' => array( 'site_categories' ),
+            'has_archive' => true
+        )
+    );
+}
+function create_Insight_post() {
+    register_post_type( 'Insight',
+        array(
+            'labels' => array(
+                'name' => 'Insight',
+                'singular_name' => 'Insight Post',
+                'add_new' => 'Add New',
+                'add_new_item' => 'Add New Insight Post',
+                'edit' => 'Edit',
+                'edit_item' => 'Edit Insight Post',
+                'new_item' => 'New Insight Post',
+                'view' => 'View',
+                'view_item' => 'View Insight Post',
+                'search_items' => 'Search Insight Post',
+                'not_found' => 'No Insight Post found found',
+                'not_found_in_trash' => 'No Insight Post found in Trash',
+                'parent' => 'Insight Post'
+            ),
+
+            'public' => true,
+            'menu_position' => 3,
+            'supports' => array( 'title', 'editor', 'thumbnail', 'custom-fields' ),
+            'taxonomies' => array( 'insight_categories', 'site_categories' ),
+            'has_archive' => true
+        )
+    );
+}
+function insight_Categories() {
+    register_taxonomy( 'insight_categories', 'post', array( 'hierarchical' => true, 'label' => 'Insight Categories', 'query_var' => true, 'rewrite' => true ) );
+}
+function Site_Categories() {
+    register_taxonomy( 'site_categories', 'post', array( 'hierarchical' => true, 'label' => 'Site Categories', 'query_var' => true, 'rewrite' => true ) );
 }
 
 

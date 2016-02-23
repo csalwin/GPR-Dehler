@@ -1,0 +1,187 @@
+.casestudies.content {
+  ul {
+    li {
+      padding: 15px 10px;
+      text-align: left;
+      position: relative;
+
+      @media (min-width: $screen-md){
+        background: none;
+        color: $main_purple;
+        height: 330px;
+        text-align: center;
+      }
+
+      .sign {
+        width: 100%;
+        height: 100%;
+        display: block;
+
+        .imgWrap {
+          height: 100%;
+          width: 40%;
+          display: block;
+          position: absolute;
+          overflow: hidden;
+          right: 0;
+          top: 0;
+          -webkit-clip-path: polygon(13% 0, 100% 1%, 100% 100%, 13% 100%, 0% 50%);
+          clip-path: polygon(13% 0, 100% 1%, 100% 100%, 13% 100%, 0% 50%);
+
+          &:before {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 1;
+            background: rgba(48, 15, 66, 0.5);
+            -moz-transition: background .3s linear;
+            -webkit-transition: background .3s linear;
+            -o-transition: background .3s linear;
+            transition: background .3s linear;
+          }
+          @media (min-width: $screen-md){
+            width: 165px;
+            display: block;
+            left: 39px;
+            top: 63px;
+            -webkit-clip-path: none;
+            clip-path: none;
+
+            &:before {
+              display: none;
+            }
+          }
+          @media (min-width: $screen-lg){
+
+          }
+          img {
+            width: 100%;
+            position: relative;
+            display: block;
+            top: -75px;
+            -webkit-filter: grayscale(1);
+            filter: grayscale(1);
+            -webkit-clip-path: url("#clip-polygon");
+            clip-path: url("#clip-polygon");
+            @media (min-width: $screen-md){
+              -webkit-filter: none;
+              filter: none;
+              top: 0;
+            }
+
+          }
+        }
+        .desktopWho {
+          display: none;
+          float: left;
+          position: absolute;
+          top: 45px;
+          left: 10px;
+          bottom: 0;
+          right: 10px;
+          margin: 0 auto;
+          max-width: 200px;
+          max-height: 200px;
+          @media (min-width: $screen-md) {
+            display: block;
+          }
+          svg {
+            width: 100%;
+            height: 100%;
+            display: block;
+          }
+
+          .path {
+            -webkit-transition: all .7s;
+            transition: all .7s;
+            -webkit-transition-delay: 0s;
+            transition-delay: 0s;
+            -webkit-animation-direction: alternate; /* Chrome, Safari, Opera */
+            animation-direction: alternate;
+            &.left, &.right {
+              -webkit-transition-delay: .7s; /* Safari */
+              transition-delay: .7s;
+            }
+
+          }
+
+          &:hover .path {
+            display: block;
+          }
+
+          .top {
+            -webkit-transform-origin: 100% 50%;
+            transform-origin: 100% 50%;
+          }
+          .right {
+            -webkit-transform-origin: 50% 100%;
+            transform-origin: 50% 100%;
+          }
+          .left {
+            -webkit-transform-origin: 50% 0%;
+            transform-origin: 50% 0%;
+          }
+
+        }
+
+        &:hover {
+
+          .imgWrap {
+            &:before {
+              background: none;
+            }
+          }
+          .desktopWho .top {
+            -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+
+          }
+          .desktopWho .right {
+
+            -webkit-transform: scaleY(0);
+            transform: scaleY(0);
+
+          }
+          .desktopWho .bottom {
+            -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+          }
+          .desktopWho .left {
+            -webkit-transform: scaleY(0);
+            transform: scaleY(0);
+          }
+        }
+
+        .postdetails {
+          position: relative;
+          text-align: left;
+          padding: 10px;
+          top: 230px;
+          h4, p {
+            color: inherit;
+            &:hover {
+              text-decoration: none;
+            }
+          }
+          h4 {
+            margin: 0;
+          }
+          p{
+            margin: 0
+          }
+          a{
+
+          }
+        }
+
+      }
+
+    }
+  }
+
+
+}

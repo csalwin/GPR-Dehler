@@ -34,33 +34,68 @@ get_header(); ?>
 					?>
 				</div>
 
-				<div class="row">
-
-					<div class="ourApproach">
-						<h3>We call this:</h3>
-						<img class="col-xs-12 col-sm-7 col-md-4" src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/home/introImg.png">
-						<div class="clearfix"></div>
 
 				<?php if (strtolower(get_the_title()) == "who we are" ){
 					?>
+						<div class="row">
+
+							<div class="ourApproach">
+								<h3>We call this:</h3>
+								<img class="col-xs-12 col-sm-7 col-md-4" src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/home/introImg.png">
+								<div class="clearfix"></div>
 					<button class="button" href="#">Our Approach</button>
 					<button class="button" href="#">Industries</button>
+							</div>
+
+
+						</div>
 
 					<?php
 				} else if (strtolower(get_the_title()) == "our approach"){
 					 ?>
+								<div class="row">
+
+									<div class="ourApproach">
+										<h3>We call this:</h3>
+										<img class="col-xs-12 col-sm-7 col-md-4" src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/home/introImg.png">
+										<div class="clearfix"></div>
 					<button class="button" href="#">Industries</button>
 					<button class="button" href="#">Case studies</button>
+									</div>
+
+
+								</div>
 					<?php
 
+				} else if (strtolower(get_the_title()) == 'careers'){
+
+
+
+					$type = 'Careers';
+					$args=array(
+						'post_type' => $type,
+						'post_status' => 'publish',
+						'posts_per_page' => -1,
+						'caller_get_posts'=> 1
+					);
+
+					$my_query = null;
+					$my_query = new WP_Query($args);
+					if( $my_query->have_posts() ) {
+						?>
+						<h2>Vacant Positions</h2>
+
+						<?php
+						while ($my_query->have_posts()) : $my_query->the_post(); ?>
+							<p><?php the_title(); ?></p>
+							<p><?php the_content()?></p>
+							<button class="applyonline">Apply Online</button>
+
+							<?php
+						endwhile;
+					}
+					wp_reset_query();  // Restore global post data stomped by the_post().
 				}?>
-
-
-
-					</div>
-
-
-				</div>
 
 			</div>
 

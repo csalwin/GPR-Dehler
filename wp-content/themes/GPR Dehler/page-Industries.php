@@ -21,49 +21,77 @@ get_header(); ?>
         <h1><?php echo get_the_title();?></h1>
     </div>
 
-    <?php 					endwhile; ?>
-
+    <?php endwhile; ?>
 
     <div class="box main container">
         <p>
             We generate value for clients across industries. We pride ourselves in our sector expertise,
             combined with our ability to integrate learning from a range of disciplines to improve organisations.
         </p>
-
         <ul class="row">
-        <?php
 
-        show_categories();
+            <?php
+            // Set up the objects needed
+            $my_wp_query = new WP_Query();
+            $all_wp_pages = $my_wp_query->query(array('post_type' => 'page'));
 
+            // Get the page as an Object
+            $portfolio =  get_page_by_title('Industries');
 
-        function show_categories(){
             $args = array(
-                'hide_empty'  => 0,
-                'orderby' => 'ID',
-                'show_count' => 0,
-                'pad_counts' => 0,
+                'sort_order' => 'asc',
+                'sort_column' => 'menu_order',
                 'hierarchical' => 1,
-                'taxonomy' => 'industries_categories',
-                'title_li' => '',
-                'echo' => 0
+                'exclude' => '',
+                'include' => '',
+                'meta_key' => '',
+                'meta_value' => '',
+                'authors' => '',
+                'child_of' => $portfolio->ID,
+                'parent' => -1,
+                'exclude_tree' => '',
+                'number' => '',
+                'offset' => 0,
+                'post_type' => 'page',
+                'post_status' => 'publish'
             );
+            $children = get_pages($args);
 
-            $categories = get_categories($args);
-            foreach ($categories as $catKey => $cat){
-                if ($cat->cat_name != "Uncategorised") {
+//            // echo what we get back from WP to the browser
+//            echo '<pre>' . print_r( $children, true ) . '</pre>';
 
-                    // Get the ID of a given category
-                    $category_id = get_cat_ID( $cat->cat_name );
-
-                    $category_link = get_category_link( $cat );
-                    ?>
-                    <li class="col-xs-12 col-md-3">
-                        <a href="<?php echo esc_url( $category_link ) ?>">
-
+            foreach ($children as $child){
+                ?>
+                <li class="col-xs-12 col-md-3">
+                    <a href='<?php echo $child->guid ?>'>
                         <div class="sign">
-                            <?php echo $cat->cat_name; ?>
+                            <?php echo $child->post_title ?>
                             <div class="imgWrap">
-                                <img src="<?php echo z_taxonomy_image_url($cat->term_id); ?>"/>
+                                <?php
+
+                                    $image = get_field('thumbnailimg', $child->ID);
+                                    if( !empty($image) ):
+
+                                        // vars
+                                        $url = $image['url'];
+                                        $title = $image['title'];
+                                        $alt = $image['alt'];
+                                        $caption = $image['caption'];
+
+                                        // thumbnail
+                                        $size = 'thumbnail';
+                                        $thumb = $image['sizes'][ $size ];
+                                        $width = $image['sizes'][ $size . '-width' ];
+                                        $height = $image['sizes'][ $size . '-height' ];?>
+
+                                        <?php endif; ?>
+
+                                <img src="<?php echo $thumb; ?>" alt="<?php echo $alt; ?>" />
+
+
+
+<!--                                --><?php //$image = wp_get_attachment_image_src( get_post_thumbnail_id( $child->ID ), 'single-post-thumbnail' ); ?>
+<!--                                <img src="--><?php //echo $image[0] ?><!--"/>-->
                             </div>
                             <div class="desktopWho">
                                 <svg>
@@ -88,13 +116,19 @@ get_header(); ?>
                                 </svg>
                             </div>
                         </div>
-                            </a>
-                    </li>
-                    <?php
-                }
+
+
+                    </a>
+
+
+                </li>
+
+
+            <?php
+
             }
 
-        }
+
             ?>
             </ul>
 
