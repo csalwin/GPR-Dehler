@@ -23,19 +23,18 @@ get_header(); ?>
 		<?php
 		endwhile;?>
 
-		<div class="container">
+		<div class="main signs container">
 			<div class="thecontent">
 				<div class="row">
 
 
-					<h3><?php the_content()?></h3>
+					<?php the_content()?>
 				</div>
 
-				<div class="row">
-					<ul>
+					<ul class="row">
 					<?php
 					$args = array(
-						'posts_per_page'   => 5,
+						'posts_per_page'   => -1,
 						'offset'           => 0,
 						'category'         => '',
 						'category_name'    => '',
@@ -111,7 +110,12 @@ get_header(); ?>
 										</div>
 										<div class="postdetails">
 											<h4><?php echo $post->post_title; ?></h4>
-											<p>exerpt</p>
+											<?php
+											$exerpt = get_field('post_exerpt', $post->ID);
+											if( $exerpt ) {
+												echo "<p>".$exerpt."</p>";
+											}
+											?>
 											<a href="<?php echo $post->guid; ?>">Read more ></a>
 										</div>
 
@@ -130,9 +134,6 @@ get_header(); ?>
 
 
 					</ul>
-
-
-				</div>
 
 			</div>
 

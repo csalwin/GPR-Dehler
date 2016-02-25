@@ -79,24 +79,43 @@ body {
   }
 }
 
-button {
+button, a.button {
   background: $main_purple;
   border: none;
   padding: 8px 25px;
   color: #ffffff;
+  font-weight: normal;
+  text-align: center;
   -moz-transition: background .3s linear;
   -webkit-transition: background .3s linear;
   -o-transition: background .3s linear;
   transition: background .3s linear;
   &:hover {
     background: #8b003d;
+    text-decoration: none;
   }
-
+}
+.page {
+  .triCut{
+    position: absolute;
+    left: -290px;
+    top: -50px;
+    width: 500px;
+    height: 500px;
+    background: rgba(39, 5, 47, 0.15) 0 200px no-repeat;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+    z-index: 1;
+  }
 }
 .headerImgWrapper {
   overflow: hidden;
   max-height: 300px;
-
+  z-index: 1;
+  position: relative;
   .headerImg {
     width: 100%;
   }
@@ -106,18 +125,18 @@ button {
     color: #ffffff;
     position: absolute;
     width: 100%;
-    top: 100px;
+    top: 10px;
     @media (min-width: $screen-sm) {
       font-size: 40px;
-      top: 120px;
+      top: 80px;
       
     }
     @media (min-width: $screen-md) {
       font-size: 45px;
-      top: 150px;
+      top: 120px;
 
     }
-    @media (min-width: $screen-sm) {
+    @media (min-width: $screen-lg) {
       font-size: 65px;
 
 
@@ -148,5 +167,228 @@ button {
 
 
 
+.main.signs  {
+  padding: 0;
 
+  p {
+    font-size: 15px;
+    text-align: center;
+    width: 90%;
+    margin: 15px auto;
+  }
+  ul {
+    li {
+      padding: 15px 10px;
+      text-align: left;
+      position: relative;
+      background: $main_purple;
+      h4 {
+        font-size: 14px;
+        @media (min-width: $screen-md) {
+          font-size: 18px;
+        }
+      }
+
+      @media (min-width: $screen-md) {
+        background: none;
+        color: $main_purple;
+        text-align: center;
+      }
+
+      .sign {
+        width: 100%;
+        height: 100%;
+        display: block;
+        @media (min-width: $screen-md) {
+          min-height: 300px;
+        }
+
+
+        .imgWrap {
+          height: 100%;
+          width: 40%;
+          display: block;
+          position: absolute;
+          overflow: hidden;
+          right: 0;
+          top: 0;
+          -webkit-clip-path: polygon(13% 0, 100% 1%, 100% 100%, 13% 100%, 0% 50%);
+          clip-path: polygon(13% 0, 100% 1%, 100% 100%, 13% 100%, 0% 50%);
+
+          &:before {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 1;
+            background: rgba(48, 15, 66, 0.5);
+            -moz-transition: background .3s linear;
+            -webkit-transition: background .3s linear;
+            -o-transition: background .3s linear;
+            transition: background .3s linear;
+          }
+          @media (min-width: $screen-md) {
+            width: 165px;
+            display: block;
+            left: 39px;
+            top: 63px;
+            -webkit-clip-path: none;
+            clip-path: none;
+
+            &:before {
+              display: none;
+            }
+          }
+          @media (min-width: $screen-lg) {
+            left: 63px;
+          }
+
+          img {
+            width: 100%;
+            position: relative;
+            display: block;
+            top: -75px;
+            -webkit-filter: grayscale(1);
+            filter: grayscale(1);
+            -webkit-clip-path: url("#clip-polygon");
+            clip-path: url("#clip-polygon");
+            @media (min-width: $screen-md) {
+              -webkit-filter: none;
+              filter: none;
+              top: 0;
+            }
+
+          }
+
+        }
+        .desktopWho {
+          display: none;
+          float: left;
+          position: absolute;
+          top: 45px;
+          left: 10px;
+          bottom: 0;
+          right: 10px;
+          margin: 0 auto;
+          max-width: 200px;
+          max-height: 200px;
+          @media (min-width: $screen-md) {
+            display: block;
+          }
+
+          svg {
+            width: 100%;
+            height: 100%;
+            display: block;
+          }
+
+          .path {
+            -webkit-transition: all .7s;
+            transition: all .7s;
+            -webkit-transition-delay: 0s;
+            transition-delay: 0s;
+            -webkit-animation-direction: alternate; /* Chrome, Safari, Opera */
+            animation-direction: alternate;
+            &.left, &.right {
+              -webkit-transition-delay: .7s; /* Safari */
+              transition-delay: .7s;
+            }
+
+          }
+
+          &:hover .path {
+            display: block;
+          }
+
+          .top {
+            -webkit-transform-origin: 100% 50%;
+            transform-origin: 100% 50%;
+          }
+          .right {
+            -webkit-transform-origin: 50% 100%;
+            transform-origin: 50% 100%;
+          }
+          .left {
+            -webkit-transform-origin: 50% 0%;
+            transform-origin: 50% 0%;
+          }
+
+        }
+
+        &:hover {
+
+          .imgWrap {
+            &:before {
+              background: none;
+            }
+          }
+          .desktopWho .top {
+            -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+
+          }
+          .desktopWho .right {
+
+            -webkit-transform: scaleY(0);
+            transform: scaleY(0);
+
+          }
+          .desktopWho .bottom {
+            -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+          }
+          .desktopWho .left {
+            -webkit-transform: scaleY(0);
+            transform: scaleY(0);
+          }
+        }
+
+        .postdetails {
+          position: relative;
+          text-align: left;
+          padding: 10px 35px;
+          @media (min-width: $screen-md) {
+            top: 230px;
+
+          }
+          h4, p {
+            color: inherit;
+            &:hover {
+              text-decoration: none;
+            }
+          }
+          h4 {
+            max-width: 50%;
+            margin: 0;
+            color: #ffffff;
+
+            @media (min-width: $screen-md) {
+              max-width: 100%;
+              color: $main_purple;
+
+            }
+          }
+          p{
+            margin: 0
+          }
+          a.readmore{
+            display: none;
+            @media (min-width: $screen-md) {
+              display: block;
+              color: $selected_purple;
+              font-weight: bold;
+            }
+
+          }
+        }
+
+      }
+
+    }
+  }
+
+}
 

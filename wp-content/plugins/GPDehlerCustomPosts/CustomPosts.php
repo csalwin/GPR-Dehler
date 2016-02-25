@@ -17,6 +17,7 @@ add_action( 'init', 'create_Insight_post' );
 add_action( 'init', 'insight_Categories', 0 );
 add_action( 'init', 'Site_Categories', 0 );
 
+//flush_rewrite_rules();
 
 //Removes default Posts
 //add_action('admin_menu','remove_default_post_type');
@@ -51,6 +52,7 @@ function create_Careers_post() {
             'has_archive' => true
         )
     );
+    flush_rewrite_rules();
 }
 
 function create_Case_Studies_post() {
@@ -79,6 +81,7 @@ function create_Case_Studies_post() {
             'has_archive' => true
         )
     );
+    flush_rewrite_rules();
 }
 function create_Insight_post() {
     register_post_type( 'Insight',
@@ -106,6 +109,7 @@ function create_Insight_post() {
             'has_archive' => true
         )
     );
+    flush_rewrite_rules();
 }
 function insight_Categories() {
     register_taxonomy( 'insight_categories', 'post', array( 'hierarchical' => true, 'label' => 'Insight Categories', 'query_var' => true, 'rewrite' => true ) );
@@ -113,6 +117,7 @@ function insight_Categories() {
 function Site_Categories() {
     register_taxonomy( 'site_categories', 'post', array( 'hierarchical' => true, 'label' => 'Site Categories', 'query_var' => true, 'rewrite' => true ) );
 }
+
 
 
 ?>

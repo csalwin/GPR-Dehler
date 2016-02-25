@@ -8,46 +8,49 @@
  */
 
 get_header(); ?>
+<div class="page content">
+	<div class="triCut hidden-xs hidden-sm hidden-md"></div>
+	<div class="headerImgWrapper">
 
-	<section id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
 
-		<?php if ( have_posts() ) : ?>
+			<img class="headerImg" src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/industries/header.png" alt="headerImage">
 
-			<header class="page-header">
-				<h1 class="page-title"><?php printf( __( 'Search Results for: %s', 'twentyfifteen' ), get_search_query() ); ?></h1>
-			</header><!-- .page-header -->
+		<h1>Search</h1>
 
-			<?php
-			// Start the loop.
-			while ( have_posts() ) : the_post(); ?>
+
+	</div>
+
+
+	<div class="container">
+		<div class="thecontent">
+			<div class="row">
+
+			<?php if (have_posts()){
+
+				?>
+				<ul>
+					<?php while ( have_posts() ) : the_post();?>
+					<li><a href="<?php echo get_permalink();?>"><?php the_title() ?></a></li>
+
+					<?php endwhile; ?>
+
+
+				</ul>
 
 				<?php
-				/*
-				 * Run the loop for the search to output the results.
-				 * If you want to overload this in a child theme then include a file
-				 * called content-search.php and that will be used instead.
-				 */
-				get_template_part( 'content', 'search' );
 
-			// End the loop.
-			endwhile;
-
-			// Previous/next page navigation.
-			the_posts_pagination( array(
-				'prev_text'          => __( 'Previous page', 'twentyfifteen' ),
-				'next_text'          => __( 'Next page', 'twentyfifteen' ),
-				'before_page_number' => '<span class="meta-nav screen-reader-text">' . __( 'Page', 'twentyfifteen' ) . ' </span>',
-			) );
+			}
 
 		// If no content, include the "No posts found" template.
-		else :
-			get_template_part( 'content', 'none' );
+		else {?>
+				<p><?php _e( 'Sorry, but nothing matched your search terms. Please try again with different keywords.', 'twentythirteen' ); ?></p>
+			<?php get_search_form(); ?>
 
-		endif;
-		?>
+			<?php }?>
 
-		</main><!-- .site-main -->
-	</section><!-- .content-area -->
+			</div>
+		</div>
+	</div>
+</div>
 
 <?php get_footer(); ?>

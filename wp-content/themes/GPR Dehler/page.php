@@ -13,6 +13,7 @@
 
 get_header(); ?>
 	<div class="page content">
+		<div class="triCut hidden-xs hidden-sm hidden-md"></div>
 		<div class="headerImgWrapper">
 			<?php
 			// Start the loop.
@@ -66,35 +67,6 @@ get_header(); ?>
 
 								</div>
 					<?php
-
-				} else if (strtolower(get_the_title()) == 'careers'){
-
-
-
-					$type = 'Careers';
-					$args=array(
-						'post_type' => $type,
-						'post_status' => 'publish',
-						'posts_per_page' => -1,
-						'caller_get_posts'=> 1
-					);
-
-					$my_query = null;
-					$my_query = new WP_Query($args);
-					if( $my_query->have_posts() ) {
-						?>
-						<h2>Vacant Positions</h2>
-
-						<?php
-						while ($my_query->have_posts()) : $my_query->the_post(); ?>
-							<p><?php the_title(); ?></p>
-							<p><?php the_content()?></p>
-							<button class="applyonline">Apply Online</button>
-
-							<?php
-						endwhile;
-					}
-					wp_reset_query();  // Restore global post data stomped by the_post().
 				}?>
 
 			</div>

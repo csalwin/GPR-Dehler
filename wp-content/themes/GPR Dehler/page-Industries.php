@@ -9,6 +9,7 @@
 get_header(); ?>
 
 <div class="page industries content">
+    <div class="triCut hidden-xs hidden-sm hidden-md"></div>
     <div class="headerImgWrapper">
         <?php
         // Start the loop.
@@ -23,11 +24,10 @@ get_header(); ?>
 
     <?php endwhile; ?>
 
-    <div class="box main container">
-        <p>
-            We generate value for clients across industries. We pride ourselves in our sector expertise,
-            combined with our ability to integrate learning from a range of disciplines to improve organisations.
-        </p>
+    <div class="box main signs container">
+        <div class="content">
+            <?php the_content();?>
+        </div>
         <ul class="row">
 
             <?php

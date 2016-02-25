@@ -41,6 +41,8 @@ get_header(); ?>
 				 */
 				get_template_part( 'content', get_post_format() );
 
+			the_content();
+
 			// End the loop.
 			endwhile;
 

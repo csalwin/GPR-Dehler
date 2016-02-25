@@ -32,6 +32,18 @@ $( document ).ready(function() {
     });
 
 
+//    Job Form
+
+    $('button.applyonline').click(function (){
+        $('form.jobform').hide();
+        $(this).next().slideToggle();
+        $('button.applyonline').show();
+        $(this).hide();
+
+
+    })
+
+
 
 
 
