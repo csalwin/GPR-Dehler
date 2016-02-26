@@ -47,9 +47,7 @@ get_header(); ?>
 					$my_query = new WP_Query($args);
 					if( $my_query->have_posts() ) {
 					?>
-
 						<div class="jobs">
-
 							<div class="row jobtitle">
 								<div class="container">
 									<h2>Vacant Positions</h2>
