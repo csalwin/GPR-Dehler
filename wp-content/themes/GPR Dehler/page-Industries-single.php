@@ -66,6 +66,14 @@ get_header(); ?>
             <h2>Achievements</h2>
 
         </div>
+        <div class="achivementslider">
+            <ul class="achivslider">
+                <li>INVENTORY <strong>REDUCTIONS</strong> OF <br/> <strong>20% - 75%</strong></li>
+                <li>INVENTORY <strong>REDUCTIONS</strong> OF <br/> <strong>30% - 75%</strong></li>
+                <li>INVENTORY <strong>REDUCTIONS</strong> OF <br/> <strong>20% - 85%</strong></li>
+                <li>INVENTORY <strong>REDUCTIONS</strong> OF <br/> <strong>37% - 87%</strong></li>
+            </ul>
+        </div>
 
 
     </div>
@@ -284,3 +292,4 @@ get_header(); ?>
 </div>
 
 <?php get_footer(); ?>
+

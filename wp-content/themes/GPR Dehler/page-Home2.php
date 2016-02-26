@@ -347,27 +347,28 @@ get_header(); ?>
 
 
 
-    <?php get_footer(); ?>
 
-    <script type="text/javascript">
-        $(document).ready(function()
-        {
-            $('.overview').slick({
-                slidesToShow: 6,
-                slidesToScroll: 1,
-                autoplay: true,
-                autoplaySpeed: 0,
-                speed: 4500,
-                cssEase:'linear'
-            });
-
-            $('.homeSlider').bxSlider({
-                controls: false,
-                pager: false,
-                auto: true
-            });
-
-        });
-    </script>
 </div>
+<?php get_footer(); ?>
+
+<script type="text/javascript">
+    $(document).ready(function()
+    {
+        $('.overview').slick({
+            slidesToShow: 6,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 0,
+            speed: 4500,
+            cssEase:'linear'
+        });
+
+        $('.homeSlider').bxSlider({
+            controls: false,
+            pager: false,
+            auto: true
+        });
+
+    });
+</script>
 

@@ -21,7 +21,7 @@
             list-style: disc;
           }
         }
-        .jobform {
+        .wpcf7 {
           display: none;
           .inputwrapper {
             padding: 0px;
@@ -51,6 +51,11 @@
             display: inline-block;
             cursor: pointer;
             padding: 8px 10px;
+          }
+          input[type="submit"]{
+            border: none;
+            padding: 8px 10px;
+            width: 200px;
           }
         }
       }

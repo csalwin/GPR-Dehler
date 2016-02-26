@@ -35,13 +35,69 @@ $( document ).ready(function() {
 //    Job Form
 
     $('button.applyonline').click(function (){
-        $('form.jobform').hide();
+        $('.wpcf7').hide();
         $(this).next().slideToggle();
         $('button.applyonline').show();
         $(this).hide();
 
 
-    })
+    });
+
+
+
+//    SLIDERS
+    $('.resultslider').slick({
+        centerMode: true,
+//                centerPadding: '60px',
+        slidesToShow: 3,
+        autoplay: true,
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    arrows: true,
+                    centerMode: true,
+//                            centerPadding: '800px',
+                    slidesToShow: 1
+                }
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    arrows: false,
+                    centerMode: true,
+                    centerPadding: '0px',
+                    slidesToShow: 1
+                }
+            }
+        ]
+    });
+    $('.achivslider').slick({
+        centerMode: true,
+//                centerPadding: '60px',
+        slidesToShow: 1,
+        autoplay: true,
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    arrows: true,
+                    centerMode: true,
+//                            centerPadding: '800px',
+                    slidesToShow: 1
+                }
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    arrows: false,
+                    centerMode: true,
+                    centerPadding: '0px',
+                    slidesToShow: 1
+                }
+            }
+        ]
+    });
 
 
 

@@ -48,6 +48,55 @@
     }
 
   }
+  .achievements {
+    .achivementslider {
+      ul.achivslider {
+        background: url("images/industries/purple-stats-bg.jpg");
+        padding: 0;
+        margin-bottom: 0;
+        li{
+          //background: #000088;
+          color: #ffffff;
+          //padding: 100px;
+          text-align: center;
+          font-size: 40px;
+          @media(min-width: $screen-sm){
+            padding: 100px;
+          }
+
+        }
+        button {
+          height: 100%;
+          width: 20%;
+          background: rgba(255, 255, 255, 0.5);
+          font-size: 40px;
+          &.slick-next:before, &.slick-prev:before {
+            font: inherit;
+          }
+          &.slick-prev{
+            left: 0;
+            z-index: 1;
+            &:before {
+               content: "‹";
+              font-size: 140px;
+              position: absolute;
+              left: 49%;
+            }
+          }
+          &.slick-next {
+            right: 0;
+            &:before {
+              content: "›";
+              font-size: 140px;
+              position: absolute;
+              right: 49%;
+            }
+          }
+        }
+
+      }
+    }
+  }
   .casestudies {
     background: url("images/home/process-bg.png");
     .box {

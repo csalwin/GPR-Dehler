@@ -23,8 +23,7 @@ get_header(); ?>
 		<?php
 		endwhile;?>
 
-		<div class="main signs container">
-			<div class="thecontent">
+		<div class="box main signs container">
 				<div class="row">
 
 
@@ -108,6 +107,7 @@ get_header(); ?>
 												<!--							<image xlink:href="http://www.greeninc.nl/wp-content/uploads/2013/02/081129-Stock-Photo-YvZ-IMG_0238.jpg" x="15" y="15" height="270px" width="270px"/>-->
 											</svg>
 										</div>
+										<div class="clearfix"></div>
 										<div class="postdetails">
 											<h4><?php echo $post->post_title; ?></h4>
 											<?php
@@ -116,30 +116,22 @@ get_header(); ?>
 												echo "<p>".$exerpt."</p>";
 											}
 											?>
-											<a href="<?php echo $post->guid; ?>">Read more ></a>
+											<a class="readmore" href="<?php echo $post->guid; ?>">Read more ></a>
 										</div>
 
 									</div>
 								</a>
-
-
 							</li>
-
-
 							<?php
-
 						}
 					}
             ?>
-
-
 					</ul>
 
 			</div>
-
-		</div>
 	</div><!-- .content-area -->
 
 <?php get_footer(); ?>
+
 
 

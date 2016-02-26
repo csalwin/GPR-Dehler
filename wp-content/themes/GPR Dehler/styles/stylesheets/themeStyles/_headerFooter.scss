@@ -298,7 +298,7 @@
     display: block;
     overflow: visible;
     background: #e0dee2;
-    z-index: -1;
+    margin: 50px 0 0 0;
 
     &:before{
       content: "";
@@ -334,10 +334,6 @@
       z-index: 4;
       color: #575756;
       margin-bottom: 50px;
-
-
-
-
 
       .clearfix {
         display: block;

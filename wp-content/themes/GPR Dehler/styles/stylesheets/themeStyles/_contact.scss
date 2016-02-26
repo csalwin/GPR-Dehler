@@ -1,0 +1,64 @@
+.contact {
+  form {
+    padding: 0 15px;
+    h3 {
+      font-size: 20px;
+      text-transform: uppercase;
+    }
+    input, select, textarea {
+      display: block;
+      width: 100%;
+      margin: 8px 0;
+      background: none;
+      border: #d6d5d6 solid 2px;
+      background: rgba(255, 255, 255, 0.3);
+      padding: 5px;
+      border-radius: 0;
+      font-size: 13px;
+      text-transform: uppercase;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+
+      &:focus {
+        outline: $selected_purple 2px solid;
+      }
+      &::-webkit-input-placeholder {
+
+        text-transform: uppercase;
+        color: #575756;
+      }
+      &:-moz-placeholder {
+        text-transform: uppercase;
+        color: #575756;
+      }
+      &:-ms-input-placeholder {
+        text-transform: uppercase;
+        color: #575756;
+      }
+    }
+    select {
+      background: url("images/contactDropdown.png") 97% 50% no-repeat;
+
+    }
+    p {
+      min-height: 34px;
+      font-size: 14px;
+      line-height: 15px;
+      margin: 0;
+    }
+    button, input[type="submit"] {
+      color: #ffffff;
+      background: $main_purple;
+      border: none;
+      padding: 8px 25px;
+      -moz-transition: background .3s linear;
+      -webkit-transition: background .3s linear;
+      -o-transition: background .3s linear;
+      transition: background .3s linear;
+      &:hover {
+        background: #8b003d;
+      }
+    }
+  }
+}

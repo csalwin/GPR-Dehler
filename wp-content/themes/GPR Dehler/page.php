@@ -34,41 +34,6 @@ get_header(); ?>
 					the_content();
 					?>
 				</div>
-
-
-				<?php if (strtolower(get_the_title()) == "who we are" ){
-					?>
-						<div class="row">
-
-							<div class="ourApproach">
-								<h3>We call this:</h3>
-								<img class="col-xs-12 col-sm-7 col-md-4" src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/home/introImg.png">
-								<div class="clearfix"></div>
-					<button class="button" href="#">Our Approach</button>
-					<button class="button" href="#">Industries</button>
-							</div>
-
-
-						</div>
-
-					<?php
-				} else if (strtolower(get_the_title()) == "our approach"){
-					 ?>
-								<div class="row">
-
-									<div class="ourApproach">
-										<h3>We call this:</h3>
-										<img class="col-xs-12 col-sm-7 col-md-4" src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/home/introImg.png">
-										<div class="clearfix"></div>
-					<button class="button" href="#">Industries</button>
-					<button class="button" href="#">Case studies</button>
-									</div>
-
-
-								</div>
-					<?php
-				}?>
-
 			</div>
 
 		</div>

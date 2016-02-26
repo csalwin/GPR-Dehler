@@ -20,8 +20,7 @@ get_header(); ?>
 					<h1><?php echo get_the_title();?></h1>
 		</div>
 
-		<?php
-		endwhile;?>
+
 
 		<div class="container">
 			<div class="thecontent">
@@ -63,27 +62,30 @@ get_header(); ?>
 										<p><?php the_content()?></p>
 										<button class="applyonline">Apply Online</button>
 
-										<form class="jobform" method="post">
-											<input type="hidden" value="<?php the_title() ?>"/>
-											<div class="inputwrapper col-xs-12 col-md-4">
-												<input name="fullname" placeholder="Full Name" type="text" class="col-xs-12"/>
-											</div>
-											<div style="padding: 0 5px" class="inputwrapper col-xs-12 col-md-4">
-												<input  name="phoneNumber" placeholder="Phone Number" type="tel" class="col-xs-12"/>
-											</div>
-											<div class="inputwrapper col-xs-12 col-md-4">
-												<input name="emailAddress" placeholder="Email Address" type="email" class="col-xs-12"/>
-											</div>
-											<div class="inputwrapper col-xs-12">
-												<textarea rows="8" name="comments" placeholder="Comments" class="col-xs-12"></textarea>
-											</div>
-											<label for="attachCV" class="attachcvBtn">
-												<a class="button">Attach CV</a>
-											</label>
-											<input type="file" id="attachCV"/>
+										<?php echo do_shortcode('[contact-form-7 id="185" title="Job Form"]'); ?>
 
-											<button type="submit" class="pull-right">Apply now</button>
-										</form>
+
+<!--										<form class="jobform" method="post">-->
+<!--											<input type="hidden" value="--><?php //the_title() ?><!--"/>-->
+<!--											<div class="inputwrapper col-xs-12 col-md-4">-->
+<!--												<input name="fullname" placeholder="Full Name" type="text" class="col-xs-12"/>-->
+<!--											</div>-->
+<!--											<div style="padding: 0 5px" class="inputwrapper col-xs-12 col-md-4">-->
+<!--												<input  name="phoneNumber" placeholder="Phone Number" type="tel" class="col-xs-12"/>-->
+<!--											</div>-->
+<!--											<div class="inputwrapper col-xs-12 col-md-4">-->
+<!--												<input name="emailAddress" placeholder="Email Address" type="email" class="col-xs-12"/>-->
+<!--											</div>-->
+<!--											<div class="inputwrapper col-xs-12">-->
+<!--												<textarea rows="8" name="comments" placeholder="Comments" class="col-xs-12"></textarea>-->
+<!--											</div>-->
+<!--											<label for="attachCV" class="attachcvBtn">-->
+<!--												<a class="button">Attach CV</a>-->
+<!--											</label>-->
+<!--											<input type="file" id="attachCV"/>-->
+<!---->
+<!--											<button type="submit" class="pull-right">Apply now</button>-->
+<!--										</form>-->
 
 									</div>
 								</div>
@@ -97,7 +99,8 @@ get_header(); ?>
 							?>
 
 
-
+							<?php
+							endwhile;?>
 
 
 

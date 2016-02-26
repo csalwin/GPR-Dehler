@@ -4,3 +4,24 @@
     bottom: 0;
   }
 }
+
+.single-insight {
+  color: #807b8f;
+  .postdate {
+    color: #b3b3b3;
+  }
+  .postcontent {
+    margin: 30px 0;
+    color: #807b8f;
+  }
+  .recent {
+    ul{
+      padding-left: 15px;
+      li{
+        list-style: disc;
+      }
+    }
+
+  }
+
+}
