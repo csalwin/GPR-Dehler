@@ -17,56 +17,90 @@ get_header(); ?>
         <div class="slider">
             <div class="homeSliderWrapper">
                 <ul class="homeSlider">
+                    <?php
 
-                    <li>
-<!--                        <div class=diamondImg>-->
-<!--                            <img src="--><?php //echo esc_url( get_template_directory_uri() ); ?><!--/images/dimond.png">-->
+                    // check if the repeater field has rows of data
+                    if( have_rows('home_main_slider_images') ) {
+
+                        // loop through the rows of data
+                        while (have_rows('home_main_slider_images')) { the_row();
+                            $image_text = the_sub_field('image_text');
+                            $post_exerpt = the_sub_field('case_studies');
+                            $image = the_sub_field('images');
+
+                            ?>
+
+                            <li>
+                                <div class="container">
+                                    <div class="casestudy">
+                                        <h1>Think. Disrupt. <span><?php $image_text ?></span></h1>
+                                        <p><?php print_r($post_exerpt, true)?></p>
+                                        <a href="#">Read the case Study</a>
+                                    </div>
+                                </div>
+                                <img src="<?php $image['url']; ?>">
+                            </li>
+                        <?php }
+
+                    }else {
+
+                        // no rows found
+
+                    }
+
+                    ?>
+
+<!--                    <li>-->
+<!--<!--                        <div class=diamondImg>-->-->
+<!--<!--                            <img src="-->--><?php ////echo esc_url( get_template_directory_uri() ); ?><!--<!--/images/dimond.png">-->-->
+<!--<!--                        </div>-->-->
+<!---->
+<!--                        <div class="container">-->
+<!---->
+<!--                            <div class="casestudy">-->
+<!--                                <h1>Think. Disrupt. <span>Grow.</span></h1>-->
+<!--                                <p>$800 Million of new value is <br />-->
+<!--                                    created in 18 months.-->
+<!--                                </p>-->
+<!--                                <a href="#">Read the case Study</a>-->
+<!---->
+<!--                            </div>-->
 <!--                        </div>-->
+<!---->
+<!--                        <img src="--><?php //echo esc_url( get_template_directory_uri() ); ?><!--/images/slider/slide-1.jpg">-->
+<!---->
+<!--                    </li>-->
+<!--                    <li>-->
+<!---->
+<!--                        <div class="container">-->
+<!--                            <div class="casestudy">-->
+<!--                                <h1>Think. Disrupt. <span>Innovate.</span></h1>-->
+<!--                                <p>$800 Million of new value is <br />-->
+<!--                                    created in 18 months.-->
+<!--                                </p>-->
+<!--                                <a href="#">Read the case Study</a>-->
+<!---->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                        <img src="--><?php //echo esc_url( get_template_directory_uri() ); ?><!--/images/slider/slide-2.png">-->
+<!---->
+<!--                    </li>-->
+<!--                    <li>-->
+<!--                        <div class="container">-->
+<!--                            <div class="casestudy">-->
+<!--                                <h1>Think. Disrupt. <span>Adapt.</span></h1>-->
+<!--                                <p>$800 Million of new value is <br />-->
+<!--                                    created in 18 months.-->
+<!--                                </p>-->
+<!--                                <a href="#">Read the case Study</a>-->
+<!---->
+<!--                            </div>-->
+<!--                        </div>-->
+<!---->
+<!--                        <img src="--><?php //echo esc_url( get_template_directory_uri() ); ?><!--/images/slider/slide-3.png">-->
+<!--                    </li>-->
 
-                        <div class="container">
-
-                            <div class="casestudy">
-                                <h1>Think. Disrupt. <span>Grow.</span></h1>
-                                <p>$800 Million of new value is <br />
-                                    created in 18 months.
-                                </p>
-                                <a href="#">Read the case Study</a>
-
-                            </div>
-                        </div>
-
-                        <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/slider/slide-1.jpg">
-
-                    </li>
-                    <li>
-
-                        <div class="container">
-                            <div class="casestudy">
-                                <h1>Think. Disrupt. <span>Innovate.</span></h1>
-                                <p>$800 Million of new value is <br />
-                                    created in 18 months.
-                                </p>
-                                <a href="#">Read the case Study</a>
-
-                            </div>
-                        </div>
-                        <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/slider/slide-2.png">
-
-                    </li>
-                    <li>
-                        <div class="container">
-                            <div class="casestudy">
-                                <h1>Think. Disrupt. <span>Adapt.</span></h1>
-                                <p>$800 Million of new value is <br />
-                                    created in 18 months.
-                                </p>
-                                <a href="#">Read the case Study</a>
-
-                            </div>
-                        </div>
-
-                        <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/slider/slide-3.png">
-                    </li>
+                    </ul>
             </div>
             <!--			--><?php //putRevSlider('home-slider', 'homepage'); ?>
 

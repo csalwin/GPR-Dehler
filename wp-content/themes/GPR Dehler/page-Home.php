@@ -38,63 +38,60 @@ get_header(); ?>
                 </div>
                 <ul class="homeSlider images">
 
-                    <li>
-                        <div class="imageWrapper">
-                            <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/slider/slide-1.jpg">
-                        </div>
+                        <?php
 
+                        // check if the repeater field has rows of data
+                        if( have_rows('home_main_slider_images') ) {
 
-                    </li>
-                    <li>
-                        <div class="imageWrapper">
-                            <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/slider/slide-2.png">
-                        </div>
+                            // loop through the rows of data
+                            while (have_rows('home_main_slider_images')): the_row();
+                                $image = get_sub_field('images');
+                                ?>
 
-                    </li>
-                    <li>
-                        <div class="imageWrapper">
-                            <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/slider/slide-3.png">
-                        </div>
-                    </li>
+                                <li>
+                                    <div class="imageWrapper">
+                                        <img src="<?php echo $image['url']; ?>">
+                                    </div>
+                                </li>
+                            <?php endwhile;
+
+                        }else {
+
+                            // no rows found
+
+                        }
+
+                        ?>
                 </ul>
 
                 <ul class="homeSlider content">
-                    <li>
-                        <div class="container hidden-xs hidden-sm">
-                            <div class="col-xs-7 casestudy">
-                                <h1>Think. Disrupt. <span>Grow.</span></h1>
-                                <p>$800 Million of new value is <br />
-                                    created in 18 months.
-                                </p>
-                                <a href="#">Read the case Study</a>
+                    <?php
+                    // check if the repeater field has rows of data
+                    if( have_rows('home_main_slider_images') ) {
+                        // loop through the rows of data
+                        while (have_rows('home_main_slider_images')) : the_row();
+                            $image_text = get_sub_field('image_text');
+                            $post_exerpt = get_sub_field('case_studies');
+                            $exerpt = get_field('post_exerpt', $post_exerpt->ID)
+                            ?>
+                            <li>
+                                <div class="container">
+                                    <div class="casestudy">
+                                        <h1>Think. Disrupt. <span><?php echo $image_text ?></span></h1>
+                                        <p><?php echo $exerpt?></p>
+                                        <a href="<?php echo $post_exerpt-> guid ?>">Read the case Study</a>
+                                    </div>
+                                </div>
+                            </li>
+                        <?php endwhile;
 
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="container hidden-xs hidden-sm">
-                            <div class="col-xs-7 casestudy">
-                                <h1>Think. Disrupt. <span>Innovate.</span></h1>
-                                <p>$800 Million of new value is <br />
-                                    created in 18 months.
-                                </p>
-                                <a href="#">Read the case Study</a>
+                    }else {
 
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="container hidden-xs hidden-sm">
-                            <div class="col-xs-7 casestudy">
-                                <h1>Think. Disrupt. <span>Adapt.</span></h1>
-                                <p>$800 Million of new value is <br />
-                                    created in 18 months.
-                                </p>
-                                <a href="#">Read the case Study</a>
+                        // no rows found
 
-                            </div>
-                        </div>
-                    </li>
+                    }
+
+                    ?>
                 </ul>
             </div>
         </div>
@@ -124,49 +121,87 @@ get_header(); ?>
         <div class="sliderwrapper">
             <div class="slider">
                 <ul class="testSlider">
-                    <li>
-                        <div class="imgWrapper">
-                            <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/home/testSlider1.png">
-                        </div>
-                        <div class="overlay">
-                            <div class="container">
-                                <div class="casestudy">
-                                    <h2>Think. Disrupt. Innovate.</h2>
-                                    <p>Intelligent technologies are used to to triple production in 12 months</p>
-                                    <a href="#">Read the case study ></a>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="imgWrapper">
-                            <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/home/testSlider2.jpg">
-                        </div>
 
-                        <div class="overlay">
-                            <div class="container">
-                                <div class="casestudy">
-                                    <h2>Think. Disrupt. Innovate.</h2>
-                                    <p>Intelligent technologies are used to to triple production in 12 months</p>
-                                    <a href="#">Read the case study ></a>
+
+                    <?php
+
+                    // check if the repeater field has rows of data
+                    if( have_rows('home_second_slider') ) {
+
+                        // loop through the rows of data
+                        while (have_rows('home_second_slider')): the_row();
+                            $image = get_sub_field('images');
+                            $image_text = get_sub_field('image_text');
+                            $post_exerpt = get_sub_field('case_studies');
+                            $exerpt = get_field('post_exerpt', $post_exerpt->ID)
+                            ?>
+
+                            <li>
+                                <div class="imgWrapper">
+                                    <img src="<?php echo $image['url']; ?>">
                                 </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="imgWrapper">
-                            <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/home/testSlider3.jpg">
-                        </div>
-                        <div class="overlay">
-                            <div class="container">
-                                <div class="casestudy">
-                                    <h2>Think. Disrupt. Innovate.</h2>
-                                    <p>Intelligent technologies are used to to triple production in 12 months</p>
-                                    <a href="#">Read the case study ></a>
+                                <div class="overlay">
+                                    <div class="container">
+                                        <div class="casestudy">
+                                            <h2>Think. Disrupt. <?php echo $image_text; ?></h2>
+                                            <p><?php echo $exerpt; ?></p>
+                                            <a href="<?php echo $post_exerpt-> guid?>">Read the case study ></a>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
-                    </li>
+                            </li>
+                        <?php endwhile;
+
+                    }else {
+
+                        // no rows found
+
+                    }
+
+                    ?>
+<!--                    <li>-->
+<!--                        <div class="imgWrapper">-->
+<!--                            <img src="--><?php //echo esc_url( get_template_directory_uri() ); ?><!--/images/home/testSlider1.png">-->
+<!--                        </div>-->
+<!--                        <div class="overlay">-->
+<!--                            <div class="container">-->
+<!--                                <div class="casestudy">-->
+<!--                                    <h2>Think. Disrupt. Innovate.</h2>-->
+<!--                                    <p>Intelligent technologies are used to to triple production in 12 months</p>-->
+<!--                                    <a href="#">Read the case study ></a>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </li>-->
+<!--                    <li>-->
+<!--                        <div class="imgWrapper">-->
+<!--                            <img src="--><?php //echo esc_url( get_template_directory_uri() ); ?><!--/images/home/testSlider2.jpg">-->
+<!--                        </div>-->
+<!---->
+<!--                        <div class="overlay">-->
+<!--                            <div class="container">-->
+<!--                                <div class="casestudy">-->
+<!--                                    <h2>Think. Disrupt. Innovate.</h2>-->
+<!--                                    <p>Intelligent technologies are used to to triple production in 12 months</p>-->
+<!--                                    <a href="#">Read the case study ></a>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </li>-->
+<!--                    <li>-->
+<!--                        <div class="imgWrapper">-->
+<!--                            <img src="--><?php //echo esc_url( get_template_directory_uri() ); ?><!--/images/home/testSlider3.jpg">-->
+<!--                        </div>-->
+<!--                        <div class="overlay">-->
+<!--                            <div class="container">-->
+<!--                                <div class="casestudy">-->
+<!--                                    <h2>Think. Disrupt. Innovate.</h2>-->
+<!--                                    <p>Intelligent technologies are used to to triple production in 12 months</p>-->
+<!--                                    <a href="#">Read the case study ></a>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </li>-->
                 </ul>
             </div>
 
@@ -178,15 +213,40 @@ get_header(); ?>
                     &nbsp;
                 </div>
                 <ul class="testSlider">
-                    <li>
-                        <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/home/testSlider1.png">
-                    </li>
-                    <li>
-                        <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/home/testSlider2.jpg">
-                    </li>
-                    <li>
-                        <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/home/testSlider3.jpg">
-                    </li>
+
+                    <?php
+
+                    // check if the repeater field has rows of data
+                    if( have_rows('home_second_slider') ) {
+
+                        // loop through the rows of data
+                        while (have_rows('home_second_slider')): the_row();
+                            $image = get_sub_field('images');
+                            ?>
+
+                            <li>
+                                <img src="<?php echo $image['url']; ?>">
+                            </li>
+                        <?php endwhile;
+
+                    }else {
+
+                        // no rows found
+
+                    }
+
+                    ?>
+
+
+<!--                    <li>-->
+<!--                        <img src="--><?php //echo esc_url( get_template_directory_uri() ); ?><!--/images/home/testSlider1.png">-->
+<!--                    </li>-->
+<!--                    <li>-->
+<!--                        <img src="--><?php //echo esc_url( get_template_directory_uri() ); ?><!--/images/home/testSlider2.jpg">-->
+<!--                    </li>-->
+<!--                    <li>-->
+<!--                        <img src="--><?php //echo esc_url( get_template_directory_uri() ); ?><!--/images/home/testSlider3.jpg">-->
+<!--                    </li>-->
                 </ul>
 
 
