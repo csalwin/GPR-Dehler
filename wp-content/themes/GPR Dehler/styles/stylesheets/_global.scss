@@ -119,6 +119,7 @@ button, a.button, input.button[type="submit"] {
   position: relative;
   .headerImg {
     width: 100%;
+    position: relative;
   }
   h1 {
     text-align: center;
@@ -127,6 +128,7 @@ button, a.button, input.button[type="submit"] {
     position: absolute;
     width: 100%;
     top: 10px;
+    text-shadow: -1px 3px 30px rgba(0, 0, 0, 0.44);
     @media (min-width: $screen-sm) {
       font-size: 40px;
       top: 80px;

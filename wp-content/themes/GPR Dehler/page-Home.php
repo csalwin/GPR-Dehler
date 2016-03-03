@@ -103,14 +103,14 @@ get_header(); ?>
             <img class="col-xs-12 col-sm-7 col-md-4" src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/home/introImg.png">
 
 
-            <div class="introWrapper col-xs-11"">
+            <div class="introWrapper col-xs-11">
                 <p> We take a people centric approach to accelerate strategy realisation. Our approach releases
                     the capability of teams, uncovers innate talent, encourages creativity and fosters discretionary effort through an experiential discovery process.</p>
 
                 <p>For three decades we have delivered a significant return on investment for our clients in over 40 countries..</p>
 
 
-            <button>Our Approach</button>
+            <a class="button" href="<?php echo get_page_link(10)?>">Our Approach</a>
 
             </div>
         </div>
@@ -262,23 +262,31 @@ get_header(); ?>
             <div class="row">
                 <ul>
                     <li class="col-xs-6 col-md-3">
-                        <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/home/skills/whoWeAreIcons1.png"/>
-                        Who we are
+                        <a href="<?php echo get_page_link(8)?>">
+                            <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/home/skills/whoWeAreIcons1.png"/>
+                            Who we are
+                        </a>
 
                     </li>
                     <li class="col-xs-6 col-md-3">
-                        <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/home/skills/whoWeAreIcons2.png"/>
-                        Our Approach
+                        <a href="<?php echo get_page_link(10)?>">
+                            <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/home/skills/whoWeAreIcons2.png"/>
+                            Our Approach
+                        </a>
 
                     </li>
                     <li class="col-xs-6 col-md-3">
-                        <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/home/skills/whoWeAreIcons3.png"/>
-                        Industries
+                        <a href="<?php echo get_page_link(80)?>">
+                            <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/home/skills/whoWeAreIcons3.png"/>
+                            Industries
+                        </a>
 
                     </li>
                     <li class="col-xs-6 col-md-3">
-                        <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/home/skills/whoWeAreIcons4.png"/>
-                        Articles
+                        <a href="<?php echo get_page_link(16)?>">
+                            <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/home/skills/whoWeAreIcons4.png"/>
+                            Articles
+                        </a>
 
                     </li>
 

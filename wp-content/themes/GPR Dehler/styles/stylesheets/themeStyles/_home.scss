@@ -278,7 +278,8 @@
     }
     &.ourProcess {
       background: url("images/home/process-bg.png");
-
+      z-index: 2;
+      position: relative;
       p {
         width: 80%;
         display: block;
