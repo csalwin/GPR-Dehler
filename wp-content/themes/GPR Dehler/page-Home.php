@@ -156,49 +156,6 @@ get_header(); ?>
                     }
 
                     ?>
-<!--                    <li>-->
-<!--                        <div class="imgWrapper">-->
-<!--                            <img src="--><?php //echo esc_url( get_template_directory_uri() ); ?><!--/images/home/testSlider1.png">-->
-<!--                        </div>-->
-<!--                        <div class="overlay">-->
-<!--                            <div class="container">-->
-<!--                                <div class="casestudy">-->
-<!--                                    <h2>Think. Disrupt. Innovate.</h2>-->
-<!--                                    <p>Intelligent technologies are used to to triple production in 12 months</p>-->
-<!--                                    <a href="#">Read the case study ></a>-->
-<!--                                </div>-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                    </li>-->
-<!--                    <li>-->
-<!--                        <div class="imgWrapper">-->
-<!--                            <img src="--><?php //echo esc_url( get_template_directory_uri() ); ?><!--/images/home/testSlider2.jpg">-->
-<!--                        </div>-->
-<!---->
-<!--                        <div class="overlay">-->
-<!--                            <div class="container">-->
-<!--                                <div class="casestudy">-->
-<!--                                    <h2>Think. Disrupt. Innovate.</h2>-->
-<!--                                    <p>Intelligent technologies are used to to triple production in 12 months</p>-->
-<!--                                    <a href="#">Read the case study ></a>-->
-<!--                                </div>-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                    </li>-->
-<!--                    <li>-->
-<!--                        <div class="imgWrapper">-->
-<!--                            <img src="--><?php //echo esc_url( get_template_directory_uri() ); ?><!--/images/home/testSlider3.jpg">-->
-<!--                        </div>-->
-<!--                        <div class="overlay">-->
-<!--                            <div class="container">-->
-<!--                                <div class="casestudy">-->
-<!--                                    <h2>Think. Disrupt. Innovate.</h2>-->
-<!--                                    <p>Intelligent technologies are used to to triple production in 12 months</p>-->
-<!--                                    <a href="#">Read the case study ></a>-->
-<!--                                </div>-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                    </li>-->
                 </ul>
             </div>
 
@@ -233,17 +190,6 @@ get_header(); ?>
                     }
 
                     ?>
-
-
-<!--                    <li>-->
-<!--                        <img src="--><?php //echo esc_url( get_template_directory_uri() ); ?><!--/images/home/testSlider1.png">-->
-<!--                    </li>-->
-<!--                    <li>-->
-<!--                        <img src="--><?php //echo esc_url( get_template_directory_uri() ); ?><!--/images/home/testSlider2.jpg">-->
-<!--                    </li>-->
-<!--                    <li>-->
-<!--                        <img src="--><?php //echo esc_url( get_template_directory_uri() ); ?><!--/images/home/testSlider3.jpg">-->
-<!--                    </li>-->
                 </ul>
 
 

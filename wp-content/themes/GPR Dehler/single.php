@@ -10,19 +10,7 @@
 get_header(); ?>
 <div class="page content">
 	<div class="triCut hidden-xs hidden-sm hidden-md"></div>
-	<div class="headerImgWrapper">
-		<?php
-		// Start the loop.
-		while ( have_posts() ) : the_post();
-		if (has_post_thumbnail( $post->ID ) ){ ?>
-			<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ),'full');?>
-			<img class="headerImg" src="<?php echo $image[0]?>"/>
-			<?php
-		}else{?>
-			<img class="headerImg" src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/industries/header.png" alt="headerImage">
-		<?php }?>
-		<h1><?php echo get_the_title();?></h1>
-	</div>
+	<?php get_template_part( 'includes/headerimagetitle' ); ?>
 
 	<?php
 	if (get_post_type( get_the_ID() ) == "insight" ) {?>
@@ -114,12 +102,6 @@ get_header(); ?>
 
 
 	<?php }?>
-
-
-
-
-
-	<?php endwhile; ?>
 
 	<?php
 	if (get_post_type( get_the_ID() ) == "casestudies" ) {

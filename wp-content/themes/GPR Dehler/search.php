@@ -15,7 +15,7 @@ get_header(); ?>
 
 			<img class="headerImg" src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/industries/header.png" alt="headerImage">
 
-		<h1>Search</h1>
+		<div class="width970"><h1>Search: <?php echo get_search_query(); ?></h1></div>
 
 
 	</div>

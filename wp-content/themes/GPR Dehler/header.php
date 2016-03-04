@@ -66,7 +66,6 @@
 			<div class="socialIcons col-md-3 col-lg-2 col-lg-pull-1 pull-right hidden-xs hidden-sm">
 				<ul>
 					<li id="linkedIn"></li>
-					<li id="facebook"></li>
 					<li id="twitter"></li>
 				</ul>
 			</div>
@@ -82,12 +81,6 @@
 			);
 
 			wp_nav_menu( $menu ); ?>
-
-
-
-
-
-
 
 		</div>
 	</div>

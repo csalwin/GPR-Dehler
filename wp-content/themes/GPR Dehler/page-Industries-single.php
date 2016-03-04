@@ -10,21 +10,8 @@ get_header(); ?>
 
 <div class="page industries content">
     <div class="triCut hidden-xs hidden-sm hidden-md"></div>
-    <div class="headerImgWrapper">
 
-
-        <?php
-        // Start the loop.
-        while ( have_posts() ) : the_post();
-        if ( has_post_thumbnail() ) {
-            the_post_thumbnail();
-        }else{?>
-            <img class="headerImg" src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/industries/header.png" alt="headerImage">
-        <?php }?>
-        <h1><?php echo get_the_title();?></h1>
-    </div>
-
-    <?php endwhile; ?>
+    <?php get_template_part( 'includes/headerimagetitle' ); ?>
 
     <div class="box main container">
         <div class="content">

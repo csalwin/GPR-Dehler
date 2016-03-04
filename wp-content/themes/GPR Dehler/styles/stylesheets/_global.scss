@@ -38,6 +38,10 @@ body {
     text-decoration: none;
   }
 }
+.width970 {
+  max-width: 970px;
+  margin: 0 auto;
+}
 .box {
   background-color: rgba(255,255,255, 0.5);
   text-align: center;
@@ -124,6 +128,8 @@ button, a.button, input.button[type="submit"] {
     text-transform: uppercase;
     color: #ffffff;
     position: absolute;
+    max-width: 970px;
+    margin: 0 auto;
     width: 100%;
     top: 10px;
     text-shadow: -1px 3px 30px rgba(0, 0, 0, 0.44);
