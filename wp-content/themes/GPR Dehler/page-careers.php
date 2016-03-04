@@ -14,7 +14,8 @@ get_header(); ?>
 			while ( have_posts() ) : the_post();
 			if (has_post_thumbnail( $post->ID ) ){ ?>
 				<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ),'full');?>
-				<img class="headerImg" src="<?php echo $image[0]?>" data-stellar-ratio="0.8"/>
+				<img class="headerImg hidden-xs hidden-sm" src="<?php echo $image[0]?>" data-stellar-ratio="0.8"/>
+				<img class="headerImg hidden-md hidden-lg" src="<?php echo $image[0]?>"/>
 				<?php
 			}else{?>
 				<img class="headerImg" src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/industries/header.png" alt="headerImage" data-stellar-ratio="0.8"/>
@@ -50,8 +51,11 @@ get_header(); ?>
 					?>
 						<div class="jobs">
 							<div class="row jobtitle">
-								<div class="container">
-									<h2>Vacant Positions</h2>
+								<div class="col-xs-12">
+									<div class="container">
+										<h2 class="text-center">Vacant Positions</h2>
+									</div>
+
 								</div>
 							</div>
 							<?php
@@ -65,29 +69,6 @@ get_header(); ?>
 										<button class="applyonline">Apply Online</button>
 
 										<?php echo do_shortcode('[contact-form-7 id="185" title="Job Form"]'); ?>
-
-
-<!--										<form class="jobform" method="post">-->
-<!--											<input type="hidden" value="--><?php //the_title() ?><!--"/>-->
-<!--											<div class="inputwrapper col-xs-12 col-md-4">-->
-<!--												<input name="fullname" placeholder="Full Name" type="text" class="col-xs-12"/>-->
-<!--											</div>-->
-<!--											<div style="padding: 0 5px" class="inputwrapper col-xs-12 col-md-4">-->
-<!--												<input  name="phoneNumber" placeholder="Phone Number" type="tel" class="col-xs-12"/>-->
-<!--											</div>-->
-<!--											<div class="inputwrapper col-xs-12 col-md-4">-->
-<!--												<input name="emailAddress" placeholder="Email Address" type="email" class="col-xs-12"/>-->
-<!--											</div>-->
-<!--											<div class="inputwrapper col-xs-12">-->
-<!--												<textarea rows="8" name="comments" placeholder="Comments" class="col-xs-12"></textarea>-->
-<!--											</div>-->
-<!--											<label for="attachCV" class="attachcvBtn">-->
-<!--												<a class="button">Attach CV</a>-->
-<!--											</label>-->
-<!--											<input type="file" id="attachCV"/>-->
-<!---->
-<!--											<button type="submit" class="pull-right">Apply now</button>-->
-<!--										</form>-->
 
 									</div>
 								</div>

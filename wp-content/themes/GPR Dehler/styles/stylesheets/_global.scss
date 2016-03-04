@@ -3,11 +3,9 @@ $main_purple: #300f42;
 $selected_purple: #8b003d;
 
 //Screen Sizes
-
 $screen-sm: 768px;
 $screen-md: 992px;
 $screen-lg: 1200px;
-
 
 @mixin linearGradient($top, $bottom){
   background: $top; /* Old browsers */
@@ -167,9 +165,6 @@ button, a.button, input.button[type="submit"] {
     width: 150px;
   }
 }
-
-
-
 .main.signs  {
   padding: 0;
 
@@ -350,39 +345,52 @@ button, a.button, input.button[type="submit"] {
         }
 
         .postdetails {
-          display: none;
+
           position: relative;
           text-align: left;
-          padding: 10px 35px;
-          width: 265px;
-          @media (min-width: $screen-md) {
+          display: block;
+          width: 240px;
+          padding: 10px;
+          @media (min-width: $screen-md){
             top: 230px;
-            display: block;
+            width: 265px;
+            padding-left: 10px;
+          }
+          @media (min-width: $screen-lg){
+            padding-left: 42px;
+          }
 
+
+          a:hover {
+            text-decoration: none;
           }
           h4, p {
-            color: inherit;
+            color: $main_purple;
             &:hover {
               text-decoration: none;
+
             }
           }
           h4 {
-            max-width: 50%;
-            color: #ffffff;
             margin: 0;
             font-size: 15px;
-
-            @media (min-width: $screen-md) {
-              max-width: 100%;
-              color: $main_purple;
-
+            color: #ffffff;
+            max-width: none;
+            @media (min-width: $screen-md){
+              color: inherit;
+              max-width: inherit;
             }
+
           }
           p{
             margin: 0;
             font-size: 14px;
             color: #575756;
             text-align: left;
+            display: none;
+            @media (min-width: $screen-md){
+              display: block;
+            }
           }
           a.readmore{
             display: none;

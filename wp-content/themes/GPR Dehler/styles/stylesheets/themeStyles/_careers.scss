@@ -26,8 +26,13 @@
           .inputwrapper {
             padding: 0px;
           }
+          #secondInput {
+            @media (min-width: $screen-md) {
+              padding: 0 5px;
+            }
+          }
           input, textarea {
-            margin: 5px;
+            margin: 5px 0;
             padding: 5px;
             border: #dadada 2px solid;
             &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
@@ -42,20 +47,29 @@
             &:-moz-placeholder { /* Firefox 18- */
               text-transform: uppercase;
             }
+            @media (min-width: $screen-md) {
+              margin: 5px;
+            }
           }
 
           input[type="file"] {
             display: none;
           }
           .attachcvBtn {
-            display: inline-block;
+            display: block;
             cursor: pointer;
-            padding: 8px 10px;
+            br{
+              display: none;
+            }
           }
-          input[type="submit"]{
+          input[type="submit"], a.button{
             border: none;
             padding: 8px 10px;
-            width: 200px;
+            width: 100%;
+            margin: 5px;
+            @media (min-width: $screen-md) {
+              max-width: 200px;
+            }
           }
         }
       }

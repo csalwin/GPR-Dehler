@@ -101,7 +101,9 @@ $( document ).ready(function() {
 
 
     //Parallax Setup
-    $.stellar();
+    $.stellar({
+        hideDistantElements: 0
+    });
 
 
 

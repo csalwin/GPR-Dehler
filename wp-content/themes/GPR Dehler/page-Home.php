@@ -8,7 +8,7 @@
 
 get_header(); ?>
 
-<div class="home">
+<div class="homeContent">
     <div class="row sliderBanner">
 
 
@@ -22,19 +22,13 @@ get_header(); ?>
                     position: absolute;
                     ">
                     <div class="container sliderbg">
-
                         <div class="slidebg" style="background: rgba(20, 5,28, 0.7) 0 200px no-repeat; ">&nbsp;</div>
-
                     </div>
-
-
                 </div>
 
                 <div class="container sliderbg hidden-xs hidden-sm">
 
                     <div class="slidebg">&nbsp;</div>
-
-
                 </div>
                 <ul class="homeSlider images">
 
@@ -50,7 +44,8 @@ get_header(); ?>
 
                                 <li>
                                     <div class="imageWrapper">
-                                        <img src="<?php echo $image['url']; ?>">
+                                        <img class="hidden-xs hidden-sm hidden-md" src="<?php echo $image['url']; ?>" data-stellar-ratio="0.9">
+                                        <img class="hidden-lg" src="<?php echo $image['url']; ?>">
                                     </div>
                                 </li>
                             <?php endwhile;
@@ -64,7 +59,7 @@ get_header(); ?>
                         ?>
                 </ul>
 
-                <ul class="homeSlider content">
+                <ul class="homeSlider content hidden-xs hidden-sm">
                     <?php
                     // check if the repeater field has rows of data
                     if( have_rows('home_main_slider_images') ) {
@@ -95,6 +90,7 @@ get_header(); ?>
                 </ul>
             </div>
         </div>
+    </div>
 
     <div class="container box weAre">
         <div class="row">
@@ -138,9 +134,10 @@ get_header(); ?>
 
                             <li>
                                 <div class="imgWrapper">
-                                    <img src="<?php echo $image['url']; ?>">
+                                    <img class="hidden-xs hidden-sm hidden-md" src="<?php echo $image['url']; ?>" data-stellar-ratio="0.95">
+                                    <img class="hidden-lg" src="<?php echo $image['url']; ?>">
                                 </div>
-                                <div class="overlay">
+                                <div class="overlay hidden-xs hidden-sm">
                                     <div class="container">
                                         <div class="casestudy">
                                             <h2>Think. Disrupt. <?php echo $image_text; ?></h2>
@@ -331,6 +328,8 @@ get_header(); ?>
         </div>
 
     </div>
+</div>
+
 
 
     <?php get_footer(); ?>
@@ -370,5 +369,6 @@ get_header(); ?>
 
         });
     </script>
-</div>
+
+
 

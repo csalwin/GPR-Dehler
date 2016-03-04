@@ -9,16 +9,22 @@
       .sign {
 
         .postdetails {
-          display: none;
+
           position: relative;
           text-align: left;
-          top: 230px;
-          width: 265px;
-          padding-left: 42px;
-
+          display: block;
+          width: 240px;
+          padding: 10px;
           @media (min-width: $screen-md){
-            display: block;
+            top: 230px;
+            width: 265px;
+            padding-left: 10px;
           }
+          @media (min-width: $screen-lg){
+            padding-left: 42px;
+          }
+
+
           a:hover {
             text-decoration: none;
           }
@@ -32,12 +38,23 @@
           h4 {
             margin: 0;
             font-size: 15px;
+            color: #ffffff;
+            max-width: none;
+            @media (min-width: $screen-md){
+              color: inherit;
+              max-width: inherit;
+            }
+
           }
           p{
             margin: 0;
             font-size: 14px;
             color: #575756;
             text-align: left;
+            display: none;
+            @media (min-width: $screen-md){
+              display: block;
+            }
           }
           a.readmore{
 
