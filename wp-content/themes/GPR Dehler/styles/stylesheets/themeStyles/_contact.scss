@@ -1,4 +1,13 @@
 .contact {
+  .thecontent {
+    h2, h3 {
+      color: $main_purple;
+      margin-bottom: 20px;
+      padding-left: 50px;
+      padding-right: 50px;
+    }
+
+  }
   form {
     padding: 0 15px;
     h3 {

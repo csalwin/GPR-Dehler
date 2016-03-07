@@ -117,6 +117,41 @@ get_header(); ?>
 					</ul>
 
 			</div>
+		<div class="box clients">
+
+			<div class="container">
+				<ul class="overview">
+					<li>
+						<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/home/clients/ANGLO.png" />
+					</li>
+					<li>
+						<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/home/clients/BHP-BILLITON.png" />
+
+					</li>
+					<li>
+						<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/home/clients/CITIGROUP.png" />
+
+					</li>
+					<li>
+						<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/home/clients/COCA-COLA-AMATIL.png" />
+
+					</li>
+					<li>
+						<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/home/clients/fosters.png" />
+
+					</li>
+					<li>
+						<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/home/clients/NEWMONT.png" />
+					</li>
+					<li>
+						<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/home/clients/ORIX.png" />
+
+					</li>
+				</ul>
+			</div>
+
+		</div>
+
 	</div><!-- .content-area -->
 
 <?php get_footer(); ?>

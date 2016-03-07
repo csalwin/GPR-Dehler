@@ -285,15 +285,6 @@ get_header(); ?>
         var slider_array = {};
         $(document).ready(function()
         {
-            $('.overview').slick({
-                slidesToShow: 6,
-                slidesToScroll: 1,
-                autoplay: true,
-                autoplaySpeed: 0,
-                speed: 4500,
-                cssEase:'linear'
-            });
-
             // launch bxslider
             $('.homeSlider').each(function(i){
                 slider_array[i] = $(this).bxSlider({

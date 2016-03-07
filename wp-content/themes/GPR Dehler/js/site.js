@@ -49,7 +49,7 @@ $( document ).ready(function() {
     $('.resultslider').slick({
         centerMode: true,
 //                centerPadding: '60px',
-        slidesToShow: 3,
+        slidesToShow: 1,
         autoplay: true,
         responsive: [
             {
@@ -71,6 +71,27 @@ $( document ).ready(function() {
                 }
             }
         ]
+    });
+    $('.overview').slick({
+        responsive: [
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                    autoplay: true,
+                    autoplaySpeed: 0,
+                    speed: 4500,
+                    cssEase:'linear'
+                }
+            }
+        ],
+        slidesToShow: 6,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 0,
+        speed: 4500,
+        cssEase:'linear'
     });
     $('.achivslider').slick({
         centerMode: true,

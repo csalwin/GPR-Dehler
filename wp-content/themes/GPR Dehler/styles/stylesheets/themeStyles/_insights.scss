@@ -1,4 +1,50 @@
 .insights {
+  .box {
+    h3 {
+      text-transform: uppercase;
+      font-weight: bold;
+      color: $main_purple;
+    }
+    ul {
+      li {
+        @media (min-width: $screen-md) {
+          height: 450px;
+        }
+      }
+    }
+  }
+  .whitepapers{
+    background: url("images/home/process-bg.png");
+    .box {
+      background: none;
+    }
+  }
+  .blog {
+    .main.signs{
+      ul {
+        li {
+          height: 280px;
+          .sign {
+            .imgWrap {
+              left: 58px;
+            }
+          }
+
+            .blogdetails {
+              .postdetails{
+                top: 60px;
+                position: relative;
+                float: left;
+                padding: 0;
+
+              }
+            }
+
+
+        }
+      }
+    }
+  }
   .postdetails {
     position: absolute;
     bottom: 0;

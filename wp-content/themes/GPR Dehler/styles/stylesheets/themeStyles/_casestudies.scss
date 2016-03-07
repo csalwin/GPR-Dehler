@@ -32,6 +32,9 @@
             color: $main_purple;
             &:hover {
               text-decoration: none;
+              h4 {
+                color: $selected_purple;
+              }
 
             }
           }
@@ -40,8 +43,9 @@
             font-size: 15px;
             color: #ffffff;
             max-width: none;
+            font-weight: bold;
             @media (min-width: $screen-md){
-              color: inherit;
+              color: $main-purple;
               max-width: inherit;
             }
 
@@ -63,6 +67,17 @@
 
       }
 
+    }
+  }
+  .clients {
+    padding: 50px 0;
+    background: url("images/home/process-bg.png");
+    margin: 0 0 -50px 0;
+    ul {
+      li {
+        height: auto;
+        border: none;
+      }
     }
   }
 

@@ -14,7 +14,7 @@ get_header(); ?>
     <?php get_template_part( 'includes/headerimagetitle' ); ?>
 
     <div class="box main signs container">
-        <div class="content">
+        <div class="content width970">
             <?php the_content();?>
         </div>
         <ul class="row">
@@ -54,10 +54,9 @@ get_header(); ?>
                 <li class="col-xs-12 col-md-3">
                     <a href='<?php echo $child->guid ?>'>
                         <div class="sign">
-                            <?php echo $child->post_title ?>
+                            <h3><?php echo $child->post_title ?></h3>
                             <div class="imgWrap">
                                 <?php
-
                                     $image = get_field('thumbnailimg', $child->ID);
                                     if( !empty($image) ):
 
@@ -72,7 +71,6 @@ get_header(); ?>
                                         $thumb = $image['sizes'][ $size ];
                                         $width = $image['sizes'][ $size . '-width' ];
                                         $height = $image['sizes'][ $size . '-height' ];?>
-
                                         <?php endif; ?>
 
                                 <img src="<?php echo $thumb; ?>" alt="<?php echo $alt; ?>" />

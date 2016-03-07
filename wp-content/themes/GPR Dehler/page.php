@@ -24,10 +24,40 @@ get_header(); ?>
 					the_content();
 					?>
 				</div>
-			</div>
 
+				<?php if (strtolower(get_the_title()) == "who we are" ){
+					?>
+					<div class="row">
+						<div class="ourApproach">
+							<h3>Our Approach:</h3>
+							<img class="col-xs-12 col-sm-7 col-md-4" src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/home/introImg.png">
+							<div class="clearfix"></div>
+							<a class="button" href="<?php echo get_page_link(10)?>">Our Approach</a>
+							<a class="button" href="<?php echo get_page_link(80)?>">Industries</a>
+						</div>
+					</div>
+					<?php
+				} else if (strtolower(get_the_title()) == "our approach"){
+					?>
+					<div class="row">
+						<div class="ourApproach">
+							<h3>We call this:</h3>
+							<img class="col-xs-12 col-sm-7 col-md-4" src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/home/introImg.png">
+							<div class="clearfix"></div>
+							<a class="button" href="<?php echo get_page_link(80)?>">Industries</a>
+							<a class="button" href="<?php echo get_page_link(14)?>">Case studies</a>
+						</div>
+					</div>
+				<?php }?>
+			</div>
 		</div>
+
 	</div><!-- .content-area -->
+
+
+
+
+
 
 
 <?php get_footer(); ?>

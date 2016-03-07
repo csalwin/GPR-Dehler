@@ -80,6 +80,29 @@ body {
       }
     }
   }
+  &.clients {
+    position: relative;
+    margin-bottom: -20px;
+    margin-top: 20px;
+
+    ul {
+      overflow: hidden;
+      margin: 10px 0;
+      z-index: 10;
+      li {
+        background: none;
+        color: rgba(13,13,13,0.5);
+        text-align: center;
+
+        img {
+          width: 80%;
+          margin: 0 auto;
+
+          display:inline-block
+        }
+      }
+    }
+  }
 }
 
 button, a.button, input.button[type="submit"] {
@@ -166,10 +189,15 @@ button, a.button, input.button[type="submit"] {
     float: none;
 
   }
-  button {
+  button, a.button {
     margin: 30px 15px;
     width: 150px;
+    display: inline-block;
   }
+}
+.main {
+  position: relative;
+  z-index: 2;
 }
 .main.signs  {
   padding: 0;
@@ -351,7 +379,7 @@ button, a.button, input.button[type="submit"] {
         }
 
         .postdetails {
-
+          text-transform: none;
           position: relative;
           text-align: left;
           display: block;
@@ -404,6 +432,8 @@ button, a.button, input.button[type="submit"] {
               display: block;
               color: $selected_purple;
               font-weight: bold;
+              text-transform: none;
+              margin: 10px 0 0 0;
             }
 
           }

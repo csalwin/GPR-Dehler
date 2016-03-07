@@ -15,9 +15,13 @@ get_header(); ?>
 		<div class="container">
 			<div class="thecontent width970">
 				<div class="row">
-					<?php
-					the_content();
-					?>
+					<div class="col-xs-12">
+						<?php
+						the_content();
+						?>
+
+					</div>
+
 				</div>
 
 			</div>
