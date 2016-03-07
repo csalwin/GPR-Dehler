@@ -8,7 +8,7 @@
  */
 
 get_header(); ?>
-<div class="page content">
+<div class="page insights content">
 	<div class="triCut hidden-xs hidden-sm hidden-md"></div>
 	<div class="headerImgWrapper">
 
@@ -27,17 +27,50 @@ get_header(); ?>
 
 			<?php if (have_posts()){
 
+				if ($post->post_type == "insight") {
+
+					while ( have_posts() ) : the_post();
+
+					$category = get_the_terms($post->ID, 'insight_categories');
+
+//					print_r($category[0]->name);
+//					if (get_post($post->id))
+
+
+					?>
+
+					<h3><?php echo $category[0]->name ?></h3>
+
+					<ul>
+
+
+						<?php the_title() ?>
+
+
+					</ul>
+
+
+					<?php
+
+
+				endwhile;
+				}
+
 				?>
 				<ul>
 					<?php while ( have_posts() ) : the_post();?>
-					<li><a href="<?php echo get_permalink();?>"><?php the_title() ?></a></li>
 
+
+					<li><a href="<?php echo get_permalink();?>"><?php the_title() ?></a></li>
 					<?php endwhile; ?>
 
 				</ul>
 
-				<?php
 
+
+
+
+				<?php
 			}
 
 		// If no content, include the "No posts found" template.

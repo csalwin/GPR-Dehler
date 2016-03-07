@@ -2,14 +2,11 @@
   ul {
     li {
       @media (min-width: $screen-md){
-
         height: 450px;
-
       }
       .sign {
 
         .postdetails {
-
           position: relative;
           text-align: left;
           display: block;
@@ -86,6 +83,9 @@
 
 }
 .single-casestudies{
+  .the-content {
+    text-align: left;
+  }
   .objectives {
     overflow: hidden;
     position: relative;
@@ -99,6 +99,7 @@
       margin: 10px 0;
       li {
         list-style: disc;
+        padding-right: 40px;
       }
     }
     form {
@@ -136,7 +137,7 @@
           display: block;
           overflow: hidden;
           @media(min-width: $screen-sm){
-            padding: 100px;
+            padding: 100px 320px;
           }
 
         }

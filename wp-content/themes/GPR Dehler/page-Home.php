@@ -44,7 +44,7 @@ get_header(); ?>
 
                                 <li>
                                     <div class="imageWrapper">
-                                        <img class="hidden-xs hidden-sm hidden-md" src="<?php echo $image['url']; ?>" data-stellar-ratio="0.9">
+                                        <img class="hidden-xs hidden-sm hidden-md" src="<?php echo $image['url']; ?>" data-stellar-ratio="0.9" data-stellar-vertical-offset="-150">
                                         <img class="hidden-lg" src="<?php echo $image['url']; ?>">
                                     </div>
                                 </li>
@@ -134,7 +134,7 @@ get_header(); ?>
 
                             <li>
                                 <div class="imgWrapper">
-                                    <img class="hidden-xs hidden-sm hidden-md" src="<?php echo $image['url']; ?>" data-stellar-ratio="0.95">
+                                    <img class="hidden-xs hidden-sm hidden-md" src="<?php echo $image['url']; ?>" data-stellar-ratio="0.95" data-stellar-vertical-offset="-150">
                                     <img class="hidden-lg" src="<?php echo $image['url']; ?>">
                                 </div>
                                 <div class="overlay hidden-xs hidden-sm">
@@ -282,27 +282,40 @@ get_header(); ?>
 
     <script type="text/javascript">
 
-        var slider_array = {};
+        var slider_array;
+        var slider_arraysecond;
         $(document).ready(function()
         {
             // launch bxslider
             $('.homeSlider').each(function(i){
-                slider_array[i] = $(this).bxSlider({
+                slider_array = $(this).bxSlider({
                     controls: false,
                     pager: false,
                     infiniteLoop: true,
-                    auto: true
+                    auto: true,
+                    onSlideNext: doThis
                 });
             });
 
+            console.log(slider_array);
+
+
+            function doThis(ele, old, newi){
+                    slider_array.goToSlide(newi);
+            }
+
             $('.testSlider').each(function(i){
-                slider_array[i] = $(this).bxSlider({
+                slider_arraysecond = $(this).bxSlider({
                     controls: false,
                     pager: false,
                     infiniteLoop: true,
-                    auto: true
+                    auto: true,
+                    onSlideNext: doThistoo
                 });
             });
+            function doThistoo(ele, old, newi){
+                slider_arraysecond.goToSlide(newi);
+            }
 
         });
     </script>

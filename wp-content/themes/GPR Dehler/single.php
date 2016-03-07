@@ -87,7 +87,7 @@ get_header(); ?>
 	<?php }else {?>
 
 		<div class="row">
-			<div class="container">
+			<div class="container thecontent">
 				<div class="col-xs-12">
 
 					<?php
@@ -105,6 +105,7 @@ get_header(); ?>
 
 	<?php
 	if (get_post_type( get_the_ID() ) == "casestudies" ) {
+		if (have_rows('objectives')){
 		?>
 			<div class="objectives row">
 				<div class="container">
@@ -126,6 +127,10 @@ get_header(); ?>
 				</div>
 				<div class="triCut hidden-xs hidden-sm hidden-md"></div>
 			</div>
+			<?php }?>
+
+
+		<?php if (have_rows('results')){?>
 
 		<div class="results row">
 			<div class="container">
@@ -133,15 +138,25 @@ get_header(); ?>
 			</div>
 				<div class="resultsslider">
 					<ul class="resultslider">
-						<li>INVENTORY <strong>REDUCTIONS</strong> OF <br/> <strong>20% - 75%</strong></li>
-						<li>INVENTORY <strong>REDUCTIONS</strong> OF <br/> <strong>30% - 75%</strong></li>
-						<li>INVENTORY <strong>REDUCTIONS</strong> OF <br/> <strong>20% - 85%</strong></li>
-						<li>INVENTORY <strong>REDUCTIONS</strong> OF <br/> <strong>37% - 87%</strong></li>
+
+						<?php while( have_rows('results') ): the_row();
+
+							// vars
+							$item = get_sub_field('result_text');
+							?>
+
+							<li class="col-xs-12 col-md-6">
+								<?php echo $item; ?>
+							</li>
+
+						<?php endwhile; ?>
 					</ul>
 				</div>
 
 
 		</div>
+
+			<?php }?>
 
 		<?php
 		$postCat = get_the_terms(get_the_ID(), 'site_categories');
@@ -250,6 +265,24 @@ get_header(); ?>
 				</div>
 			</div>
 		<?php } ?>
+		<?php
+			$file = get_field('more_information_pdf');
+		if($file){
+			$fileurl = $file['url'];
+			$filetitle = $file['title'];
+			?>
+
+
+			<div class="row">
+				<div class="container">
+					<a class="button" href="<?php echo $fileurl?>" title="<?php echo $filetitle ?>">Download PDF</a>
+				</div>
+			</div>
+
+		<?php }?>
+
+
+
 		<?php
 	}
 
