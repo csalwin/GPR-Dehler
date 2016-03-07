@@ -7,8 +7,8 @@
     h2 {
       width: 100%;
       text-align: center;
-      text-transform: uppercase;
       color: $main_purple;
+      font-size: 26px;
     }
     .content {
       margin: 30px auto;
@@ -18,7 +18,8 @@
       p {
         max-width: 970px;
         margin: 0 auto;
-        font-size: 18px;
+        font-size: 16px;
+        padding: 0 100px;
       }
 
     }
@@ -65,9 +66,10 @@
 
     }
     ul {
-      margin: 10px 0;
+      margin: 50px 0;
       li {
         list-style: disc;
+        margin: 6px 0;
       }
     }
     form {
@@ -148,6 +150,10 @@
       ul {
         li {
           border: none;
+          @media (min-width: $screen-md) {
+            min-height: 310px;
+
+          }
           .postdetails {
             text-transform: capitalize;
           }

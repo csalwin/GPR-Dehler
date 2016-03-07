@@ -23,7 +23,7 @@
       }
       @media (min-width: $screen-md) {
         overflow: visible;
-        max-height: 400px;
+        max-height: 500px;
       }
 
       .homeSliderWrapper {
@@ -63,9 +63,9 @@
           li {
             position: relative;
             z-index: 1;
-            max-height: 400px;
+            max-height: 500px;
             .imageWrapper {
-              max-height: 400px;
+              max-height: 500px;
               overflow: hidden;
 
               position: relative;
@@ -180,6 +180,7 @@
                 overflow: hidden;
                 img {
                   position: relative;
+                  top: -15px;
                 }
               }
               .overlay {
@@ -343,8 +344,8 @@
 
     &.clients {
       position: relative;
-      margin-bottom: -20px;
-      margin-top: 20px;
+      margin-bottom: 0;
+      margin-top: 0;
 
       ul {
           overflow: hidden;

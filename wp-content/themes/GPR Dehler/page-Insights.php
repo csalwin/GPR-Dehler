@@ -12,12 +12,9 @@ get_header(); ?>
 
     <?php get_template_part( 'includes/headerimagetitle' ); ?>
 
-
-
-
-    <div class="box main signs container">
+    <div class="box main signs container articles">
         <h3>Articles</h3>
-        <p>Explore issues that impact management today</p>
+        <p><?php the_content()?></p>
         <ul class="row">
             <?php
 
@@ -47,7 +44,7 @@ get_header(); ?>
                 <?php
                 foreach ($posts_array as $post) {
                     ?>
-                    <li class="col-xs-12 col-md-3">
+                    <li class="col-xs-12 col-md-4">
 
                         <?php
                         $file = get_field('upload_file');
@@ -83,29 +80,30 @@ get_header(); ?>
                                     <?php endif; ?>
 
                                     <img src="<?php echo $thumb; ?>" alt="<?php echo $alt; ?>"/>
-                                </div>
-                                <div class="desktopWho">
-                                    <svg>
-                                        <line x1="0" y1="0" x2="100%" y2="0"
-                                              style="stroke: #8b003d; stroke-width: 15"></line>
-                                        <line x1="100%" y1="0" x2="100%" y2="90%"
-                                              style="stroke: #8b003d; stroke-width: 15"></line>
-                                        <line x1="100%" y1="100%" x2="0" y2="100%"
-                                              style="stroke: #8b003d; stroke-width: 15"></line>
-                                        <line x1="0" y1="10%" x2="0" y2="100%"
-                                              style="stroke: #8b003d; stroke-width: 15"></line>
+                                    <div class="desktopWho">
+                                        <svg>
+                                            <line x1="0" y1="0" x2="100%" y2="0"
+                                                  style="stroke: #8b003d; stroke-width: 15"></line>
+                                            <line x1="100%" y1="0" x2="100%" y2="90%"
+                                                  style="stroke: #8b003d; stroke-width: 15"></line>
+                                            <line x1="100%" y1="100%" x2="0" y2="100%"
+                                                  style="stroke: #8b003d; stroke-width: 15"></line>
+                                            <line x1="0" y1="10%" x2="0" y2="100%"
+                                                  style="stroke: #8b003d; stroke-width: 15"></line>
 
-                                        <line class="path top" x1="0" y1="0" x2="100%" y2="0"
-                                              style="stroke: #333333; stroke-width: 15"></line>
-                                        <line class="path right" x1="100%" y1="0" x2="100%" y2="90%"
-                                              style="stroke: #333333; stroke-width: 15"></line>
-                                        <line class="path bottom" x1="100%" y1="100%" x2="0" y2="100%"
-                                              style="stroke: #333333; stroke-width: 15"></line>
-                                        <line class="path left" x1="0" y1="10%" x2="0" y2="100%"
-                                              style="stroke: #333333; stroke-width: 15"></line>
-                                        <!--							<image xlink:href="http://www.greeninc.nl/wp-content/uploads/2013/02/081129-Stock-Photo-YvZ-IMG_0238.jpg" x="15" y="15" height="270px" width="270px"/>-->
-                                    </svg>
+                                            <line class="path top" x1="0" y1="0" x2="100%" y2="0"
+                                                  style="stroke: #333333; stroke-width: 15"></line>
+                                            <line class="path right" x1="100%" y1="0" x2="100%" y2="90%"
+                                                  style="stroke: #333333; stroke-width: 15"></line>
+                                            <line class="path bottom" x1="100%" y1="100%" x2="0" y2="100%"
+                                                  style="stroke: #333333; stroke-width: 15"></line>
+                                            <line class="path left" x1="0" y1="10%" x2="0" y2="100%"
+                                                  style="stroke: #333333; stroke-width: 15"></line>
+                                            <!--							<image xlink:href="http://www.greeninc.nl/wp-content/uploads/2013/02/081129-Stock-Photo-YvZ-IMG_0238.jpg" x="15" y="15" height="270px" width="270px"/>-->
+                                        </svg>
+                                    </div>
                                 </div>
+
                                 <div class="postdetails">
                                     <h4><?php echo $post->post_title; ?></h4>
                                     <?php
@@ -207,29 +205,30 @@ get_header(); ?>
                                         <?php endif; ?>
 
                                         <img src="<?php echo $thumb; ?>" alt="<?php echo $alt; ?>"/>
-                                    </div>
-                                    <div class="desktopWho">
-                                        <svg>
-                                            <line x1="0" y1="0" x2="100%" y2="0"
-                                                  style="stroke: #8b003d; stroke-width: 15"></line>
-                                            <line x1="100%" y1="0" x2="100%" y2="90%"
-                                                  style="stroke: #8b003d; stroke-width: 15"></line>
-                                            <line x1="100%" y1="100%" x2="0" y2="100%"
-                                                  style="stroke: #8b003d; stroke-width: 15"></line>
-                                            <line x1="0" y1="10%" x2="0" y2="100%"
-                                                  style="stroke: #8b003d; stroke-width: 15"></line>
+                                        <div class="desktopWho">
+                                            <svg>
+                                                <line x1="0" y1="0" x2="100%" y2="0"
+                                                      style="stroke: #8b003d; stroke-width: 15"></line>
+                                                <line x1="100%" y1="0" x2="100%" y2="90%"
+                                                      style="stroke: #8b003d; stroke-width: 15"></line>
+                                                <line x1="100%" y1="100%" x2="0" y2="100%"
+                                                      style="stroke: #8b003d; stroke-width: 15"></line>
+                                                <line x1="0" y1="10%" x2="0" y2="100%"
+                                                      style="stroke: #8b003d; stroke-width: 15"></line>
 
-                                            <line class="path top" x1="0" y1="0" x2="100%" y2="0"
-                                                  style="stroke: #333333; stroke-width: 15"></line>
-                                            <line class="path right" x1="100%" y1="0" x2="100%" y2="90%"
-                                                  style="stroke: #333333; stroke-width: 15"></line>
-                                            <line class="path bottom" x1="100%" y1="100%" x2="0" y2="100%"
-                                                  style="stroke: #333333; stroke-width: 15"></line>
-                                            <line class="path left" x1="0" y1="10%" x2="0" y2="100%"
-                                                  style="stroke: #333333; stroke-width: 15"></line>
-                                            <!--							<image xlink:href="http://www.greeninc.nl/wp-content/uploads/2013/02/081129-Stock-Photo-YvZ-IMG_0238.jpg" x="15" y="15" height="270px" width="270px"/>-->
-                                        </svg>
+                                                <line class="path top" x1="0" y1="0" x2="100%" y2="0"
+                                                      style="stroke: #333333; stroke-width: 15"></line>
+                                                <line class="path right" x1="100%" y1="0" x2="100%" y2="90%"
+                                                      style="stroke: #333333; stroke-width: 15"></line>
+                                                <line class="path bottom" x1="100%" y1="100%" x2="0" y2="100%"
+                                                      style="stroke: #333333; stroke-width: 15"></line>
+                                                <line class="path left" x1="0" y1="10%" x2="0" y2="100%"
+                                                      style="stroke: #333333; stroke-width: 15"></line>
+                                                <!--							<image xlink:href="http://www.greeninc.nl/wp-content/uploads/2013/02/081129-Stock-Photo-YvZ-IMG_0238.jpg" x="15" y="15" height="270px" width="270px"/>-->
+                                            </svg>
+                                        </div>
                                     </div>
+
                                     <div class="postdetails">
                                         <h4><?php echo $post->post_title; ?></h4>
                                         <?php
@@ -294,8 +293,8 @@ get_header(); ?>
                         <li class="col-xs-12 col-md-6">
 
                             <a href='<?php echo $post->guid ?>'>
-                                <div class="col-xs-6">
-                                    <div class="sign">
+                                <div class="sign ">
+                                    <div class="blogposts">
                                         <div class="imgWrap">
                                             <?php
 
@@ -317,46 +316,48 @@ get_header(); ?>
                                             <?php endif; ?>
 
                                             <img src="<?php echo $thumb; ?>" alt="<?php echo $alt; ?>"/>
-                                        </div>
-                                        <div class="desktopWho">
-                                            <svg>
-                                                <line x1="0" y1="0" x2="100%" y2="0"
-                                                      style="stroke: #8b003d; stroke-width: 15"></line>
-                                                <line x1="100%" y1="0" x2="100%" y2="90%"
-                                                      style="stroke: #8b003d; stroke-width: 15"></line>
-                                                <line x1="100%" y1="100%" x2="0" y2="100%"
-                                                      style="stroke: #8b003d; stroke-width: 15"></line>
-                                                <line x1="0" y1="10%" x2="0" y2="100%"
-                                                      style="stroke: #8b003d; stroke-width: 15"></line>
+                                            <div class="desktopWho">
+                                                <svg>
+                                                    <line x1="0" y1="0" x2="100%" y2="0"
+                                                          style="stroke: #8b003d; stroke-width: 15"></line>
+                                                    <line x1="100%" y1="0" x2="100%" y2="90%"
+                                                          style="stroke: #8b003d; stroke-width: 15"></line>
+                                                    <line x1="100%" y1="100%" x2="0" y2="100%"
+                                                          style="stroke: #8b003d; stroke-width: 15"></line>
+                                                    <line x1="0" y1="10%" x2="0" y2="100%"
+                                                          style="stroke: #8b003d; stroke-width: 15"></line>
 
-                                                <line class="path top" x1="0" y1="0" x2="100%" y2="0"
-                                                      style="stroke: #333333; stroke-width: 15"></line>
-                                                <line class="path right" x1="100%" y1="0" x2="100%" y2="90%"
-                                                      style="stroke: #333333; stroke-width: 15"></line>
-                                                <line class="path bottom" x1="100%" y1="100%" x2="0" y2="100%"
-                                                      style="stroke: #333333; stroke-width: 15"></line>
-                                                <line class="path left" x1="0" y1="10%" x2="0" y2="100%"
-                                                      style="stroke: #333333; stroke-width: 15"></line>
-                                                <!--							<image xlink:href="http://www.greeninc.nl/wp-content/uploads/2013/02/081129-Stock-Photo-YvZ-IMG_0238.jpg" x="15" y="15" height="270px" width="270px"/>-->
-                                            </svg>
+                                                    <line class="path top" x1="0" y1="0" x2="100%" y2="0"
+                                                          style="stroke: #333333; stroke-width: 15"></line>
+                                                    <line class="path right" x1="100%" y1="0" x2="100%" y2="90%"
+                                                          style="stroke: #333333; stroke-width: 15"></line>
+                                                    <line class="path bottom" x1="100%" y1="100%" x2="0" y2="100%"
+                                                          style="stroke: #333333; stroke-width: 15"></line>
+                                                    <line class="path left" x1="0" y1="10%" x2="0" y2="100%"
+                                                          style="stroke: #333333; stroke-width: 15"></line>
+                                                    <!--							<image xlink:href="http://www.greeninc.nl/wp-content/uploads/2013/02/081129-Stock-Photo-YvZ-IMG_0238.jpg" x="15" y="15" height="270px" width="270px"/>-->
+                                                </svg>
+                                            </div>
                                         </div>
+
 
 
                                     </div>
-                                </div>
-                                <div class="sign blogdetails">
-                                    <div class="postdetails">
-                                        <h4><?php echo $post->post_title; ?></h4>
-                                        <?php
-                                        $exerpt = get_field('post_exerpt', $post->ID);
-                                        if( $exerpt ) {
-                                            echo "<p>".$exerpt."</p>";
-                                        }
-                                        ?>
+                                    <div class="blogdetails">
+                                        <div class="postdetails">
+                                            <h4><?php echo $post->post_title; ?></h4>
+                                            <?php
+                                            $exerpt = get_field('post_exerpt', $post->ID);
+                                            if( $exerpt ) {
+                                                echo "<p>".$exerpt."</p>";
+                                            }
+                                            ?>
 
-                                        <a class="readmore" href="<?php echo $post->guid; ?>">Read more ></a>
+                                            <a class="readmore" href="<?php echo $post->guid; ?>">Read more ></a>
+                                        </div>
                                     </div>
                                 </div>
+
 
 
                             </a>

@@ -16,7 +16,7 @@ get_header(); ?>
             <div class="homeSliderWrapper">
                 <div class="hidden-xs hidden-sm" style="
                     overflow: hidden;
-                    height: 411px;
+                    height: 510px;
                     /* max-height: 411px; */
                     width: 100%;
                     position: absolute;
@@ -73,8 +73,8 @@ get_header(); ?>
                                 <div class="container">
                                     <div class="casestudy">
                                         <h1>Think. Disrupt. <span><?php echo $image_text ?></span></h1>
-                                        <p><?php echo $exerpt?></p>
-                                        <a href="<?php echo $post_exerpt-> guid ?>">Read the case Study</a>
+<!--                                        <p>--><?php //echo $exerpt?><!--</p>-->
+                                        <a href="<?php echo $post_exerpt-> guid ?>">Read the case Study ></a>
                                     </div>
                                 </div>
                             </li>
@@ -296,10 +296,7 @@ get_header(); ?>
                     onSlideNext: doThis
                 });
             });
-
-            console.log(slider_array);
-
-
+            //So the slider are Synced
             function doThis(){
                     slider_array.goToNextSlide();
             }
@@ -310,10 +307,10 @@ get_header(); ?>
                     pager: false,
                     infiniteLoop: true,
                     auto: true,
-                    onSlideNext: doThis
+                    onSlideNext: doThistoo
                 });
             });
-            function doThis(){
+            function doThistoo(){
                 slider_arraysecond.goToNextSlide();
             }
 

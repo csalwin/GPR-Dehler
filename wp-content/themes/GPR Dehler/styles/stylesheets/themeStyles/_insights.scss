@@ -8,7 +8,20 @@
     ul {
       li {
         @media (min-width: $screen-md) {
-          height: 450px;
+          //height: 450px;
+        }
+      }
+    }
+  }
+  .articles{
+    ul {
+      li {
+        .sign {
+          .postdetails {
+
+            margin: 0 auto;
+            padding-left: 30px;
+          }
         }
       }
     }
@@ -23,22 +36,43 @@
     .main.signs{
       ul {
         li {
-          height: 280px;
-          .sign {
-            .imgWrap {
-              left: 58px;
+          .blogposts {
+            @media (min-width: $screen-sm) {
+              float: left;
+              width: 50%;
             }
           }
 
+          .sign {
+            @media (min-width: $screen-md) {
+              &:hover {
+                h4 {
+                  color: $selected_purple;
+                }
+              }
+            }
+            .imgWrap {
+
+            }
+          }
+
+          @media (min-width: $screen-md) {
             .blogdetails {
+              margin-top: 20px;
+              float: left;
+              h4 {
+                color: $main_purple;
+
+              }
               .postdetails{
-                top: 60px;
                 position: relative;
-                float: left;
+
                 padding: 0;
 
               }
             }
+          }
+
 
 
         }
@@ -46,8 +80,7 @@
     }
   }
   .postdetails {
-    position: absolute;
-    bottom: 0;
+
   }
 }
 

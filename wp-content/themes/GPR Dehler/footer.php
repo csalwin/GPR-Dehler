@@ -25,7 +25,7 @@
             <div class="footer-form contact-form col-xs-12 col-sm-6 col-md-3">
                 <h3>Contact us</h3>
                 <form>
-                    <input type="text" placeholder="fullname" name="fullName">
+                    <input type="text" placeholder="full name" name="fullName">
                     <input type="phone" placeholder="phone number" name="phone">
                     <input type="email" placeholder="email address" name="email">
                     <select>

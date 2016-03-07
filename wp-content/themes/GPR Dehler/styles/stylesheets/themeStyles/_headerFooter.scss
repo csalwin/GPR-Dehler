@@ -66,7 +66,7 @@
               color: #fff;
               position: relative;
               display: block;
-              &:hover {
+              &:hover, &:focus {
                 text-decoration: none;
               }
 
@@ -102,14 +102,45 @@
                 transition: all 0s ease;
               }
             }
+            &.current-menu-item {
+              a{
+                &:before {
+                  content: '';
+                  display: block;
+                  position: absolute;
+                  left: 0;
+                  bottom: 0;
+                  height: 3px;
+                  width: 100%;
+                  transition: width 0s ease;
+                }
+                &:after {
+                  content: '';
+                  display: block;
+                  position: absolute;
+                  right: 0;
+                  bottom: 0;
+                  height: 3px;
+                  width: 100%;
+                  background: $selected_purple;
+                  transition: width .5s ease;
+                }
+                &:hover:before {
+                  width: 0;
+                  background: $selected_purple;
+                  transition: width .5s ease;
+                }
+                &:hover:after {
+                  width: 0;
+                  background: $selected_purple;
+                  transition: all 0s ease;
+                }
 
 
+              }
 
 
-
-
-
-
+            }
 
           }
 
@@ -217,18 +248,21 @@
             &#linkedIn {
               &:before{
                 content: url('images/linkedIn.png');
+                transition: all .5s ease;
               }
 
             }
             &#facebook {
               &:before{
                 content: url('images/facebook.png');
+                transition: all .5s ease;
               }
 
             }
             &#twitter {
               &:before{
                 content: url('images/twitter.png');
+                transition: all .5s ease;
               }
 
             }
@@ -237,6 +271,7 @@
               -moz-filter: invert(75%);
               -ms-filter: invert(75%);
               filter: invert(75%);
+              transition: all .5s ease;
             }
 
           }
