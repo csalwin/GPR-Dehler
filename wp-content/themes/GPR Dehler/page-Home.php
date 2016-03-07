@@ -300,8 +300,8 @@ get_header(); ?>
             console.log(slider_array);
 
 
-            function doThis(ele, old, newi){
-                    slider_array.goToSlide(newi);
+            function doThis(){
+                    slider_array.goToNextSlide();
             }
 
             $('.testSlider').each(function(i){
@@ -310,12 +310,13 @@ get_header(); ?>
                     pager: false,
                     infiniteLoop: true,
                     auto: true,
-                    onSlideNext: doThistoo
+                    onSlideNext: doThis
                 });
             });
-            function doThistoo(ele, old, newi){
-                slider_arraysecond.goToSlide(newi);
+            function doThis(){
+                slider_arraysecond.goToNextSlide();
             }
+
 
         });
     </script>

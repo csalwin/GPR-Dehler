@@ -119,29 +119,31 @@ get_header(); ?>
                                                 <?php } ?>
 
                                                 <img src="<?php echo $thumb; ?>" alt="<?php echo $alt; ?>"/>
-                                            </div>
-                                            <div class="desktopWho">
-                                                <svg>
-                                                    <line x1="0" y1="0" x2="100%" y2="0"
-                                                          style="stroke: #8b003d; stroke-width: 15"></line>
-                                                    <line x1="100%" y1="0" x2="100%" y2="90%"
-                                                          style="stroke: #8b003d; stroke-width: 15"></line>
-                                                    <line x1="100%" y1="100%" x2="0" y2="100%"
-                                                          style="stroke: #8b003d; stroke-width: 15"></line>
-                                                    <line x1="0" y1="10%" x2="0" y2="100%"
-                                                          style="stroke: #8b003d; stroke-width: 15"></line>
 
-                                                    <line class="path top" x1="0" y1="0" x2="100%" y2="0"
-                                                          style="stroke: #333333; stroke-width: 15"></line>
-                                                    <line class="path right" x1="100%" y1="0" x2="100%" y2="90%"
-                                                          style="stroke: #333333; stroke-width: 15"></line>
-                                                    <line class="path bottom" x1="100%" y1="100%" x2="0" y2="100%"
-                                                          style="stroke: #333333; stroke-width: 15"></line>
-                                                    <line class="path left" x1="0" y1="10%" x2="0" y2="100%"
-                                                          style="stroke: #333333; stroke-width: 15"></line>
-                                                    <!--							<image xlink:href="http://www.greeninc.nl/wp-content/uploads/2013/02/081129-Stock-Photo-YvZ-IMG_0238.jpg" x="15" y="15" height="270px" width="270px"/>-->
-                                                </svg>
+                                                <div class="desktopWho">
+                                                    <svg>
+                                                        <line x1="0" y1="0" x2="100%" y2="0"
+                                                              style="stroke: #8b003d; stroke-width: 15"></line>
+                                                        <line x1="100%" y1="0" x2="100%" y2="90%"
+                                                              style="stroke: #8b003d; stroke-width: 15"></line>
+                                                        <line x1="100%" y1="100%" x2="0" y2="100%"
+                                                              style="stroke: #8b003d; stroke-width: 15"></line>
+                                                        <line x1="0" y1="10%" x2="0" y2="100%"
+                                                              style="stroke: #8b003d; stroke-width: 15"></line>
+
+                                                        <line class="path top" x1="0" y1="0" x2="100%" y2="0"
+                                                              style="stroke: #333333; stroke-width: 15"></line>
+                                                        <line class="path right" x1="100%" y1="0" x2="100%" y2="90%"
+                                                              style="stroke: #333333; stroke-width: 15"></line>
+                                                        <line class="path bottom" x1="100%" y1="100%" x2="0" y2="100%"
+                                                              style="stroke: #333333; stroke-width: 15"></line>
+                                                        <line class="path left" x1="0" y1="10%" x2="0" y2="100%"
+                                                              style="stroke: #333333; stroke-width: 15"></line>
+                                                    </svg>
+                                                </div>
+
                                             </div>
+
 
                                             <div class="postdetails">
                                             <a href="<?php echo $post->guid; ?>">

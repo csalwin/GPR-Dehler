@@ -10,6 +10,7 @@
       padding: 30px 20px;
       &:last-of-type {
         margin-bottom: 0;
+        padding-bottom: 40px;
       }
       .job {
         button, a.button {
@@ -24,7 +25,7 @@
         .wpcf7 {
           display: none;
           .inputwrapper {
-            padding: 0px;
+            padding: 0;
           }
           #secondInput {
             @media (min-width: $screen-md) {

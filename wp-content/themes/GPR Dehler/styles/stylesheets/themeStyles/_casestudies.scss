@@ -1,10 +1,10 @@
 .casestudies.content {
   ul {
     li {
-      @media (min-width: $screen-md){
-        height: 450px;
-      }
       .sign {
+        @media (min-width: $screen-md){
+          min-height: 380px;
+        }
 
         .postdetails {
           position: relative;
@@ -13,7 +13,6 @@
           width: 240px;
           padding: 10px;
           @media (min-width: $screen-md){
-            top: 230px;
             width: 265px;
             padding-left: 10px;
           }
@@ -69,7 +68,6 @@
   .clients {
     padding: 50px 0;
     background: url("images/home/process-bg.png");
-    margin: 0 0 -50px 0;
     ul {
       li {
         height: auto;
@@ -83,8 +81,15 @@
 
 }
 .single-casestudies{
+  li {
+    list-style: disc;
+  }
   .thecontent {
     text-align: left;
+    a {
+      color: $main_purple;
+      font-weight: bold;
+    }
   }
   .objectives {
     overflow: hidden;
@@ -98,7 +103,6 @@
     ul {
       margin: 10px 0;
       li {
-        list-style: disc;
         padding-right: 40px;
       }
     }

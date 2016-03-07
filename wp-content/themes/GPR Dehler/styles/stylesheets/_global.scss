@@ -214,6 +214,7 @@ button, a.button, input.button[type="submit"] {
       text-align: left;
       position: relative;
       background: $main_purple;
+
       h4 {
         font-size: 14px;
         @media (min-width: $screen-md) {
@@ -232,11 +233,12 @@ button, a.button, input.button[type="submit"] {
         height: 100%;
         display: block;
         @media (min-width: $screen-md) {
-          min-height: 300px;
+         min-height: 240px;
         }
 
 
         .imgWrap {
+
           height: 100%;
           width: 40%;
           display: block;
@@ -263,19 +265,17 @@ button, a.button, input.button[type="submit"] {
             transition: background .3s linear;
           }
           @media (min-width: $screen-md) {
-            width: 165px;
+            margin: 0 auto;
+            width: 200px;
             display: block;
-            left: 39px;
-            top: 63px;
             -webkit-clip-path: none;
             clip-path: none;
+            position: relative;
+            padding: 20px;
 
             &:before {
               display: none;
             }
-          }
-          @media (min-width: $screen-lg) {
-            left: 63px;
           }
 
           img {
@@ -300,10 +300,10 @@ button, a.button, input.button[type="submit"] {
           display: none;
           float: left;
           position: absolute;
-          top: 45px;
-          left: 10px;
+          top: 0;
+          left: 0;
           bottom: 0;
-          right: 10px;
+          right: 0;
           margin: 0 auto;
           max-width: 200px;
           max-height: 200px;
@@ -386,7 +386,6 @@ button, a.button, input.button[type="submit"] {
           width: 240px;
           padding: 10px;
           @media (min-width: $screen-md){
-            top: 230px;
             width: 265px;
             padding-left: 10px;
           }
