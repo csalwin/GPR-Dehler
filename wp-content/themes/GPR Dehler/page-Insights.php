@@ -66,7 +66,7 @@ get_header(); ?>
                                     $image = get_field('thumbnailimg', $post->ID);
                                     if (!empty($image)):
                                         // vars
-                                        $url = $image['url'];
+//                                        $url = $image['url'];
                                         $title = $image['title'];
                                         $alt = $image['alt'];
                                         $caption = $image['caption'];
@@ -112,7 +112,7 @@ get_header(); ?>
                                         echo "<p>".$exerpt."</p>";
                                     }
                                     ?>
-                                    <a class="readmore" href="<?php echo $url; ?>" title="<?php echo $title; ?>" target="_blank">Read more ></a>
+                                    <a class="readmore" href="<?php echo $url; ?>" title="<?php echo $title; ?>" target="_blank">Download ></a>
                                 </div>
 
                             </div>
@@ -237,7 +237,7 @@ get_header(); ?>
                                             echo "<p>".$exerpt."</p>";
                                         }
                                         ?>
-                                        <a class="readmore" href="<?php echo $url; ?>" title="<?php echo $title; ?>" target="_blank">Read more ></a>
+                                        <a class="readmore" href="<?php echo $url; ?>" title="<?php echo $title; ?>" target="_blank">Download ></a>
                                     </div>
 
                                 </div>

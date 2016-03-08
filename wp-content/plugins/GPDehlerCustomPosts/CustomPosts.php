@@ -20,10 +20,10 @@ add_action( 'init', 'Site_Categories', 0 );
 //flush_rewrite_rules();
 
 //Removes default Posts
-//add_action('admin_menu','remove_default_post_type');
-//function remove_default_post_type() {
-//    remove_menu_page('edit.php');
-//}
+add_action('admin_menu','remove_default_post_type');
+function remove_default_post_type() {
+    remove_menu_page('edit.php');
+}
 
 
 function create_Careers_post() {

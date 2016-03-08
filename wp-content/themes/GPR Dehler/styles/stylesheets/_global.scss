@@ -29,7 +29,7 @@ body {
     position: relative;
   }
   li {
-    list-style: none;
+    //list-style: none;
     text-decoration: none;
   }
   a {
@@ -216,6 +216,7 @@ button, a.button, input.button[type="submit"] {
       position: relative;
       background: $main_purple;
       border-bottom: none;
+      list-style: none;
 
       h4 {
         font-size: 14px;

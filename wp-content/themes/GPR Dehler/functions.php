@@ -89,7 +89,10 @@ function my_search_form( $form ) {
     $form = '<form role="search" method="get" id="searchform" class="searchform" action="' . home_url( '/' ) . '" >
 
 	<input type="text" placeholder="Search..." value="' . get_search_query() . '" name="s" id="s" />
-	<i class="glyphicon glyphicon-search" type="submit" id="searchsubmit"></i>
+	<button type="submit" id="searchsubmit">
+        <i class="glyphicon glyphicon-search"></i>
+    </button>
+
 
 	</form>';
 

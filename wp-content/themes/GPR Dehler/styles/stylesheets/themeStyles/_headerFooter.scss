@@ -102,7 +102,7 @@
                 transition: all 0s ease;
               }
             }
-            &.current-menu-item {
+            &.current-menu-item, &.current-page-ancestor {
               a{
                 &:before {
                   content: '';
@@ -194,9 +194,15 @@
               color: #ffffff;
             }
 
-            i {
-              position: relative;
-              top: 3px;
+
+          }
+          button#searchsubmit {
+            position: relative;
+            padding: 0;
+            background: none;
+            top: 3px;
+            &:hover {
+              background: none;
             }
           }
         }
@@ -245,6 +251,7 @@
             width: 35px;
             position: relative;
             float: left;
+            list-style: none;
             &#linkedIn {
               &:before{
                 content: url('images/linkedIn.png');
@@ -473,10 +480,11 @@
           line-height: 15px;
           margin: 0;
         }
-        button {
+        button, input[type='submit'] {
           background: $main_purple;
           border: none;
-          padding: 8px 25px;
+          width: auto;
+          padding: 11px 25px;
           -moz-transition: background .3s linear;
           -webkit-transition: background .3s linear;
           -o-transition: background .3s linear;
@@ -487,12 +495,21 @@
 
 
         }
+        br {
+          display: none;
+        }
+        input[type='submit']{
+
+        }
         &.newsletter-form {
+
           float: right;
           text-align: right;
           &:after{
             clear: both;
           }
+
+
         }
       }
       .address {

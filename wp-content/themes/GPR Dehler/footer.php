@@ -24,27 +24,13 @@
 
             <div class="footer-form contact-form col-xs-12 col-sm-6 col-md-3">
                 <h3>Contact us</h3>
-                <form>
-                    <input type="text" placeholder="full name" name="fullName">
-                    <input type="phone" placeholder="phone number" name="phone">
-                    <input type="email" placeholder="email address" name="email">
-                    <select>
-                        <option value="" disabled selected>Type of enquiry</option>
-                        <option value="Enquiry1">Enquiry 1</option>
-                        <option value="Enquiry2">Enquiry 2</option>
-                    </select>
-                    <button type="submit">Submit</button>
-                </form>
+                <?php echo do_shortcode('[contact-form-7 id="272" title="Footer Contact Us"]');?>
 
             </div>
             <div class="footer-form newsletter-form col-xs-12 col-sm-6 col-md-3">
                 <h3>Newsletter</h3>
                 <p>Lorum ipsum dolor sit consectertur adispising</p>
-                <form>
-                    <input type="text" placeholder="fullname" name="fullName">
-                    <input type="email" placeholder="email address" name="email">
-                    <button type="submit">Submit</button>
-                </form>
+                <?php echo do_shortcode('[contact-form-7 id="271" title="Newsletter"]');?>
 
 
             </div>

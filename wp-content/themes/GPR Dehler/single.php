@@ -140,7 +140,6 @@ get_header(); ?>
 					<ul class="resultslider">
 
 						<?php while( have_rows('results') ): the_row();
-
 							// vars
 							$item = get_sub_field('result_text');
 							?>
@@ -205,6 +204,7 @@ get_header(); ?>
 
 
 		if ($posts_array || $artical_array){
+
 			?>
 
 			<div class="row main related">
@@ -217,72 +217,56 @@ get_header(); ?>
 						<div class="col-xs-12 col-md-6">
 
 						<h4>Case Studies</h4>
-						<ul>
+							<ul>
 
+							<?php
+							foreach ($posts_array as $post) {
+								?>
+								<li class="col-xs-12">
+									<a href="<?php echo $post->guid ?>">
+										<?php echo $post->post_title ?>
+									</a>
+								</li>
+
+							<?php }?>
+							</ul>
+						</div>
 						<?php
-						foreach ($posts_array as $post) {
-							?>
-							<li class="col-xs-12">
-								<a href="<?php echo $post->guid ?>">
-									<?php echo $post->post_title ?>
-
-								</a>
-							</li>
-
-						<?php }?>
-						</ul>
-							</div><?php
 					}?>
+					<?php wp_reset_query(); ?>
 					<?php
-					//        echo '<pre>' . print_r( $artical_array, true ) . '</pre>';
+
 					if( $artical_array ) {
 						?>
 						<div class="col-xs-12 col-md-6">
 						<h4>White Papers</h4>
-						<ul>
+							<ul>
+
+							<?php
+							foreach ($artical_array as $postart) {
+								$file = get_field('upload_file');
+								if( $file ) {
+									// vars
+									$url = $file['url'];
+									$title = $file['title'];
+									$caption = $file['caption'];
+								}
+								?>
+								<li class="col-xs-12">
+									<a href="<?php echo $url; ?>" title="<?php echo $title; ?>" target="_blank">
+										<?php echo $postart->post_title ?>
+									</a>
+								</li>
+								<?php }?>
+							</ul>
+						</div>
 
 						<?php
-						foreach ($artical_array as $post) {
-							$file = get_field('upload_file');
-							if( $file ) {
-								// vars
-								$url = $file['url'];
-								$title = $file['title'];
-								$caption = $file['caption'];
-							}
-							?>
-							<li class="col-xs-12 col-md-6">
-								<a href="<?php echo $url; ?>" title="<?php echo $title; ?>" target="_blank">
-									<?php echo $post->post_title ?>
-								</a>
-							</li>
-
-
-							</ul>
-							</div>
-						<?php }
 					} ?>
 				</div>
 			</div>
 		<?php } ?>
-		<?php
-			$file = get_field('more_information_pdf');
-		if($file){
-			$fileurl = $file['url'];
-			$filetitle = $file['title'];
-			?>
-
-
-			<div class="row">
-				<div class="container">
-					<a class="button" href="<?php echo $fileurl?>" title="<?php echo $filetitle ?>">Download PDF</a>
-				</div>
-			</div>
-
-		<?php }?>
-
-
-
+		<?php wp_reset_query(); ?>
 		<?php
 	}
 
