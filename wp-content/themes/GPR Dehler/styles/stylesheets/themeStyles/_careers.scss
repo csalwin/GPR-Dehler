@@ -21,6 +21,7 @@
           display: block;
         }
         ul {
+          padding: 0 0 0 15px;
           li {
             list-style: disc;
           }
@@ -76,6 +77,15 @@
             }
           }
         }
+        .wpcf7-validation-errors , .wpcf7-mail-sent-ok {
+          display: block;
+          border: 2px solid $selected_purple;
+          background: #8b003d;
+          color: #ffffff;
+          float: left;
+          margin: 0 19px;
+        }
+
       }
 
     }

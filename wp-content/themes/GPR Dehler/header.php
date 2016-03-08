@@ -65,8 +65,8 @@
 			</div>
 			<div class="socialIcons col-md-3 col-lg-2 col-lg-pull-1 pull-right hidden-xs hidden-sm">
 				<ul>
-					<li id="linkedIn"></li>
-					<li id="twitter"></li>
+					<a href="https://www.linkedin.com/company/gpr-dehler" target="_blank"><li id="linkedIn"></li></a>
+					<a href="https://twitter.com/GPRDehler" target="_blank"><li id="twitter"></li></a>
 				</ul>
 			</div>
 

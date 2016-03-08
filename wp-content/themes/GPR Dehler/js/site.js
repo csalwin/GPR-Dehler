@@ -17,7 +17,6 @@ $( document ).ready(function() {
     });
 
     $(".searchForm input").focus(function () {
-        console.log("Focus Fire");
         if ( $(".searchForm").css('width') <= '150px'){
             $(".searchForm").css('width', '300px');
             $(".searchForm form").css('padding-left', '40px');

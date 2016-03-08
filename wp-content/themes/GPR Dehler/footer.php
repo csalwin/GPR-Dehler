@@ -29,7 +29,7 @@
             </div>
             <div class="footer-form newsletter-form col-xs-12 col-sm-6 col-md-3">
                 <h3>Newsletter</h3>
-                <p>Lorum ipsum dolor sit consectertur adispising</p>
+                <p>To subscribe to our newsletter please complete your details below:</p>
                 <?php echo do_shortcode('[contact-form-7 id="271" title="Newsletter"]');?>
 
 

@@ -32,10 +32,8 @@ function enqueue() {
     wp_register_script('siteScript', get_template_directory_uri(). "/js/site.js", "jquery", "1", true );
     wp_enqueue_script('siteScript');
 
-
-
-
-
+    wp_register_script('bootstrapjs', get_template_directory_uri(). "/styles/bootstrap/js/bootstrap.min.js", "jquery", "1", true );
+    wp_enqueue_script('bootstrapjs');
 
 
 

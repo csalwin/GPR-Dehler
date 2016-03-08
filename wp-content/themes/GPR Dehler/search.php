@@ -57,10 +57,8 @@ get_header(); ?>
 								<div class="sign">
 									<div class="imgWrap">
 										<?php
-
 										$image = get_field('thumbnailimg', $post->ID);
-										if (!empty($image)):
-
+										if (!empty($image)){
 											// vars
 											$url = $image['url'];
 											$title = $image['title'];
@@ -73,7 +71,11 @@ get_header(); ?>
 											$width = $image['sizes'][$size . '-width'];
 											$height = $image['sizes'][$size . '-height']; ?>
 
-										<?php endif; ?>
+										<?php } else if ($post->post_type == "page"){
+											$featimg = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'thumbnail' );
+											$thumb = $featimg[0];
+
+										} ?>
 
 										<img src="<?php echo $thumb; ?>" alt="<?php echo $alt; ?>"/>
 										<div class="desktopWho">
@@ -103,7 +105,7 @@ get_header(); ?>
 
 									<div class="clearfix"></div>
 									<div class="postdetails">
-										<h4><?php echo $post->post_title; ?></h4>
+										<h4><?php if ($post->post_type == 'page'){echo "Page: ";} echo $post->post_title; ?></h4>
 										<?php
 										$exerpt = get_field('post_exerpt', $post->ID);
 										if( $exerpt ) {

@@ -60,12 +60,14 @@
           padding: 0;
           li {
             font-size: 16px;
-            padding: 5px 0;
+            padding: 7px 0;
             text-align: center;
             a {
               color: #fff;
               position: relative;
               display: block;
+              width: 26%;
+              margin: 0 auto;
               &:hover, &:focus {
                 text-decoration: none;
               }
@@ -153,6 +155,11 @@
               display: block;
               padding: 0 10px;
               float: left;
+              a {
+                width: 100%;
+                margin: auto;
+
+              }
             }
           }
         }
@@ -434,6 +441,15 @@
       .footer-form {
         padding: 0 15px;
 
+        .wpcf7-validation-errors , .wpcf7-mail-sent-ok {
+          border: 2px solid $selected_purple;
+          margin: 10px 0;
+          background: #8b003d;
+          color: #ffffff;
+          width: 89%;
+          float: left;
+        }
+
 
         h3 {
           font-size: 20px;
@@ -508,6 +524,11 @@
           &:after{
             clear: both;
           }
+
+          .wpcf7-validation-errors , .wpcf7-mail-sent-ok {
+            float: right;
+          }
+
 
 
         }

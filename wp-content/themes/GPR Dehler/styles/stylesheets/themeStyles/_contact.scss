@@ -70,5 +70,16 @@
         background: #8b003d;
       }
     }
+
+
+    .wpcf7-validation-errors , .wpcf7-mail-sent-ok {
+      border: 2px solid $selected_purple;
+      background: #8b003d;
+      color: #ffffff;
+      float: left;
+      display: block;
+      margin: 8px;
+    }
+
   }
 }

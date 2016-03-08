@@ -95,6 +95,11 @@
   .postcontent {
     margin: 30px 0;
     color: #807b8f;
+    .button {
+      width: auto;
+      display: inline-block;
+      margin: 10px 0;
+    }
   }
   .recent {
     ul{

@@ -65,6 +65,7 @@ get_header(); ?>
                     if( have_rows('home_main_slider_images') ) {
                         // loop through the rows of data
                         while (have_rows('home_main_slider_images')) : the_row();
+                            $showExerpt = get_sub_field('show_exerpt');
                             $image_text = get_sub_field('image_text');
                             $post_exerpt = get_sub_field('case_studies');
                             $exerpt = get_field('post_exerpt', $post_exerpt->ID)
@@ -73,8 +74,13 @@ get_header(); ?>
                                 <div class="container">
                                     <div class="casestudy">
                                         <h1>Think. Disrupt. <span><?php echo $image_text ?></span></h1>
-<!--                                        <p>--><?php //echo $exerpt?><!--</p>-->
-                                        <a href="<?php echo $post_exerpt-> guid ?>">Read the case Study ></a>
+
+                                            <?php if ($showExerpt){
+                                                ?><p><?php echo $exerpt?></p><?php
+                                            }?>
+
+                                            <a href="<?php echo $post_exerpt-> guid ?>">Read the case study ></a>
+
                                     </div>
                                 </div>
                             </li>
@@ -293,6 +299,7 @@ get_header(); ?>
                     pager: false,
                     infiniteLoop: true,
                     auto: true,
+                    speed: 600,
                     onSlideNext: doThis
                 });
             });
