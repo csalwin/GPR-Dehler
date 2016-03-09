@@ -10,9 +10,16 @@
 get_header(); ?>
 
 <div class="page content">
+	<div class="triCut hidden-xs hidden-sm hidden-md"></div>
+	<?php get_template_part( 'includes/headerimagetitle' ); ?>
+
 	<div class="container">
-		<h1>404 Page Not found</h1>
-		<h1>404 Page Not found</h1>
+		<div class="thecontent">
+			<div class="row" style="text-align: center; margin-bottom: 30px">
+				<h1 style="color: #300f42;"><span style="font-size: 260px">404</span><br /> Page Not found, Please try again</h1>
+
+			</div>
+		</div>
 	</div>
 </div>
 
