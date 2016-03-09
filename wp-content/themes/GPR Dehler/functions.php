@@ -26,8 +26,8 @@ function enqueue() {
     wp_register_script('bxslider', get_template_directory_uri(). "/js/bxslider/jquery.bxslider.min.js", "jquery", "1", true );
     wp_enqueue_script('bxslider');
 
-    wp_register_script('stellar', get_template_directory_uri(). "/js/stellar.js", "jquery", "1", true );
-    wp_enqueue_script('stellar');
+//    wp_register_script('stellar', get_template_directory_uri(). "/js/stellar.js", "jquery", "1", true );
+//    wp_enqueue_script('stellar');
 
     wp_register_script('siteScript', get_template_directory_uri(). "/js/site.js", "jquery", "1", true );
     wp_enqueue_script('siteScript');

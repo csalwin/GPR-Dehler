@@ -6,12 +6,53 @@
  * @subpackage GPR-Dehler
  */
 
-get_header(); ?>
+get_header();
+
+$filter = $_GET["filter"];
+
+
+?>
+
 	<div class="page casestudies content">
 
 		<?php get_template_part( 'includes/headerimagetitle' ); ?>
 
+
+
+		<div class="filterrow row">
+			<div class="container">
+				<ul class="col-xs-12 filterButtons">
+					<?php
+					$terms = get_terms('site_categories');
+					$url = strtok($url, '?');
+					foreach ($terms as $term){
+
+						if ($filter == $term->slug) {
+							?>
+								<li class="current col-xs-12"><a href="?" class="button"><?php echo $term->name; ?></a></li>
+
+							<?php
+						}else {
+							?>
+								<li class="col-xs-12"><a href="?filter=<?php echo $term->slug; ?>" class="button"><?php echo $term->name; ?></a></li>
+
+							<?php
+						}
+						?>
+						<?php
+					}
+					?>
+				</ul>
+
+
+			</div>
+
+
+		</div>
+
 		<div class="box main signs container">
+
+
 				<div class="row">
 
 
@@ -20,24 +61,50 @@ get_header(); ?>
 
 					<ul class="row">
 					<?php
-					$args = array(
-						'posts_per_page'   => -1,
-						'offset'           => 0,
-						'category'         => '',
-						'category_name'    => '',
-						'orderby'          => 'date',
-						'order'            => 'DESC',
-						'include'          => '',
-						'exclude'          => '',
-						'meta_key'         => '',
-						'meta_value'       => '',
-						'post_type'        => 'Case studies',
-						'post_mime_type'   => '',
-						'post_parent'      => '',
-						'author'	   => '',
-						'post_status'      => 'publish',
-						'suppress_filters' => true
-					);
+
+					if($filter){
+						$args = array(
+							'posts_per_page'   => -1,
+							'offset'           => 0,
+							'category'         => '',
+							'category_name'    => '',
+							'orderby'          => 'date',
+							'order'            => 'DESC',
+							'include'          => '',
+							'exclude'          => '',
+							'meta_key'         => '',
+							'meta_value'       => '',
+							'post_type'        => 'Case studies',
+							'post_mime_type'   => '',
+							'post_parent'      => '',
+							'site_categories' => $filter,
+							'author'	   => '',
+							'post_status'      => 'publish',
+							'suppress_filters' => true
+						);
+
+					}else {
+						$args = array(
+							'posts_per_page'   => -1,
+							'offset'           => 0,
+							'category'         => '',
+							'category_name'    => '',
+							'orderby'          => 'date',
+							'order'            => 'DESC',
+							'include'          => '',
+							'exclude'          => '',
+							'meta_key'         => '',
+							'meta_value'       => '',
+							'post_type'        => 'Case studies',
+							'post_mime_type'   => '',
+							'post_parent'      => '',
+							'author'	   => '',
+							'post_status'      => 'publish',
+							'suppress_filters' => true
+						);
+					}
+
+
 					$posts_array = get_posts( $args );
 
 //					echo '<pre>' . print_r( $posts_array, true ) . '</pre>';
