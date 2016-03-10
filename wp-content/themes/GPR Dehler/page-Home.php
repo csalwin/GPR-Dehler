@@ -299,7 +299,7 @@ get_header(); ?>
                     pager: false,
                     infiniteLoop: true,
                     auto: true,
-                    speed: 600,
+                    speed: 1500,
                     onSlideNext: doThis
                 });
             });
@@ -314,6 +314,7 @@ get_header(); ?>
                     pager: false,
                     infiniteLoop: true,
                     auto: true,
+                    speed: 1500,
                     onSlideNext: doThistoo
                 });
             });
