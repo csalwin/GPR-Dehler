@@ -1,6 +1,28 @@
 .casestudies.content {
     .row.filterrow {
       background: $main_purple;
+
+      form {
+        background: rgba(255, 255, 255, 0.8);
+        margin: 10px;
+        select {
+          display: block;
+          width: 100%;
+          margin: 8px 0;
+          background: url("images/contactDropdown.png") 97% 50% no-repeat;
+          border: #d6d5d6 solid 2px;
+
+          padding: 5px;
+          border-radius: 0;
+          font-size: 13px;
+          text-transform: uppercase;
+          -webkit-appearance: none;
+          -moz-appearance: none;
+          appearance: none;
+        }
+      }
+
+
       ul.filterButtons {
         display: block;
         margin: 0;

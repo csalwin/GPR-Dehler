@@ -21,10 +21,32 @@ $filter = $_GET["filter"];
 
 		<div class="filterrow row">
 			<div class="container">
-				<ul class="col-xs-12 filterButtons">
+				<form class="hidden-md hidden-lg">
+					<select id="filterdropdown" name="filterOptions">
+						<option value="?">All</option>
+						<?php
+					$terms = get_terms('site_categories');
+					foreach ($terms as $term){
+						if ($filter == $term->slug) {
+							?>
+							<option value="?filter=<?php echo $term->slug; ?>" selected><?php echo $term->name; ?></option>
+							<?php
+						}else {
+							?>
+							<option value="?filter=<?php echo $term->slug; ?>"><?php echo $term->name; ?></option>
+							<?php
+						}
+						?>
+						<?php
+					}
+					?>
+
+					</select>
+				</form>
+
+				<ul class="col-xs-12 hidden-xs hidden-sm filterButtons">
 					<?php
 					$terms = get_terms('site_categories');
-					$url = strtok($url, '?');
 					foreach ($terms as $term){
 
 						if ($filter == $term->slug) {

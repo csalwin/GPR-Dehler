@@ -120,10 +120,9 @@ $( document ).ready(function() {
     });
 
 
-    //Parallax Setup
-    $.stellar({
-        hideDistantElements: 0
-    });
+    $('#filterdropdown').change(function () {
+        window.location.href = $(this).val();
+    })
 
 
 
