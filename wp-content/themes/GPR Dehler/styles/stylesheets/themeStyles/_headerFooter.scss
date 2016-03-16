@@ -93,16 +93,19 @@
                 background: #ffffff;
                 transition: width .5s ease;
               }
-              &:hover:before {
-                width: 100%;
-                background: #ffffff;
-                transition: width .5s ease;
+              @media (min-width: $screen-md) {
+                &:hover:before {
+                  width: 100%;
+                  background: #ffffff;
+                  transition: width .5s ease;
+                }
+                &:hover:after {
+                  width: 100%;
+                  background: transparent;
+                  transition: all 0s ease;
+                }
               }
-              &:hover:after {
-                width: 100%;
-                background: transparent;
-                transition: all 0s ease;
-              }
+
             }
             &.current-menu-item, &.current-page-ancestor {
               a{

@@ -1,5 +1,5 @@
 .casestudies.content {
-    .row.filterrow {
+    .filterrow {
       background: $main_purple;
 
       form {
@@ -62,10 +62,11 @@
           position: relative;
           text-align: left;
           display: block;
-          width: 240px;
+          max-width: 240px;
           padding: 10px;
           @media (min-width: $screen-md){
-            width: 265px;
+            max-width: 265px;
+            width: 100%;
             padding-left: 10px;
           }
           @media (min-width: $screen-lg){
@@ -141,6 +142,9 @@
     a {
       color: $main_purple;
       font-weight: bold;
+      &.button {
+        color: #ffffff;
+      }
     }
   }
   .objectives {
@@ -192,7 +196,7 @@
           font-size: 40px;
           display: block;
           overflow: hidden;
-          @media(min-width: $screen-sm){
+          @media(min-width: $screen-lg){
             padding: 100px 320px;
           }
 

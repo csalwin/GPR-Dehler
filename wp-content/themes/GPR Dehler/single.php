@@ -105,8 +105,33 @@ get_header(); ?>
 
 	<?php
 	if (get_post_type( get_the_ID() ) == "casestudies" ) {
+
+		$file = get_field('more_information_pdf');
+
+		if( $file ) {
+
+			// vars
+			$url = $file['url'];
+			$title = $file['title'];
+			$caption = $file['caption'];
+			?>
+			<div class="row download">
+				<div class="container thecontent">
+					<a class="button" href="<?php echo $url?>" target="_blank">Download PDF</a>
+				</div>
+			</div>
+
+			<?php
+		}
+
+		?>
+
+
+
+		<?php
 		if (have_rows('objectives')){
 		?>
+
 			<div class="objectives row">
 				<div class="container">
 					<h2>Objectives</h2>

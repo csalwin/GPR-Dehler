@@ -19,7 +19,7 @@ $filter = $_GET["filter"];
 
 
 
-		<div class="filterrow row">
+		<div class="filterrow">
 			<div class="container">
 				<form class="hidden-md hidden-lg">
 					<select id="filterdropdown" name="filterOptions">
@@ -73,11 +73,7 @@ $filter = $_GET["filter"];
 		</div>
 
 		<div class="box main signs container">
-
-
 				<div class="row">
-
-
 					<?php the_content()?>
 				</div>
 

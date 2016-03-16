@@ -132,7 +132,7 @@ get_header(); ?>
         </ul>
 
     </div>
-    <div class="row whitepapers">
+    <div class="whitepapers">
 
         <div class="box main signs container">
             <h3>WhitePapers</h3>
@@ -255,7 +255,7 @@ get_header(); ?>
             </ul>
         </div>
     </div>
-    <div class="row blog">
+    <div class="blog">
 
         <div class="box main signs container">
             <h3>Blog</h3>

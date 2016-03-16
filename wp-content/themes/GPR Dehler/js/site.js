@@ -47,25 +47,15 @@ $( document ).ready(function() {
 //    SLIDERS
     $('.resultslider').slick({
         centerMode: true,
-//                centerPadding: '60px',
         slidesToShow: 1,
         autoplay: true,
+        arrows: true,
         responsive: [
             {
-                breakpoint: 768,
-                settings: {
-                    arrows: true,
-                    centerMode: true,
-//                            centerPadding: '800px',
-                    slidesToShow: 1
-                }
-            },
-            {
-                breakpoint: 600,
+                breakpoint: 1100,
                 settings: {
                     arrows: false,
                     centerMode: true,
-                    centerPadding: '0px',
                     slidesToShow: 1
                 }
             }

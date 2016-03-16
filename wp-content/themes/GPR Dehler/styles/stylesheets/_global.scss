@@ -395,7 +395,7 @@ button, a.button, input.button[type="submit"] {
           width: 240px;
           padding: 10px;
           @media (min-width: $screen-md){
-            width: 265px;
+            max-width: 265px;
             padding-left: 10px;
           }
           @media (min-width: $screen-lg){

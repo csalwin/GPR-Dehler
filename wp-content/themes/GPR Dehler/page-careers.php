@@ -23,7 +23,7 @@ get_header(); ?>
 			</div>
 		</div>
 
-				<div class="row">
+				<div class="jobslist">
 					<?php
 					$type = 'Careers';
 					$args=array(
@@ -38,7 +38,7 @@ get_header(); ?>
 					if( $my_query->have_posts() ) {
 					?>
 						<div class="jobs">
-							<div class="row jobtitle">
+							<div class="jobtitle">
 								<div class="col-xs-12">
 									<div class="container">
 										<h2 class="text-center">Vacant Positions</h2>
@@ -49,7 +49,7 @@ get_header(); ?>
 							<?php
 							while ($my_query->have_posts()) : $my_query->the_post(); ?>
 
-							<div class="jobrow row">
+							<div class="jobrow">
 								<div class="container">
 									<div class="job width970">
 										<h3><?php the_title(); ?></h3>

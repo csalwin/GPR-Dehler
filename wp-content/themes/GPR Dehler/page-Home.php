@@ -76,10 +76,13 @@ get_header(); ?>
                                         <h1>Think. Disrupt. <span><?php echo $image_text ?></span></h1>
 
                                             <?php if ($showExerpt){
-                                                ?><p><?php echo $exerpt?></p><?php
+                                                ?><p><?php echo $exerpt?></p>
+                                                <a href="<?php echo $post_exerpt-> guid ?>">Read the case study ></a>
+
+                                                <?php
                                             }?>
 
-                                            <a href="<?php echo $post_exerpt-> guid ?>">Read the case study ></a>
+
 
                                     </div>
                                 </div>
