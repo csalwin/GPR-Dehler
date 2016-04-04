@@ -34,7 +34,7 @@ $( document ).ready(function() {
 //    Job Form
 
     $('button.applyonline').click(function (){
-        $('.wpcf7').hide();
+        $('.jobForm').hide();
         $(this).next().slideToggle();
         $('button.applyonline').show();
         $(this).hide();

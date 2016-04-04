@@ -3,7 +3,7 @@
     &.box {
       background: none;
     }
-    margin: 50px auto;
+    margin: 20px auto;
     h2 {
       width: 100%;
       text-align: center;
@@ -28,6 +28,7 @@
     }
     a {
       overflow: hidden;
+      color: $main_purple;
       .sign {
         height: 100%;
         h3 {
@@ -66,7 +67,7 @@
     h2 {
       width: 100%;
       text-align: center;
-
+      margin: 50px 0;
     }
     ul {
       margin: 50px 0;
@@ -83,6 +84,7 @@
         margin: 0 auto;
         float: none;
         display: block;
+        margin-bottom: 40px;
       }
     }
     .triCut {

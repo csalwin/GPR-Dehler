@@ -67,7 +67,6 @@ get_header(); ?>
     <div class="casestudies">
             <div class="box main signs container">
                 <h2>Case Studies</h2>
-                <ul class="row">
                     <?php
                     $args = array(
                         'posts_per_page'   => 8,
@@ -93,6 +92,8 @@ get_header(); ?>
                     if( $posts_array ) {
                         ?>
                         <?php
+                        $i=0;
+                        echo '<ul class="row">';
                         foreach ($posts_array as $post) {
                             ?>
                                 <li class="col-xs-12 col-md-3">
@@ -158,7 +159,10 @@ get_header(); ?>
                                 </li>
 
 
-
+                            <?php
+                            $i++;
+                            if ($i%4 == 0) echo '</ul><ul class="row">';
+                         ?>
 
                             <?php
                         }

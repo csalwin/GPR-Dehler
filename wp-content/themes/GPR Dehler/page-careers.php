@@ -56,7 +56,7 @@ get_header(); ?>
 										<p><?php the_content()?></p>
 										<button class="applyonline">Apply Online</button>
 
-										<?php echo do_shortcode('[contact-form-7 id="185" title="Job Form"]'); ?>
+										<?php echo do_shortcode('[contact-form-7 id="185" title="Job Form" class="jobForm"]'); ?>
 
 									</div>
 								</div>

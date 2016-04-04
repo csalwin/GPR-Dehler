@@ -1,7 +1,6 @@
 .insights {
   .box {
     h3 {
-      text-transform: uppercase;
       font-weight: bold;
       color: $main_purple;
     }
@@ -93,6 +92,7 @@
   color: #807b8f;
   .postdate {
     color: #b3b3b3;
+    margin: 30px 0;
   }
   .postcontent {
     margin: 30px 0;

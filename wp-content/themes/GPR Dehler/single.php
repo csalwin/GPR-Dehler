@@ -28,21 +28,22 @@ get_header(); ?>
 						?>
 
 				</div>
-				<div class="col-xs-12 col-md-3 pull-right">
-					<div class="recent">
-						<h3>Recent post</h3>
+				<div class="col-xs-12 col-md-3 pull-right" style="background: #F5F5F5">
+					<!--<div class="recent">
+						<h3>Recent posts</h3>
 						<ul>
 							<?php
 							$args = array(
 								'numberposts' => '8',
-								'post_type'        => 'Case studies' , 'insight');
+								'post_type'        => 'insight'
+								);
 							$recent_posts = wp_get_recent_posts( $args );
 							foreach( $recent_posts as $recent ){
 								echo '<li><a href="' . get_permalink($recent["ID"]) . '">' .   $recent["post_title"].'</a> </li> ';
 							}
 							?>
 						</ul>
-					</div>
+					</div>-->
 					<div class="recent">
 						<h3>Industries</h3>
 						<ul>
@@ -154,6 +155,16 @@ get_header(); ?>
 			</div>
 			<?php }?>
 
+		<?php $follow_on_copy = get_field('follow_on_copy'); ?>
+		<?php if($follow_on_copy) { ?>
+			<div class="row">
+				<div class="container thecontent">
+					<div class="col-xs-12">
+						<?php the_field('follow_on_copy'); ?>
+					</div>
+				</div>
+			</div>
+		<?php } ?>
 
 		<?php if (have_rows('results')){?>
 

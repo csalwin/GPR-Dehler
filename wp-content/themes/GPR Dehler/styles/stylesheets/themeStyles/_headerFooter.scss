@@ -354,7 +354,6 @@
           padding: 5px;
           border-radius: 0;
           font-size: 3.5vw;
-          text-transform: uppercase;
           -webkit-appearance: none;
           -moz-appearance: none;
           appearance: none;
@@ -397,6 +396,13 @@
     overflow: visible;
     background: #e0dee2;
     margin: 0;
+
+    .footerHeader {
+      text-transform: uppercase;
+      font-weight: bold;
+      color: $main_purple;
+      font-size: 18px;
+    }
 
     &:before{
       content: "";
@@ -455,8 +461,10 @@
 
 
         h3 {
-          font-size: 20px;
+          font-size: 18px;
           text-transform: uppercase;
+          font-weight: bold;
+          color: $main_purple;
         }
         input, select {
           display: block;
@@ -468,7 +476,6 @@
           padding: 5px;
           border-radius: 0;
           font-size: 13px;
-          text-transform: uppercase;
           -webkit-appearance: none;
           -moz-appearance: none;
           appearance: none;
@@ -554,13 +561,13 @@
           }
           &.tel {
             &:before{
-              content:"T:";
+              content:"T: ";
               color: #007499;
             }
           }
           &.email {
             &:before {
-              content:"E:";
+              content:"E: ";
               color: #007499;
 
             }
