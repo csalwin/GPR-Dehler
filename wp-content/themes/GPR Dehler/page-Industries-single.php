@@ -55,10 +55,17 @@ get_header(); ?>
         </div>
         <div class="achivementslider">
             <ul class="achivslider">
-                <li>INVENTORY <strong>REDUCTIONS</strong> OF <br/> <strong>20% - 75%</strong></li>
-                <li>INVENTORY <strong>REDUCTIONS</strong> OF <br/> <strong>30% - 75%</strong></li>
-                <li>INVENTORY <strong>REDUCTIONS</strong> OF <br/> <strong>20% - 85%</strong></li>
-                <li>INVENTORY <strong>REDUCTIONS</strong> OF <br/> <strong>37% - 87%</strong></li>
+
+                <?php while( have_rows('achievements') ): the_row();
+                    // vars
+                    $item = get_sub_field('achieve_text');
+                    ?>
+
+                    <li class="col-xs-12 col-md-6">
+                        <?php echo $item; ?>
+                    </li>
+
+                <?php endwhile; ?>
             </ul>
         </div>
 

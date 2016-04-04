@@ -52,7 +52,7 @@ $( document ).ready(function() {
         arrows: true,
         responsive: [
             {
-                breakpoint: 1100,
+                breakpoint: 1200,
                 settings: {
                     arrows: false,
                     centerMode: true,

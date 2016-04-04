@@ -112,7 +112,7 @@ get_header(); ?>
                 <p> We take a people centric approach to accelerate strategy realisation. Our approach releases
                     the capability of teams, uncovers innate talent, encourages creativity and fosters discretionary effort through an experiential discovery process.</p>
 
-                <p>For three decades we have delivered a significant return on investment for our clients in over 40 countries..</p>
+                <p>For three decades we have delivered a significant return on investment for our clients in over 40 countries.</p>
 
 
             <a class="button" href="<?php echo get_page_link(10)?>">Our Approach</a>
