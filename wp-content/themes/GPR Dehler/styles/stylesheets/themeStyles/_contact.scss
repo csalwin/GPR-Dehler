@@ -35,15 +35,15 @@
       &::-webkit-input-placeholder {
 
         text-transform: uppercase;
-        color: #575756;
+        color: $font_grey;
       }
       &:-moz-placeholder {
         text-transform: uppercase;
-        color: #575756;
+        color: $font_grey;
       }
       &:-ms-input-placeholder {
         text-transform: uppercase;
-        color: #575756;
+        color: $font_grey;
       }
     }
     select {

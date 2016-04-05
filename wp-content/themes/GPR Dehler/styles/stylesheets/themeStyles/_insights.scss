@@ -89,14 +89,14 @@
 }
 
 .single-insight {
-  color: #807b8f;
+  color: $font_grey;
   .postdate {
     color: #b3b3b3;
     margin: 30px 0;
   }
   .postcontent {
     margin: 30px 0;
-    color: #807b8f;
+    color: $font_grey;
     .button {
       width: auto;
       display: inline-block;
