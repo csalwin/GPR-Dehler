@@ -160,23 +160,9 @@
       margin: 10px 0;
       li {
         padding-right: 40px;
+
       }
     }
-    //ul {
-    //  margin: 10px 0;
-    //  -moz-column-count: 2;
-    //  -moz-column-gap: 20px;
-    //  -webkit-column-count: 2;
-    //  -webkit-column-gap: 20px;
-    //  column-count: 2;
-    //  column-gap: 20px;
-    //  li {
-    //    width: 100%;
-    //    padding-right: 40px;
-    //    height: 100%;
-    //
-    //  }
-    //}
     form {
       width: 100%;
       display: block;
@@ -211,8 +197,9 @@
           font-size: 20px;
           display: block;
           overflow: hidden;
+          padding: 20px;
           @media(min-width: $screen-lg){
-            padding: 100px 320px;
+            padding: 100px 350px;
           }
 
         }

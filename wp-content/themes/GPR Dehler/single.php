@@ -110,7 +110,6 @@ get_header(); ?>
 		$file = get_field('more_information_pdf');
 
 		if( $file ) {
-
 			// vars
 			$url = $file['url'];
 			$title = $file['title'];
@@ -121,14 +120,9 @@ get_header(); ?>
 					<a class="button" href="<?php echo $url?>" target="_blank">Download PDF</a>
 				</div>
 			</div>
-
 			<?php
 		}
-
 		?>
-
-
-
 		<?php
 		if (have_rows('objectives')){
 		?>
@@ -147,6 +141,7 @@ get_header(); ?>
 							<li class="col-xs-12 col-md-6">
 								<?php echo $item; ?>
 							</li>
+
 
 						<?php endwhile; ?>
 					</ul>
