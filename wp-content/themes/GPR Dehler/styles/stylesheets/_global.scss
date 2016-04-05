@@ -1,6 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Lato:400,700);
 $main_purple: #300f42;
 $selected_purple: #8b003d;
+$font_grey: #575756;
 
 //Screen Sizes
 $screen-sm: 768px;
@@ -37,6 +38,9 @@ body {
   a {
     text-decoration: none;
     color: $main_purple;
+    &:hover {
+      color: $main_purple;
+    }
   }
   h1 {
     font-size: 60px;
@@ -167,12 +171,10 @@ button, a.button, input.button[type="submit"] {
     @media (min-width: $screen-sm) {
       font-size: 40px;
       top: 80px;
-      
     }
     @media (min-width: $screen-md) {
       font-size: 45px;
       top: 120px;
-
     }
     @media (min-width: $screen-lg) {
       font-size: 65px;
@@ -192,8 +194,11 @@ button, a.button, input.button[type="submit"] {
   }
   p {
     font-size: 15px;
-    color: #575756;
+    color: $font_grey;
     margin: 25px 0;
+  }
+  li {
+    color: $font_grey;
   }
   img {
     margin: 0 auto 20px auto;

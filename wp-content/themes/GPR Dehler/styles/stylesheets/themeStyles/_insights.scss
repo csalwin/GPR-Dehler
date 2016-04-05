@@ -108,6 +108,9 @@
       padding-left: 15px;
       li{
         list-style: disc;
+        a {
+          color: $font_grey;
+        }
       }
     }
 

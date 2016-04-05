@@ -107,15 +107,17 @@ get_header(); ?>
 
             <img class="col-xs-12 col-sm-7 col-md-4" src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/home/introImg.png">
 
-
             <div class="introWrapper col-xs-11">
-                <p> We take a people centric approach to accelerate strategy realisation. Our approach releases
-                    the capability of teams, uncovers innate talent, encourages creativity and fosters discretionary effort through an experiential discovery process.</p>
+                <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-                <p>For three decades we have delivered a significant return on investment for our clients in over 40 countries.</p>
+                    <?php
+                    the_content();
 
+                endwhile;
+                endif;
+                    ?>
 
-            <a class="button" href="<?php echo get_page_link(10)?>">Our Approach</a>
+                <a class="button" href="<?php echo get_page_link(10)?>">Our Approach</a>
 
             </div>
         </div>

@@ -136,6 +136,7 @@
 .single-casestudies{
   li {
     list-style: disc;
+    font-size: 15px;
   }
   .thecontent {
     text-align: left;
@@ -160,6 +161,7 @@
       margin: 10px 0;
       li {
         padding-right: 40px;
+        font-size: 15px;
 
       }
     }
@@ -236,6 +238,7 @@
     }
   }
   .related{
+    color: #575756;
     margin-bottom: 20px;
     h2{
       text-align: center;
@@ -246,7 +249,7 @@
       li {
         list-style: disc;
         a {
-          color: $main_purple;
+          color: $font_grey;
         }
       }
     }
