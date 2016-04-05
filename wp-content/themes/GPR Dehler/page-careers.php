@@ -65,6 +65,14 @@ get_header(); ?>
 
 								<?php
 							endwhile;
+							}else {
+								?>
+								<div class="jobs">
+									<h2 class="nojobs">There are no Jobs currently listed</h2>
+								</div>
+
+
+								<?php
 							}
 							wp_reset_query();  // Restore global post data stomped by the_post().
 							?>
