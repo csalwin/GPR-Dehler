@@ -163,7 +163,7 @@ get_header(); ?>
 
 		<?php if (have_rows('results')){?>
 
-		<div class="results row">
+		<div class="results">
 			<div class="container">
 				<h2>Results</h2>
 			</div>
