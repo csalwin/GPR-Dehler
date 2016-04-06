@@ -165,7 +165,7 @@ button, a.button, input.button[type="submit"] {
     color: #ffffff;
     position: relative;
     max-width: 970px;
-    margin: 0 auto;
+    margin: 30px auto;
     width: 100%;
 
     text-shadow: -1px 3px 30px rgba(0, 0, 0, 0.60);
@@ -178,6 +178,7 @@ button, a.button, input.button[type="submit"] {
     h1 {
       position: absolute;
       top: 10px;
+      margin: 0 auto;
       @media (min-width: $screen-sm) {
         font-size: 40px;
         top: 80px;
