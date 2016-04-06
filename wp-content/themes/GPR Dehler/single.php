@@ -15,7 +15,7 @@ get_header(); ?>
 	<?php
 	if (get_post_type( get_the_ID() ) == "insight" ) {?>
 
-		<div class="row">
+		<div>
 			<div class="container">
 				<div class="postdate col-xs-12">
 					<?php the_date() ?>
@@ -87,7 +87,7 @@ get_header(); ?>
 		</div>
 	<?php }else {?>
 
-		<div class="row">
+		<div>
 			<div class="container thecontent">
 				<div class="col-xs-12">
 
@@ -115,7 +115,7 @@ get_header(); ?>
 			$title = $file['title'];
 			$caption = $file['caption'];
 			?>
-			<div class="row download">
+			<div class="download">
 				<div class="container thecontent">
 					<a class="button" href="<?php echo $url?>" target="_blank">Download PDF</a>
 				</div>
@@ -127,7 +127,7 @@ get_header(); ?>
 		if (have_rows('objectives')){
 		?>
 
-			<div class="objectives row">
+			<div class="objectives">
 				<div class="container">
 					<h2>Objectives</h2>
 					<ul>
@@ -152,7 +152,7 @@ get_header(); ?>
 
 		<?php $follow_on_copy = get_field('follow_on_copy'); ?>
 		<?php if($follow_on_copy) { ?>
-			<div class="row">
+			<div>
 				<div class="container thecontent">
 					<div class="col-xs-12">
 						<?php the_field('follow_on_copy'); ?>
@@ -238,7 +238,7 @@ get_header(); ?>
 
 			?>
 
-			<div class="row main related">
+			<div class="main related">
 				<div class="container">
 					<h2>Related</h2>
 					<?php
