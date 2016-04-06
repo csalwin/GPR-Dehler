@@ -343,6 +343,8 @@ button, a.button, input.button[type="submit"] {
 
           .path {
             -webkit-transition: all .7s;
+            -moz-transition: all .7s;
+            -o-transition: all 0.7s;
             transition: all .7s;
             -webkit-transition-delay: 0s;
             transition-delay: 0s;
@@ -355,9 +357,9 @@ button, a.button, input.button[type="submit"] {
             }
           }
 
-          &:hover .path {
-            display: block;
-          }
+          //&:hover .path {
+          //  display: block;
+          //}
 
           .top {
             -moz-transform-origin: 100% 50%;
