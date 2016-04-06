@@ -65,8 +65,12 @@
           position: relative;
           text-align: left;
           display: block;
-          max-width: 240px;
+          max-width: 225px;
           padding: 10px;
+          @media (min-width: $screen-sm){
+            max-width: 240px;
+          }
+
           @media (min-width: $screen-md){
             max-width: 265px;
             width: 100%;
