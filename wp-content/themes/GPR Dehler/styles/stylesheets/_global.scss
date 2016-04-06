@@ -160,7 +160,7 @@ button, a.button, input.button[type="submit"] {
   position: relative;
 
   .headerImg {
-    width: 100%;
+
     position: absolute;
   }
   h1 {
@@ -179,6 +179,7 @@ button, a.button, input.button[type="submit"] {
   }
   @media (min-width: $screen-sm) {
     .headerImg {
+      width: 100%;
       position: relative;
     }
     h1 {
