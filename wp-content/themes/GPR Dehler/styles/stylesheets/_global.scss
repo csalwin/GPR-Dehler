@@ -348,6 +348,7 @@ button, a.button, input.button[type="submit"] {
             transition-delay: 0s;
             -webkit-animation-direction: alternate; /* Chrome, Safari, Opera */
             animation-direction: alternate;
+
             &.left, &.right {
               -webkit-transition-delay: .7s; /* Safari */
               transition-delay: .7s;
@@ -359,14 +360,17 @@ button, a.button, input.button[type="submit"] {
           }
 
           .top {
+            -moz-transform-origin: 100% 50%;
             -webkit-transform-origin: 100% 50%;
             transform-origin: 100% 50%;
           }
           .right {
+            -moz-transform-origin: 50% 100%;
             -webkit-transform-origin: 50% 100%;
             transform-origin: 50% 100%;
           }
           .left {
+            -moz-transform-origin: 50% 0%;
             -webkit-transform-origin: 50% 0%;
             transform-origin: 50% 0%;
           }
