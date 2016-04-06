@@ -228,7 +228,8 @@ button, a.button, input.button[type="submit"] {
   }
   button, a.button {
     margin: 30px 15px;
-    width: 150px;
+    width: 40%;
+    max-width: 150px;
     display: inline-block;
   }
 }
