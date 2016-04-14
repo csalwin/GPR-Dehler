@@ -14,7 +14,7 @@ get_header(); ?>
 
 
 		<div class="container">
-			<div class="thecontent width970">
+			<div class="thecontent col-xs-12 width970">
 				<div class="row">
 
 
