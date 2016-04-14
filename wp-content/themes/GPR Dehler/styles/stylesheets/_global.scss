@@ -231,6 +231,11 @@ button, a.button, input.button[type="submit"] {
     width: 40%;
     max-width: 150px;
     display: inline-block;
+    font-size: 13px;
+    @media (min-width: $screen-sm) {
+      font-size: 14px;
+    }
+
   }
 }
 .main {
