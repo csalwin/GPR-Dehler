@@ -18,7 +18,7 @@ get_header(); ?>
 
 
 		<div class="container">
-			<div class="thecontent">
+			<div class="thecontent col-xs-12">
 				<div class="row">
 					<?php
 					the_content();
