@@ -25,6 +25,9 @@ get_header(); ?>
                         <div class="slidebg" style="background: rgba(20, 5,28, 0.7) 0 200px no-repeat; ">&nbsp;</div>
                     </div>
                 </div>
+                
+                
+                
 
                 <div class="container sliderbg hidden-xs hidden-sm">
 
@@ -59,7 +62,7 @@ get_header(); ?>
                         ?>
                 </ul>
 
-                <ul class="homeSlider content hidden-xs hidden-sm">
+                <ul class="homeSlider content">
                     <?php
                     // check if the repeater field has rows of data
                     if( have_rows('home_main_slider_images') ) {
@@ -76,8 +79,11 @@ get_header(); ?>
                                         <h1>Think. Disrupt. <span><?php echo $image_text ?></span></h1>
 
                                             <?php if ($showExerpt){
-                                                ?><p><?php echo $exerpt?></p>
-                                                <a href="<?php echo $post_exerpt-> guid ?>">Read the case study ></a>
+                                                ?>
+                                                <div class="hidden-xs hidden-sm">
+                                                    <p><?php echo $exerpt?></p>
+                                                    <a href="<?php echo $post_exerpt-> guid ?>">Read the case study ></a>
+                                                </div>
 
                                                 <?php
                                             }?>
