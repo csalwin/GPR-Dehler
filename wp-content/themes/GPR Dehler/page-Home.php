@@ -47,8 +47,7 @@ get_header(); ?>
 
                                 <li>
                                     <div class="imageWrapper">
-                                        <img class="hidden-xs hidden-sm hidden-md" src="<?php echo $image['url']; ?>" data-stellar-ratio="0.9" data-stellar-vertical-offset="-150">
-                                        <img class="hidden-lg" src="<?php echo $image['url']; ?>">
+                                        <img alt="headerImage" title="sliderImage" src="<?php echo $image['url']; ?>">
                                     </div>
                                 </li>
                             <?php endwhile;

@@ -77,7 +77,11 @@
 
               img{
                 height: 100%;
+
                 position: relative;
+                @media (min-width: $screen-sm) {
+                  min-height: 500px;
+                }
               }
 
             }
@@ -93,6 +97,9 @@
               color: white;
               padding: 40px 0 0 15px;
 
+              @media (min-width: $screen-sm) {
+                padding: 100px 0 0 0;
+              }
               @media (min-width: $screen-md) {
                 padding: 198px 0 0 0;
               }
@@ -101,7 +108,9 @@
                 margin: 5px 0;
                 position: relative;
                 text-transform: uppercase;
-                @media (min-width: $screen-md) {
+                text-shadow: -1px 3px 30px rgba(0, 0, 0, 0.60);
+
+                @media (min-width: $screen-sm) {
                   font-size: 38px;
                 }
                 span {
