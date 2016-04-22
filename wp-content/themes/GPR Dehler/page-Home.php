@@ -79,10 +79,9 @@ get_header(); ?>
 
                                             <?php if ($showExerpt){
                                                 ?>
-                                                <div class="hidden-xs hidden-sm">
-                                                    <p><?php echo $exerpt?></p>
+
+                                                    <p  class="hidden-xs hidden-sm"><?php echo $exerpt?></p>
                                                     <a href="<?php echo $post_exerpt-> guid ?>">Read the case study ></a>
-                                                </div>
 
                                                 <?php
                                             }?>
@@ -150,14 +149,13 @@ get_header(); ?>
 
                             <li>
                                 <div class="imgWrapper">
-                                    <img class="hidden-xs hidden-sm hidden-md" src="<?php echo $image['url']; ?>" data-stellar-ratio="0.95" data-stellar-vertical-offset="-150">
-                                    <img class="hidden-lg" src="<?php echo $image['url']; ?>">
+                                    <img src="<?php echo $image['url']; ?>">
                                 </div>
-                                <div class="overlay hidden-xs hidden-sm">
+                                <div class="overlay">
                                     <div class="container">
                                         <div class="casestudy">
                                             <h2>Think. Disrupt. <?php echo $image_text; ?></h2>
-                                            <p><?php echo $exerpt; ?></p>
+                                            <p class="hidden-xs hidden-sm"><?php echo $exerpt; ?></p>
                                             <a href="<?php echo $post_exerpt-> guid?>">Read the case study ></a>
                                         </div>
                                     </div>
