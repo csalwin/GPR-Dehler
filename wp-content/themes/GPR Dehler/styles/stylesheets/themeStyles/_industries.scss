@@ -65,6 +65,7 @@
     overflow: hidden;
     position: relative;
     background: url("images/home/process-bg.png");
+
     h2 {
       width: 100%;
       text-align: center;
@@ -73,6 +74,7 @@
     ul {
       margin-top: 50px;
       margin-bottom: 50px;
+      max-width: 970px;
       li {
         list-style: disc;
         margin: 6px 0;
@@ -91,7 +93,7 @@
     }
     .triCut {
       left: auto;
-      top: 160px;
+      top: 195px;
       right: -250px;
     }
 
