@@ -22,7 +22,7 @@ get_header(); ?>
         <div class="container">
             <?php if( have_rows('what_we_do') ): ?>
                 <h2>What We Do</h2>
-                <ul>
+                <ul class="col-xs-12 col-md-10 col-md-offset-1">
 
                     <?php while( have_rows('what_we_do') ): the_row();
 
