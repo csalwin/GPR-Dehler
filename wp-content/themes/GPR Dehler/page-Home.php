@@ -294,45 +294,47 @@ get_header(); ?>
 
     <?php get_footer(); ?>
 
-    <script type="text/javascript">
-
-        var slider_array;
-        var slider_arraysecond;
-        $(document).ready(function()
-        {
-            // launch bxslider
-            $('.homeSlider').each(function(i){
-                slider_array = $(this).bxSlider({
-                    controls: false,
-                    pager: false,
-                    infiniteLoop: true,
-                    auto: true,
-                    speed: 1500,
-                    onSlideNext: doThis
-                });
-            });
-            //So the slider are Synced
-            function doThis(){
-                    slider_array.goToNextSlide();
-            }
-
-            $('.testSlider').each(function(i){
-                slider_arraysecond = $(this).bxSlider({
-                    controls: false,
-                    pager: false,
-                    infiniteLoop: true,
-                    auto: true,
-                    speed: 1500,
-                    onSlideNext: doThistoo
-                });
-            });
-            function doThistoo(){
-                slider_arraysecond.goToNextSlide();
-            }
-
-
-        });
-    </script>
+<!--    <script type="text/javascript">-->
+<!---->
+<!--        var slider_array;-->
+<!--        var slider_arraysecond;-->
+<!--        $(document).ready(function()-->
+<!--        {-->
+<!--            // launch bxslider-->
+<!--            $('.homeSlider').each(function(i){-->
+<!--                slider_array = $(this).bxSlider({-->
+<!--                    controls: false,-->
+<!--                    pager: false,-->
+<!--                    infiniteLoop: true,-->
+<!--                    auto: true,-->
+<!--                    speed: 1800,-->
+<!--//                    pause: 5000,-->
+<!--                    onSlideNext: doThis-->
+<!--                });-->
+<!--            });-->
+<!--            //So the slider are Synced-->
+<!--            function doThis(){-->
+<!--                    slider_array.goToNextSlide();-->
+<!--            }-->
+<!---->
+<!--            $('.testSlider').each(function(i){-->
+<!--                slider_arraysecond = $(this).bxSlider({-->
+<!--                    controls: false,-->
+<!--                    pager: false,-->
+<!--                    infiniteLoop: true,-->
+<!--                    auto: true,-->
+<!--                    speed: 1800,-->
+<!--//                    pause: 5000,-->
+<!--                    onSlideNext: doThistoo-->
+<!--                });-->
+<!--            });-->
+<!--            function doThistoo(){-->
+<!--                slider_arraysecond.goToNextSlide();-->
+<!--            }-->
+<!---->
+<!---->
+<!--        });-->
+<!--    </script>-->
 
 
 

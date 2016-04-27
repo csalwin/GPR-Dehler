@@ -44,7 +44,7 @@
                         London SW1Y 5ES<br />
                         United Kingdom</p>
 
-                    <a class="tel" href="tel:+4402035444688">+44 (0)20 35444688</a><br />
+                    <a class="tel" href="tel:+4402035444688">+44 (0)20 3544 4688</a><br />
                     <a class="email" href="mailto:info.uk@gprdehler.com">info.uk@gprdehler.com</a>
 
 
@@ -106,9 +106,10 @@
 
 </footer><!-- .site-footer -->
 
-<script type="text/javascript" src="http://icarus.somethingbig.co.uk/s/7b377566a0817fde45d549e01b3c53b2-T/en_GB8ttp39/70119/b6b48b2829824b869586ac216d119363/2.0.8/_/download/batch/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector.js?locale=en-GB&collectorId=83187286"></script>
+<!--<script type="text/javascript" src="http://icarus.somethingbig.co.uk/s/7b377566a0817fde45d549e01b3c53b2-T/en_GB8ttp39/70119/b6b48b2829824b869586ac216d119363/2.0.8/_/download/batch/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector.js?locale=en-GB&collectorId=83187286"></script>-->
 
 <?php wp_footer(); ?>
+
 
 </body>
 </html>

@@ -135,7 +135,7 @@ get_header(); ?>
     <div class="whitepapers">
 
         <div class="box main signs container">
-            <h3>WhitePapers</h3>
+            <h3>White Papers</h3>
             <p>Download insight into the managerial application of current research.</p>
             <ul class="row">
                 <?php

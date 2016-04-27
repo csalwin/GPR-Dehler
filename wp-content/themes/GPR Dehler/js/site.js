@@ -109,6 +109,45 @@ $( document ).ready(function() {
         ]
     });
 
+//Home Page Sliders
+    var slider_array;
+    var slider_arraysecond;
+        // launch bxslider
+        $('.homeSlider').each(function(i){
+            slider_array = $(this).bxSlider({
+                controls: false,
+                pager: false,
+                infiniteLoop: true,
+                auto: true,
+                speed: 1800,
+                pause: 5000,
+                autoDelay: 1000,
+                onSlideNext: doThis
+            });
+        });
+        //So the slider are Synced
+        function doThis(){
+            slider_array.goToNextSlide();
+        }
+
+        $('.testSlider').each(function(i){
+            slider_arraysecond = $(this).bxSlider({
+                controls: false,
+                pager: false,
+                infiniteLoop: true,
+                auto: true,
+                speed: 1800,
+                pause: 5000,
+                onSlideNext: doThistoo
+            });
+        });
+        function doThistoo(){
+            slider_arraysecond.goToNextSlide();
+        }
+    
+    
+    
+
 
     $('#filterdropdown').change(function () {
         window.location.href = $(this).val();

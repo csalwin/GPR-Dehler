@@ -114,7 +114,10 @@
                   font-size: 38px;
                 }
                 span {
-                  padding-left: 25px;
+                  @media (min-width: $screen-md) {
+                    padding-left: 25px;
+                  }
+
                   text-shadow: -1px 3px 30px rgba(0, 0, 0, 0.44);
                 }
               }
