@@ -79,7 +79,7 @@ $( document ).ready(function() {
         slidesToScroll: 1,
         autoplay: true,
         autoplaySpeed: 0,
-        speed: 4500,
+        speed: 3000,
         cssEase:'linear'
     });
     $('.achivslider').slick({
@@ -120,7 +120,7 @@ $( document ).ready(function() {
                 infiniteLoop: true,
                 auto: true,
                 speed: 1800,
-                pause: 5000,
+                pause: 9000,
                 autoDelay: 1000,
                 onSlideNext: doThis
             });
@@ -137,7 +137,7 @@ $( document ).ready(function() {
                 infiniteLoop: true,
                 auto: true,
                 speed: 1800,
-                pause: 5000,
+                pause: 9000,
                 onSlideNext: doThistoo
             });
         });
