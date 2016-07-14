@@ -34,12 +34,10 @@ $( document ).ready(function() {
 //    Job Form
 
     $('button.applyonline').click(function (){
-        $('.jobForm').hide();
+        $('.job .wpcf7').slideUp();
         $(this).next().slideToggle();
         $('button.applyonline').show();
         $(this).hide();
-
-
     });
 
 
