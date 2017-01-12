@@ -191,7 +191,7 @@ get_header(); ?>
                                         if (!empty($image)):
 
                                             // vars
-                                            $url = $image['url'];
+                                            $imgUrl = $image['url'];
                                             $title = $image['title'];
                                             $alt = $image['alt'];
                                             $caption = $image['caption'];

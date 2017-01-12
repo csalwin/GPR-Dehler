@@ -48,16 +48,13 @@ get_header(); ?>
 							</div>
 							<?php
 							while ($my_query->have_posts()) : $my_query->the_post(); ?>
-
 							<div class="jobrow">
 								<div class="container">
 									<div class="job width970">
 										<h3><?php the_title(); ?></h3>
 										<p><?php the_content()?></p>
 										<button class="applyonline">Apply Online</button>
-
 										<?php echo do_shortcode('[contact-form-7 id="185" title="Job Form" class="jobForm"]'); ?>
-
 									</div>
 								</div>
 							</div>

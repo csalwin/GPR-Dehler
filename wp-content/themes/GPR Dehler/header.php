@@ -45,11 +45,6 @@
 
 <body <?php body_class(); ?>>
 
-
-
-
-
-
 <div id="nav-bar">
 <!--	used for the half background image  -->
 	<div class="backgroundImage"></div>
